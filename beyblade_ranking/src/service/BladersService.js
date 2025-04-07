@@ -3,7 +3,7 @@ export const Bladers = {
         return [
             {
                 name: "Nik",
-                moniker: "",
+                bladerName: "",
                 elo: 1499,
                 firstFinishes: 1,
                 secondFinishes: 1,
@@ -13,16 +13,17 @@ export const Bladers = {
             },
             {
                 name: "Christian Suello",
-                moniker: "HellsSuboh",
+                bladerName: "HellsSuboh",
                 elo: 1500,
                 firstFinishes: 1,
                 secondFinishes: 1,
                 thirdFinishes: 1,
-                desc: "HellsSuboh is a force to be reckoned with. If you see he's signature HammerStance, run."
+                desc: "HellsSuboh is a force to be reckoned with. If you see he's signature HammerStance, run.",
+                sigCombo: "Keel Shark 2-60 LR"
             },
             {
                 name: "Christian Suello",
-                moniker: "HellsSuboh",
+                bladerName: "HellsSuboh",
                 elo: 1500,
                 firstFinishes: 1,
                 secondFinishes: 1,
@@ -32,7 +33,7 @@ export const Bladers = {
             },
             {
                 name: "Pau",
-                moniker: "The Goat",
+                bladerName: "The Goat",
                 elo: 1501,
                 firstFinishes: 999,
                 secondFinishes: 999,
@@ -42,7 +43,7 @@ export const Bladers = {
             },
             {
                 name: "Kris",
-                moniker: "Thor",
+                bladerName: "Thor",
                 elo: 1502,
                 firstFinishes: 999,
                 secondFinishes: 999,
@@ -52,7 +53,7 @@ export const Bladers = {
             },
             {
                 name: "Christian Suello",
-                moniker: "HellsSuboh",
+                bladerName: "HellsSuboh",
                 elo: 1500,
                 firstFinishes: 1,
                 secondFinishes: 1,
@@ -62,7 +63,7 @@ export const Bladers = {
             },
             {
                 name: "Christian Suello",
-                moniker: "HellsSuboh",
+                bladerName: "HellsSuboh",
                 elo: 1500,
                 firstFinishes: 1,
                 secondFinishes: 1,
@@ -72,7 +73,7 @@ export const Bladers = {
             },
             {
                 name: "Christian Suello",
-                moniker: "HellsSuboh",
+                bladerName: "HellsSuboh",
                 elo: 1500,
                 firstFinishes: 1,
                 secondFinishes: 1,
@@ -82,7 +83,7 @@ export const Bladers = {
             },
             {
                 name: "Christian Suello",
-                moniker: "HellsSuboh",
+                bladerName: "HellsSuboh",
                 elo: 1500,
                 firstFinishes: 1,
                 secondFinishes: 1,
@@ -92,7 +93,7 @@ export const Bladers = {
             },
             {
                 name: "Christian Suello",
-                moniker: "HellsSuboh",
+                bladerName: "HellsSuboh",
                 elo: 1500,
                 firstFinishes: 1,
                 secondFinishes: 1,
@@ -102,7 +103,7 @@ export const Bladers = {
             },
             {
                 name: "Christian Suello",
-                moniker: "HellsSuboh",
+                bladerName: "HellsSuboh",
                 elo: 1500,
                 firstFinishes: 1,
                 secondFinishes: 1,
@@ -112,7 +113,7 @@ export const Bladers = {
             },
             {
                 name: "Christian Suello",
-                moniker: "HellsSuboh",
+                bladerName: "HellsSuboh",
                 elo: 1500,
                 firstFinishes: 1,
                 secondFinishes: 1,
@@ -122,7 +123,7 @@ export const Bladers = {
             },
             {
                 name: "Christian Suello",
-                moniker: "HellsSuboh",
+                bladerName: "HellsSuboh",
                 elo: 1500,
                 firstFinishes: 1,
                 secondFinishes: 1,
@@ -132,7 +133,7 @@ export const Bladers = {
             },
             {
                 name: "Christian Suello",
-                moniker: "HellsSuboh",
+                bladerName: "HellsSuboh",
                 elo: 1500,
                 firstFinishes: 1,
                 secondFinishes: 1,
@@ -142,7 +143,7 @@ export const Bladers = {
             },
             {
                 name: "Christian Suello",
-                moniker: "HellsSuboh",
+                bladerName: "HellsSuboh",
                 elo: 1500,
                 firstFinishes: 1,
                 secondFinishes: 1,

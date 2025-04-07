@@ -1,5 +1,5 @@
 <script setup>
-import { DataTable, Column, Button } from 'primevue'
+import { DataTable, Column, Dialog } from 'primevue'
 import {ref, onMounted} from 'vue'
 import { Bladers } from './service/BladersService'
 
@@ -13,10 +13,18 @@ onMounted(() => {
 const data = ref([])
 const columns = [
   {field: 'name', header: 'Name'},
-  {field: 'moniker', header: 'Moniker'},
+  {field: 'bladerName', header: 'Blader Name'},
   {field: 'elo', header: 'Elo'},
   {field: 'totalWins', header: 'Total Podiums'},
 ]
+
+const bladerPopup = ref(false)
+const selectedBladerRef = ref()
+function popupBlader(selectedBlader){
+  selectedBladerRef.value = selectedBlader
+  bladerPopup.value = true
+}
+
 </script>
 
 <template>
@@ -31,11 +39,39 @@ const columns = [
     </div>
     <br>
     <div v-animateonscroll="{ enterClass: 'fadeIn', leaveClass: 'fadeOut'}">
-      <DataTable :value="data">
-        <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header"></Column>
+      <DataTable removableSort selectionMode="single" v-model:selection="selectedBladerRef" :value="data" stripedRows sortField="elo" :sortOrder="-1"
+        @rowSelect="popupBlader">
+        <Column v-for="col of columns" sortable :key="col.field" :field="col.field" :header="col.header"></Column>
       </DataTable>
     </div>
   </div>
+
+  <Dialog v-model:visible="bladerPopup">
+    <div class="bladerField">
+      Name: {{ selectedBladerRef.data.name }}
+    </div>
+    <div class="bladerField">
+      Blader Name: {{ selectedBladerRef.data.bladerName }}
+    </div>
+    <div class="bladerField">
+      Description: {{ selectedBladerRef.data.desc }}
+    </div>
+    <div class="bladerField">
+      First Place Finishes: {{ selectedBladerRef.data.firstFinishes }}
+    </div>
+    <div class="bladerField">
+      Second Place Finishes: {{ selectedBladerRef.data.secondFinishes }}
+    </div>
+    <div class="bladerField">
+      Third Place Finishes: {{ selectedBladerRef.data.thirdFinishes }}
+    </div>
+    <div class="bladerField">
+      Total Podiums: {{ selectedBladerRef.data.totalWins }}
+    </div>
+    <div class="bladerField">
+      Signature Combo: {{ selectedBladerRef.data.sigCombo }}
+    </div>
+  </Dialog>
 </template>
 
 <style scoped>
