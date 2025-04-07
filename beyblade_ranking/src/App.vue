@@ -1,17 +1,41 @@
 <script setup>
 import { DataTable, Column, Button } from 'primevue'
+import {ref, onMounted} from 'vue'
+import { Bladers } from './service/BladersService'
+
+onMounted(() => {
+  data.value = Bladers.getBladers()
+  for(let i=0; i<data.value.length; i++){
+    let blader = data.value[i]
+    blader.totalWins = blader.firstFinishes+blader.secondFinishes+blader.firstFinishes
+  }
+})
+const data = ref([])
+const columns = [
+  {field: 'name', header: 'Name'},
+  {field: 'moniker', header: 'Moniker'},
+  {field: 'elo', header: 'Elo'},
+  {field: 'totalWins', header: 'Total Podiums'},
+]
 </script>
 
 <template>
-  <h1 class="fadeIn">Yomi's BBX Rankings</h1>
+  <h3 class="fadeIn">LGHS x Yomi Presents...</h3>
+  <h1 class="fadeInDelay1Sec">The Peg's Best Bladers (Final name pending)</h1>
   <h3 class="fadeInDelay1Sec">Winnipeg's Competitive Beyblade X Rankings</h3>
-  <div class="scrollDown bounce">
-    <i class="pi pi-angle-down"></i>
-    Scroll Down
-    <i class="pi pi-angle-down"></i>
+  <div class="fadeInDelay2Sec">
+    <div class="scrollDown bounce">
+      <i class="pi pi-angle-down"></i>
+      Scroll Down
+      <i class="pi pi-angle-down"></i>
+    </div>
+    <br>
+    <div v-animateonscroll="{ enterClass: 'fadeIn', leaveClass: 'fadeOut'}">
+      <DataTable :value="data">
+        <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header"></Column>
+      </DataTable>
+    </div>
   </div>
-  <br>
-  <DataTable></DataTable>
 </template>
 
 <style scoped>
@@ -50,5 +74,11 @@ div .bounce {
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-delay: 1s;
+}
+.fadeInDelay2Sec {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 2s;
 }
 </style>
