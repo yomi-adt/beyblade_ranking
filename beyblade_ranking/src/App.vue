@@ -3,8 +3,8 @@ import { DataTable, Column, Button } from 'primevue'
 </script>
 
 <template>
-  <h1>Yomi's BBX Rankings</h1>
-  <h3>Winnipeg's Competitive Beyblade X Rankings</h3>
+  <h1 class="fadeIn">Yomi's BBX Rankings</h1>
+  <h3 class="fadeInDelay1Sec">Winnipeg's Competitive Beyblade X Rankings</h3>
   <div class="scrollDown bounce">
     <i class="pi pi-angle-down"></i>
     Scroll Down
@@ -44,5 +44,11 @@ div .bounce {
 .fadeOut {
   animation-name: fadeOut;
   animation-duration: 1s;
+}
+.fadeInDelay1Sec {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
 }
 </style>
