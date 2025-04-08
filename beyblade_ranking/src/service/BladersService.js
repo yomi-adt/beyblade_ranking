@@ -2,10 +2,10 @@ let csv = `ID	Name	Blader Name	Attendances	Swiss Wins	First Place Finishes	Secon
 1	Kris G			5646	10	10	10	30	5676	17		
 2	Jeff L			45645345	12	313	6854	7179	45652524	9		
 3	Jerome L			453453	8945	3524561	8674563	12208069	12661522	11		
-4	Trystan Y			453453456	6786783753	756375	753753	6788293881	7241747337	2		
+4	Trystan Y	tan24196		453453456	6786783753	756375	753753	6788293881	7241747337	2		
 5	Roy W			7537537537		3757537		3757537	7541295074	1		
-6	Paulo L			753753753	5373753	375375		5749128	759502881	3		
-7	Jared P							0	0	18		
+6	Paulo L	jpzl		753753753	5373753	375375		5749128	759502881	3		
+7	Jared P	boneshelly						0	0	18		
 8	Nick M					3753753	753753753	757507506	757507506	4		
 9	Allen L							0	0	18		
 10	Christian C							0	0	18		
@@ -13,12 +13,12 @@ let csv = `ID	Name	Blader Name	Attendances	Swiss Wins	First Place Finishes	Secon
 12	Paulo S			573753	753753753			753753753	754327506	6		
 13	Jaren C							0	0	18		
 14	Rico C							0	0	18		
-15	Marc U			75375375				0	75375375	8		
+15	Marc U	EVOLFLOW		75375375				0	75375375	8		
 16	Czamel R					375375		375375	375375	14		
 17	Jah C							0	0	18		
-18	JM C							0	0	18		
+18	JM C	caster						0	0	18		
 19	Ethan A					3753753	3753753	7507506	7507506	12		
-20	Jepoy M			37537537				0	37537537	10		
+20	Jepoy M	jepoy		37537537				0	37537537	10		
 21	Steven F							0	0	18		
 22	Richard C				75375			75375	75375	15		
 23	Ren DV							0	0	18		
@@ -26,7 +26,7 @@ let csv = `ID	Name	Blader Name	Attendances	Swiss Wins	First Place Finishes	Secon
 25	Riel L							0	0	18		
 26	Andrew				753753		753753	1507506	1507506	13		
 27	Matt E							0	0	18		
-28	Trish L							0	0	18		
+28	Trish L	3sh						0	0	18		
 29	CJ S	HellsSuboh						0	0	18	Wielder of HellsHammer. If you see his hammer stance, run on sight.	Hells Hammer 3-60 LF
 30	Ralph S							0	0	18		
 31	Jeric S							0	0	18		
@@ -43,18 +43,18 @@ let csv = `ID	Name	Blader Name	Attendances	Swiss Wins	First Place Finishes	Secon
 42	Riley R							0	0	18		
 43	Jake T							0	0	18		
 44	Patrick G							0	0	18		
-45	Cyber							0	0	18		
-46	Bailey							0	0	18		
+45	Cyber	Cyber						0	0	18		
+46	Bailey	thatkanadian						0	0	18		
 47	Kris T							0	0	18		
 48	Seth F							0	0	18		
 49	Rich C							0	0	18		
-50	Okarun							0	0	18		
+50	Okarun	Okarun						0	0	18		
 51	Bryan L							0	0	18		
-52	Tyler K							0	0	18		
+52	Tyler K	tykubz						0	0	18		
 53	Michael V							0	0	18		
 54	Nathan							0	0	18		
 55	Damon S							0	0	18		
-56	Darlan W							0	0	18		`
+56	Darlan W											`
 
 //var csv is the CSV file with headers
 function csvJSON(csv){
@@ -81,7 +81,6 @@ function csvJSON(csv){
         result.push(obj);
   
     }
-  
     return result
   }
 export const Bladers = {

@@ -5,7 +5,6 @@ import { Bladers } from './service/BladersService'
 
 onMounted(() => {
   data.value = Bladers.getBladers()
-  console.log(data.value)
 })
 const data = ref([])
 const columns = [
@@ -20,7 +19,6 @@ const bladerPopup = ref(false)
 const selectedBladerRef = ref()
 function popupBlader(selectedBlader){
   selectedBladerRef.value = selectedBlader
-  console.log(selectedBlader.data["Name"])
   bladerPopup.value = true
 }
 
