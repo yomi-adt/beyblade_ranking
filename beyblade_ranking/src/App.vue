@@ -1,5 +1,5 @@
 <script setup>
-import { DataTable, Column, Dialog } from 'primevue'
+import { DataTable, Column, Dialog, Avatar, Panel, Divider, Message } from 'primevue'
 import {ref, onMounted} from 'vue'
 import { Bladers } from './service/BladersService'
 
@@ -32,11 +32,13 @@ function popupBlader(selectedBlader){
   <h1 class="fadeInDelay1Sec">The Peg's Best Bladers (Final name pending)</h1>
   <h3 class="fadeInDelay1Sec">Winnipeg's Competitive Beyblade X Rankings</h3>
   <div class="fadeInDelay2Sec">
+    (Pro Tip: Click on one of the rows in the table below)
     <div class="scrollDown bounce">
       <i class="pi pi-angle-down"></i>
       Scroll Down
       <i class="pi pi-angle-down"></i>
     </div>
+
     <br>
     <div v-animateonscroll="{ enterClass: 'fadeIn', leaveClass: 'fadeOut'}">
       <DataTable removableSort selectionMode="single" v-model:selection="selectedBladerRef" :value="data" stripedRows sortField="elo" :sortOrder="-1"
@@ -47,29 +49,42 @@ function popupBlader(selectedBlader){
   </div>
 
   <Dialog v-model:visible="bladerPopup">
-    <div class="bladerField">
-      Name: {{ selectedBladerRef.data.name }}
+    <template #header>
+      <div class="fadeIn">
+        <Avatar icon="pi pi-user" shape="circle"></Avatar> {{ selectedBladerRef.data.name }}, "{{ selectedBladerRef.data.bladerName }}"
+      </div>
+    </template>
+
+    <div class="fadeInDelay1Sec">
+      <Panel header="Description:">
+        {{ selectedBladerRef.data.desc }}
+      </Panel>
     </div>
-    <div class="bladerField">
-      Blader Name: {{ selectedBladerRef.data.bladerName }}
-    </div>
-    <div class="bladerField">
-      Description: {{ selectedBladerRef.data.desc }}
-    </div>
-    <div class="bladerField">
-      First Place Finishes: {{ selectedBladerRef.data.firstFinishes }}
-    </div>
-    <div class="bladerField">
-      Second Place Finishes: {{ selectedBladerRef.data.secondFinishes }}
-    </div>
-    <div class="bladerField">
-      Third Place Finishes: {{ selectedBladerRef.data.thirdFinishes }}
-    </div>
-    <div class="bladerField">
-      Total Podiums: {{ selectedBladerRef.data.totalWins }}
-    </div>
-    <div class="bladerField">
-      Signature Combo: {{ selectedBladerRef.data.sigCombo }}
+    
+    <div class="fadeInDelay2Sec">
+      <Divider></Divider>
+
+      <Message severity="success" icon="pi pi-trophy">
+        Total Podiums: {{ selectedBladerRef.data.totalWins }}
+      </Message>
+      <div class="bladerField">
+        <i class="pi pi-angle-right"></i>
+        First Place Finishes: {{ selectedBladerRef.data.firstFinishes }}
+      </div>
+      <div class="bladerField">
+        <i class="pi pi-angle-right"></i>
+        Second Place Finishes: {{ selectedBladerRef.data.secondFinishes }}
+      </div>
+      <div class="bladerField">
+        <i class="pi pi-angle-right"></i>
+        Third Place Finishes: {{ selectedBladerRef.data.thirdFinishes }}
+      </div>
+
+      <Divider></Divider>
+
+      <Message severity="warn" icon="pi pi-exclamation-triangle">
+        Signature Combo: {{ selectedBladerRef.data.sigCombo }}
+      </Message>
     </div>
   </Dialog>
 </template>
