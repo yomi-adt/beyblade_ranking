@@ -5,23 +5,21 @@ import { Bladers } from './service/BladersService'
 
 onMounted(() => {
   data.value = Bladers.getBladers()
-  for(let i=0; i<data.value.length; i++){
-    let blader = data.value[i]
-    blader.totalWins = blader.firstFinishes+blader.secondFinishes+blader.firstFinishes
-  }
+  console.log(data.value)
 })
 const data = ref([])
 const columns = [
-  {field: 'name', header: 'Name'},
-  {field: 'bladerName', header: 'Blader Name'},
-  {field: 'elo', header: 'Elo'},
-  {field: 'totalWins', header: 'Total Podiums'},
+  {field: 'Name', header: 'Name'},
+  {field: 'Blader Name', header: 'Blader Name'},
+  {field: 'Total Points', header: 'Elo'},
+  {field: 'Total Wins', header: 'Total Podiums'},
 ]
 
 const bladerPopup = ref(false)
 const selectedBladerRef = ref()
 function popupBlader(selectedBlader){
   selectedBladerRef.value = selectedBlader
+  console.log(selectedBlader.data["Name"])
   bladerPopup.value = true
 }
 
@@ -40,24 +38,24 @@ function popupBlader(selectedBlader){
     </div>
 
     <br>
-    <div v-animateonscroll="{ enterClass: 'fadeIn', leaveClass: 'fadeOut'}">
-      <DataTable removableSort selectionMode="single" v-model:selection="selectedBladerRef" :value="data" stripedRows sortField="elo" :sortOrder="-1"
-        @rowSelect="popupBlader">
-        <Column v-for="col of columns" sortable :key="col.field" :field="col.field" :header="col.header"></Column>
-      </DataTable>
+    <div class="fadeInDelay2Sec" v-animateonscroll="{ enterClass: 'fadeIn', leaveClass: 'fadeOut'}">
+    <DataTable removableSort :value="data" sortField="Total Points" :sortOrder="-1" selectionMode="single" v-model:selection="selectedBladerRef" stripedRows paginator :rows="10"
+      @rowSelect="popupBlader">
+      <Column v-for="col of columns" sortable :key="col.field" :field="col.field" :header="col.header"></Column>
+    </DataTable>
     </div>
+
   </div>
 
   <Dialog v-model:visible="bladerPopup">
     <template #header>
       <div class="fadeIn">
-        <Avatar icon="pi pi-user" shape="circle"></Avatar> {{ selectedBladerRef.data.name }}, "{{ selectedBladerRef.data.bladerName }}"
+        <Avatar icon="pi pi-user" shape="circle"></Avatar> {{ selectedBladerRef.data["Name"] }}<span v-show="selectedBladerRef.data['Blader Name']">, "{{ selectedBladerRef.data['Blader Name'] }}"</span>
       </div>
     </template>
-
     <div class="fadeInDelay1Sec">
       <Panel header="Description:">
-        {{ selectedBladerRef.data.desc }}
+        {{ selectedBladerRef.data['Description'] }}
       </Panel>
     </div>
     

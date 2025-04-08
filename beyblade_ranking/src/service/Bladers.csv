@@ -1,4 +1,4 @@
-let csv = `ID,Name,Blader Name,Attendances,Swiss Wins,First Place Finishes,Second Place Finishes,Third Place Finishes,Total Podiums,Total Points,Rank,Description,Signature Combo
+ID,Name,Blader Name,Attendances,Swiss Wins,First Place Finishes,Second Place Finishes,Third Place Finishes,Total Podiums,Total Points,Rank,Description,Signature Combo
 1,Kris G,,,5646,10,10,10,30,5676,,,
 2,Jeff L,,,45645345,12,313,6854,7179,45652524,,,
 3,Jerome L,,,453453,8945,3524561,8674563,12208069,12661522,,,
@@ -54,38 +54,4 @@ let csv = `ID,Name,Blader Name,Attendances,Swiss Wins,First Place Finishes,Secon
 53,Michael V,,,,,,,0,0,,,
 54,Nathan,,,,,,,0,0,,,
 55,Damon S,,,,,,,0,0,,,
-56,Darlan W,,,,,,,0,0,,,`
-
-//var csv is the CSV file with headers
-function csvJSON(csv){
-
-    var lines=csv.split("\n");
-  
-    var result = [];
-  
-    // NOTE: If your columns contain commas in their values, you'll need
-    // to deal with those before doing the next step 
-    // (you might convert them to &&& or something, then covert them back later)
-    // jsfiddle showing the issue https://jsfiddle.net/
-    var headers=lines[0].split(",");
-  
-    for(var i=1;i<lines.length;i++){
-  
-        var obj = {};
-        var currentline=lines[i].split(",");
-  
-        for(var j=0;j<headers.length;j++){
-            obj[headers[j]] = currentline[j];
-        }
-  
-        result.push(obj);
-  
-    }
-  
-    return result
-  }
-export const Bladers = {
-    getBladers() {
-        return csvJSON(csv)
-    }
-}
+56,Darlan W,,,,,,,0,0,,,
