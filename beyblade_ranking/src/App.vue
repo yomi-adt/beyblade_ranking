@@ -86,6 +86,9 @@ function popupBlader(selectedBlader){
         Signature Combo: {{ selectedBladerRef.data.sigCombo }}
       </Message>
     </div>
+    <template #footer>
+      <Divider></Divider>
+    </template>
   </Dialog>
 </template>
 
