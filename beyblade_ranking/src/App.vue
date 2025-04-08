@@ -9,10 +9,11 @@ onMounted(() => {
 })
 const data = ref([])
 const columns = [
+  {field: 'Rank', header: 'Rank'},
   {field: 'Name', header: 'Name'},
   {field: 'Blader Name', header: 'Blader Name'},
   {field: 'Total Points', header: 'Elo'},
-  {field: 'Total Wins', header: 'Total Podiums'},
+  {field: 'Total Podiums', header: 'Total Podiums'},
 ]
 
 const bladerPopup = ref(false)
@@ -39,18 +40,19 @@ function popupBlader(selectedBlader){
 
     <br>
     <div class="fadeInDelay2Sec" v-animateonscroll="{ enterClass: 'fadeIn', leaveClass: 'fadeOut'}">
-    <DataTable removableSort :value="data" sortField="Total Points" :sortOrder="-1" selectionMode="single" v-model:selection="selectedBladerRef" stripedRows paginator :rows="10"
+    <DataTable removableSort :value="data" sortField="Rank" :sortOrder="1" selectionMode="single" v-model:selection="selectedBladerRef" stripedRows paginator :rows="10"
       @rowSelect="popupBlader">
       <Column v-for="col of columns" sortable :key="col.field" :field="col.field" :header="col.header"></Column>
     </DataTable>
     </div>
 
+    <p style="font-style: italic">Last updated April 8th, 2025 (With fake data)</p>
   </div>
 
-  <Dialog v-model:visible="bladerPopup">
+  <Dialog v-model:visible="bladerPopup" style="min-width: 20vw;">
     <template #header>
       <div class="fadeIn">
-        <Avatar icon="pi pi-user" shape="circle"></Avatar> {{ selectedBladerRef.data["Name"] }}<span v-show="selectedBladerRef.data['Blader Name']">, "{{ selectedBladerRef.data['Blader Name'] }}"</span>
+        <Avatar :label="'#' + selectedBladerRef.data['Rank']" shape="circle"></Avatar> {{ selectedBladerRef.data["Name"] }}<span v-show="selectedBladerRef.data['Blader Name']">, "{{ selectedBladerRef.data['Blader Name'] }}"</span>
       </div>
     </template>
     <div class="fadeInDelay1Sec">
@@ -63,25 +65,29 @@ function popupBlader(selectedBlader){
       <Divider></Divider>
 
       <Message severity="success" icon="pi pi-trophy">
-        Total Podiums: {{ selectedBladerRef.data.totalWins }}
+        Total Podiums: {{ selectedBladerRef.data['Total Wins'] }}
       </Message>
       <div class="bladerField">
         <i class="pi pi-angle-right"></i>
-        First Place Finishes: {{ selectedBladerRef.data.firstFinishes }}
+        First Place Finishes: {{ selectedBladerRef.data['First Place Finishes'] }}
       </div>
       <div class="bladerField">
         <i class="pi pi-angle-right"></i>
-        Second Place Finishes: {{ selectedBladerRef.data.secondFinishes }}
+        Second Place Finishes: {{ selectedBladerRef.data['Second Place Finishes'] }}
       </div>
       <div class="bladerField">
         <i class="pi pi-angle-right"></i>
-        Third Place Finishes: {{ selectedBladerRef.data.thirdFinishes }}
+        Third Place Finishes: {{ selectedBladerRef.data['Third Place Finishes'] }}
+      </div>
+      <div class="bladerField">
+        <i class="pi pi-angle-right"></i>
+        Swiss Wins: {{ selectedBladerRef.data['Swiss Wins'] }}
       </div>
 
       <Divider></Divider>
 
       <Message severity="warn" icon="pi pi-exclamation-triangle">
-        Signature Combo: {{ selectedBladerRef.data.sigCombo }}
+        Signature Combo: {{ selectedBladerRef.data['Signature Combo'] }}
       </Message>
     </div>
     <template #footer>
