@@ -54,7 +54,8 @@ function popupBlader(selectedBlader){
     </template>
     <div class="fadeInDelay1Sec">
       <Panel header="Description:">
-        {{ selectedBladerRef.data['Description'] }}
+        <div v-if="selectedBladerRef.data['Description']">{{selectedBladerRef.data['Description']}}</div>
+        <div v-if="!selectedBladerRef.data['Description']">[NO DATA AVAILABLE]</div>
       </Panel>
     </div>
     
@@ -83,8 +84,11 @@ function popupBlader(selectedBlader){
 
       <Divider></Divider>
 
-      <Message severity="warn" icon="pi pi-exclamation-triangle">
+      <Message v-if="selectedBladerRef.data['Signature Combo']" severity="warn" icon="pi pi-exclamation-triangle">
         Signature Combo: {{ selectedBladerRef.data['Signature Combo'] }}
+      </Message>
+      <Message v-if="!selectedBladerRef.data['Signature Combo']" severity="info" icon="pi pi-info">
+        Signature Combo: [NO DATA AVAILABLE]
       </Message>
     </div>
     <template #footer>
