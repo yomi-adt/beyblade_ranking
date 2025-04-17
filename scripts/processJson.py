@@ -1,7 +1,7 @@
 import json
 
 # Open the JSON file and load its content
-with open('matches.json', 'r') as file:
+with open('input.json', 'r') as file:
     data = json.load(file)
 
 # Match types
@@ -30,7 +30,8 @@ for item in playerData:
                 'losersWins': 0,
                 'first': False,
                 'second': False,
-                'third': False
+                'third': False,
+                'points': 10,
 
             },
         }
@@ -39,10 +40,6 @@ for item in playerData:
     # Add id to index to dictionary
     idToIndex[item['id']] = currIndex
     currIndex = currIndex+1
-
-# print(idToIndex)
-# print(idToIndex['259854977'])
-# print(getPlayerById('259854977'))
 
 # Get match from JSON obj
 matchesData = data['data']
@@ -106,4 +103,28 @@ getPlayerById(firstPlacer['id'])['data']['first'] = True
 getPlayerById(secondPlacer['id'])['data']['second'] = True
 getPlayerById(thirdPlacer['id'])['data']['third'] = True
 for player in players:
-    print(player)
+    data = player['data']
+
+    # Made top 16
+    if(data['top16']):
+        data['points'] = data['points'] + 10
+    # Swiss king
+    if(int(data['swissWins'])==5):
+        data['points'] = data['points'] + 20
+    # First place
+    if(data['first']):
+        data['points'] = data['points'] + 50
+    # Second place
+    if(data['second']):
+        data['points'] = data['points'] + 30
+    # Third place
+    if(data['third']):
+        data['points'] = data['points'] + 20
+
+    data['points'] = data['points'] + (data['swissWins']*5)
+    data['points'] = data['points'] + (data['winnersWins']*10)
+    data['points'] = data['points'] + (data['losersWins']*5)
+
+# Write JSON data to a file
+with open('output.json', 'w') as file:
+    json.dump(players, file, indent=4)  # 'indent' makes the output more readable

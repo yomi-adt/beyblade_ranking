@@ -1,0 +1,590 @@
+[
+    {
+        "id": "259854970",
+        "data": {
+            "name": "JARED",
+            "swissWins": 3,
+            "top16": true,
+            "winnersWins": 1,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 45
+        }
+    },
+    {
+        "id": "259854987",
+        "data": {
+            "name": "PAULO S",
+            "swissWins": 0,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 10
+        }
+    },
+    {
+        "id": "259854983",
+        "data": {
+            "name": "YOMI",
+            "swissWins": 2,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 20
+        }
+    },
+    {
+        "id": "259854982",
+        "data": {
+            "name": "CASTER",
+            "swissWins": 3,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 25
+        }
+    },
+    {
+        "id": "259854992",
+        "data": {
+            "name": "ARVINE",
+            "swissWins": 4,
+            "top16": true,
+            "winnersWins": 2,
+            "losersWins": 2,
+            "first": false,
+            "second": false,
+            "third": true,
+            "points": 90
+        }
+    },
+    {
+        "id": "259855003",
+        "data": {
+            "name": "DAVE",
+            "swissWins": 2,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 20
+        }
+    },
+    {
+        "id": "259854993",
+        "data": {
+            "name": "RAY2",
+            "swissWins": 2,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 20
+        }
+    },
+    {
+        "id": "259855002",
+        "data": {
+            "name": "LANS",
+            "swissWins": 4,
+            "top16": true,
+            "winnersWins": 0,
+            "losersWins": 2,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 50
+        }
+    },
+    {
+        "id": "259854981",
+        "data": {
+            "name": "TOP JAREN X",
+            "swissWins": 2,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 20
+        }
+    },
+    {
+        "id": "259854974",
+        "data": {
+            "name": "TRISH",
+            "swissWins": 3,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 25
+        }
+    },
+    {
+        "id": "259854969",
+        "data": {
+            "name": "WREKCY",
+            "swissWins": 1,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 15
+        }
+    },
+    {
+        "id": "259854977",
+        "data": {
+            "name": "ALLEN",
+            "swissWins": 2,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 20
+        }
+    },
+    {
+        "id": "259854976",
+        "data": {
+            "name": "JINZOH",
+            "swissWins": 3,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 25
+        }
+    },
+    {
+        "id": "259854991",
+        "data": {
+            "name": "KUBZ",
+            "swissWins": 3,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 25
+        }
+    },
+    {
+        "id": "259854968",
+        "data": {
+            "name": "ANDREW",
+            "swissWins": 1,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 15
+        }
+    },
+    {
+        "id": "259854984",
+        "data": {
+            "name": "JEKO",
+            "swissWins": 4,
+            "top16": true,
+            "winnersWins": 0,
+            "losersWins": 1,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 45
+        }
+    },
+    {
+        "id": "259854978",
+        "data": {
+            "name": "JEFF",
+            "swissWins": 3,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 25
+        }
+    },
+    {
+        "id": "259854989",
+        "data": {
+            "name": "PATRICK G",
+            "swissWins": 3,
+            "top16": true,
+            "winnersWins": 5,
+            "losersWins": 0,
+            "first": true,
+            "second": false,
+            "third": false,
+            "points": 135
+        }
+    },
+    {
+        "id": "259854967",
+        "data": {
+            "name": "WITHAK",
+            "swissWins": 3,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 25
+        }
+    },
+    {
+        "id": "259854973",
+        "data": {
+            "name": "ALFREDO",
+            "swissWins": 1,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 15
+        }
+    },
+    {
+        "id": "259854996",
+        "data": {
+            "name": "MATT",
+            "swissWins": 1,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 15
+        }
+    },
+    {
+        "id": "259854972",
+        "data": {
+            "name": "ZEPH",
+            "swissWins": 5,
+            "top16": true,
+            "winnersWins": 3,
+            "losersWins": 1,
+            "first": false,
+            "second": true,
+            "third": false,
+            "points": 130
+        }
+    },
+    {
+        "id": "259854965",
+        "data": {
+            "name": "REN",
+            "swissWins": 2,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 20
+        }
+    },
+    {
+        "id": "259854975",
+        "data": {
+            "name": "JAH",
+            "swissWins": 2,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 20
+        }
+    },
+    {
+        "id": "259855001",
+        "data": {
+            "name": "IZSON",
+            "swissWins": 0,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 10
+        }
+    },
+    {
+        "id": "259854997",
+        "data": {
+            "name": "DROAM",
+            "swissWins": 5,
+            "top16": true,
+            "winnersWins": 1,
+            "losersWins": 1,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 80
+        }
+    },
+    {
+        "id": "259854964",
+        "data": {
+            "name": "PAU",
+            "swissWins": 3,
+            "top16": true,
+            "winnersWins": 1,
+            "losersWins": 3,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 60
+        }
+    },
+    {
+        "id": "259854995",
+        "data": {
+            "name": "GABBY",
+            "swissWins": 1,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 15
+        }
+    },
+    {
+        "id": "259854966",
+        "data": {
+            "name": "YEYOH",
+            "swissWins": 2,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 20
+        }
+    },
+    {
+        "id": "259855004",
+        "data": {
+            "name": "BAILEYBOYS",
+            "swissWins": 1,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 15
+        }
+    },
+    {
+        "id": "259854986",
+        "data": {
+            "name": "SIP",
+            "swissWins": 3,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 25
+        }
+    },
+    {
+        "id": "259854985",
+        "data": {
+            "name": "JETHRO",
+            "swissWins": 2,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 20
+        }
+    },
+    {
+        "id": "259854971",
+        "data": {
+            "name": "RAUGGHI",
+            "swissWins": 3,
+            "top16": true,
+            "winnersWins": 1,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 45
+        }
+    },
+    {
+        "id": "259854998",
+        "data": {
+            "name": "JEPOY",
+            "swissWins": 4,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 30
+        }
+    },
+    {
+        "id": "259854988",
+        "data": {
+            "name": "SUNGANATOR",
+            "swissWins": 3,
+            "top16": true,
+            "winnersWins": 2,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 55
+        }
+    },
+    {
+        "id": "259855000",
+        "data": {
+            "name": "JWRECK",
+            "swissWins": 4,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 30
+        }
+    },
+    {
+        "id": "259854999",
+        "data": {
+            "name": "ADZILLA",
+            "swissWins": 3,
+            "top16": true,
+            "winnersWins": 0,
+            "losersWins": 1,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 40
+        }
+    },
+    {
+        "id": "259854994",
+        "data": {
+            "name": "MR.PRESIDENT",
+            "swissWins": 1,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 15
+        }
+    },
+    {
+        "id": "259854990",
+        "data": {
+            "name": "TAN2",
+            "swissWins": 2,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 20
+        }
+    },
+    {
+        "id": "259854980",
+        "data": {
+            "name": "MIG",
+            "swissWins": 3,
+            "top16": true,
+            "winnersWins": 0,
+            "losersWins": 3,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 50
+        }
+    },
+    {
+        "id": "259854979",
+        "data": {
+            "name": "STEVEN",
+            "swissWins": 2,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 20
+        }
+    },
+    {
+        "id": "259855043",
+        "data": {
+            "name": "RICH",
+            "swissWins": 0,
+            "top16": false,
+            "winnersWins": 0,
+            "losersWins": 0,
+            "first": false,
+            "second": false,
+            "third": false,
+            "points": 10
+        }
+    }
+]
