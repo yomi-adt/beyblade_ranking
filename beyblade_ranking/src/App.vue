@@ -5,7 +5,6 @@ import { Bladers } from './service/BladersService'
 
 onMounted(() => {
   data.value = Bladers.getBladers()
-  console.log(data.value)
 })
 const data = ref([])
 const columns = [
@@ -20,7 +19,6 @@ const bladerPopup = ref(false)
 const selectedBladerRef = ref()
 function popupBlader(selectedBlader){
   selectedBladerRef.value = selectedBlader
-  console.log(selectedBlader.data["Name"])
   bladerPopup.value = true
 }
 
@@ -31,10 +29,9 @@ function popupBlader(selectedBlader){
   <h1 class="fadeInDelay1Sec">The Peg's Best Bladers (Final name pending)</h1>
   <h3 class="fadeInDelay1Sec">Winnipeg's Competitive Beyblade X Rankings</h3>
   <div class="fadeInDelay2Sec">
-    (Pro Tip: Click on one of the rows in the table below)
     <div class="scrollDown bounce">
       <i class="pi pi-angle-down"></i>
-      Scroll Down
+      Click on a Blader To See More Info!
       <i class="pi pi-angle-down"></i>
     </div>
 
