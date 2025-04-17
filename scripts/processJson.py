@@ -22,18 +22,15 @@ for item in playerData:
     players.append(
         {
             'id': item['id'],
-            'data': {
-                'name': item['attributes']['name'],
-                'swissWins': 0,
-                'top16': False,
-                'winnersWins': 0,
-                'losersWins': 0,
-                'first': False,
-                'second': False,
-                'third': False,
-                'points': 10,
-
-            },
+            'name': item['attributes']['name'],
+            'swissWins': 0,
+            'top16': False,
+            'winnersWins': 0,
+            'losersWins': 0,
+            'first': False,
+            'second': False,
+            'third': False,
+            'points': 10,
         }
     )
 
@@ -57,15 +54,15 @@ for item in matchesData:
 
     if isSwiss:
         swiss.append(item)
-        firstPlacer['data']['swissWins'] = firstPlacer['data']['swissWins'] + 1 
+        firstPlacer['swissWins'] = firstPlacer['swissWins'] + 1 
     elif currRound < 0: # If negative means secondPlacer bracket
         de.append(item)
-        firstPlacer['data']['top16'] = True
-        firstPlacer['data']['losersWins'] = firstPlacer['data']['losersWins'] + 1
+        firstPlacer['top16'] = True
+        firstPlacer['losersWins'] = firstPlacer['losersWins'] + 1
     else:
         de.append(item)
-        firstPlacer['data']['top16'] = True
-        firstPlacer['data']['winnersWins'] = firstPlacer['data']['winnersWins'] + 1
+        firstPlacer['top16'] = True
+        firstPlacer['winnersWins'] = firstPlacer['winnersWins'] + 1
 
     prevRound = currRound
 
@@ -99,11 +96,11 @@ thirdPlacer = winnersParticipants['player1']
 if(int(finalsGame['attributes']['winner_id']) == int(thirdPlacer['id'])):
     thirdPlacer = winnersParticipants['player2']
 
-getPlayerById(firstPlacer['id'])['data']['first'] = True
-getPlayerById(secondPlacer['id'])['data']['second'] = True
-getPlayerById(thirdPlacer['id'])['data']['third'] = True
+getPlayerById(firstPlacer['id'])['first'] = True
+getPlayerById(secondPlacer['id'])['second'] = True
+getPlayerById(thirdPlacer['id'])['third'] = True
 for player in players:
-    data = player['data']
+    data = player
 
     # Made top 16
     if(data['top16']):
