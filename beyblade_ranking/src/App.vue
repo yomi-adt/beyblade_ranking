@@ -8,11 +8,8 @@ onMounted(() => {
 })
 const data = ref([])
 const columns = [
-  {field: 'Rank', header: 'Rank'},
-  {field: 'Name', header: 'Name'},
-  {field: 'Blader Name', header: 'Blader Name'},
-  {field: 'Total Points', header: 'Elo'},
-  {field: 'Total Podiums', header: 'Total Podiums'},
+  {field: 'name', header: 'Name'},
+  {field: 'points', header: 'Points'},
 ]
 
 const bladerPopup = ref(false)
@@ -37,7 +34,7 @@ function popupBlader(selectedBlader){
 
     <br>
     <div class="fadeInDelay2Sec" v-animateonscroll="{ enterClass: 'fadeIn', leaveClass: 'fadeOut'}">
-    <DataTable removableSort :value="data" sortField="Rank" :sortOrder="1" selectionMode="single" v-model:selection="selectedBladerRef" stripedRows paginator :rows="10"
+    <DataTable removableSort :value="data" sortField="points" :sortOrder="-1" selectionMode="single" v-model:selection="selectedBladerRef" stripedRows paginator :rows="10"
       @rowSelect="popupBlader">
       <Column v-for="col of columns" sortable :key="col.field" :field="col.field" :header="col.header"></Column>
     </DataTable>
