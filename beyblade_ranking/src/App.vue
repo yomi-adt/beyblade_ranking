@@ -24,6 +24,17 @@ const tournamentId = ref("")
 
 function addParticipant(data){
   console.log(data)
+
+  const data2 = { name: 'John', email: 'john@example.com' };
+
+fetch('https://api.challonge.com/v2.1/communities/wbbx/tournaments/enleupi2/participants.json', {
+  method: 'GET',
+  mode: 'no-cors'
+})
+  .then(response => response.json()) // Parse the JSON response
+  .then(data2 => console.log(data2))    // Handle the response data
+  .catch(error => console.error('Error:', error)); // Handle errors
+
 }
 
 const bladerPopup = ref(false)
