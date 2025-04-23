@@ -1,5 +1,6 @@
 <script setup>
-import { DataTable, Column, Dialog, Avatar, Panel, Divider, Message } from 'primevue'
+import { DataTable, Column, Dialog, Avatar, Panel, Divider, Message, InputText, Button, Toolbar, ToggleSwitch } from 'primevue'
+import { FilterMatchMode } from '@primevue/core/api';
 import {ref, onMounted} from 'vue'
 import { Bladers } from './service/BladersService'
 
@@ -11,6 +12,19 @@ const columns = [
   {field: 'name', header: 'Name'},
   {field: 'points', header: 'Points'},
 ]
+
+const filters = ref({
+    name: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
+});
+
+const organizerMode = ref(false)
+const apiKey = ref("")
+const communityId = ref("wbbx")
+const tournamentId = ref("")
+
+function addParticipant(data){
+  console.log(data)
+}
 
 const bladerPopup = ref(false)
 const selectedBladerRef = ref()
@@ -34,10 +48,36 @@ function popupBlader(selectedBlader){
 
     <br>
     <div class="fadeInDelay2Sec" v-animateonscroll="{ enterClass: 'fadeIn', leaveClass: 'fadeOut'}">
-    <DataTable removableSort :value="data" sortField="points" :sortOrder="-1" selectionMode="single" v-model:selection="selectedBladerRef" stripedRows paginator :rows="10"
-      @rowSelect="popupBlader">
-      <Column v-for="col of columns" sortable :key="col.field" :field="col.field" :header="col.header"></Column>
-    </DataTable>
+      <Toolbar>
+        <template #start>
+          <InputText v-model="filters['name'].value" placeholder="Search for Blader" />
+        </template>
+
+        <template #center>
+          <div v-show="organizerMode">
+            <InputText placeholder="API Key"></InputText>
+            <InputText placeholder="Community ID" v-model="communityId"></InputText>
+            <InputText placeholder="Tournament URL"></InputText>
+          </div>
+        </template>
+        <template #end>
+          <p>Organizer Mode</p>
+          <ToggleSwitch v-model="organizerMode" />
+        </template>
+      </Toolbar>
+      <DataTable v-model:filters="filters" removableSort :value="data" sortField="points" :sortOrder="-1" selectionMode="single" v-model:selection="selectedBladerRef" stripedRows paginator :rows="10"
+        @rowSelect="popupBlader">
+
+        <Column v-for="col of columns" sortable :key="col.field" :field="col.field" :header="col.header"></Column>
+        <Column>
+          <template #header>
+            <Button label="New Participant" v-show="organizerMode"></Button>
+          </template>
+          <template #body="{ data }" v-show="organizerMode">
+            <Button label="Test add api" @click="addParticipant(data)" v-show="organizerMode"></Button>
+          </template>
+        </Column>
+      </DataTable>
     </div>
 
     <p style="font-style: italic">Last updated April 8th, 2025 (With fake data)</p>
