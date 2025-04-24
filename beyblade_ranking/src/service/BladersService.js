@@ -11,7 +11,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 45
+                "points": 45,
+                "rank": -1
             },
             {
                 "id": "259854987",
@@ -23,7 +24,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 10
+                "points": 10,
+                "rank": -1
             },
             {
                 "id": "259854983",
@@ -35,7 +37,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 20
+                "points": 20,
+                "rank": -1
             },
             {
                 "id": "259854982",
@@ -47,7 +50,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 25
+                "points": 25,
+                "rank": -1
             },
             {
                 "id": "259854992",
@@ -59,7 +63,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": true,
-                "points": 90
+                "points": 90,
+                "rank": -1
             },
             {
                 "id": "259855003",
@@ -71,7 +76,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 20
+                "points": 20,
+                "rank": -1
             },
             {
                 "id": "259854993",
@@ -83,7 +89,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 20
+                "points": 20,
+                "rank": -1
             },
             {
                 "id": "259855002",
@@ -95,7 +102,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 50
+                "points": 50,
+                "rank": -1
             },
             {
                 "id": "259854981",
@@ -107,7 +115,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 20
+                "points": 20,
+                "rank": -1
             },
             {
                 "id": "259854974",
@@ -119,7 +128,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 25
+                "points": 25,
+                "rank": -1
             },
             {
                 "id": "259854969",
@@ -131,7 +141,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 15
+                "points": 15,
+                "rank": -1
             },
             {
                 "id": "259854977",
@@ -143,7 +154,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 20
+                "points": 20,
+                "rank": -1
             },
             {
                 "id": "259854976",
@@ -155,7 +167,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 25
+                "points": 25,
+                "rank": -1
             },
             {
                 "id": "259854991",
@@ -167,7 +180,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 25
+                "points": 25,
+                "rank": -1
             },
             {
                 "id": "259854968",
@@ -179,7 +193,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 15
+                "points": 15,
+                "rank": -1
             },
             {
                 "id": "259854984",
@@ -191,7 +206,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 45
+                "points": 45,
+                "rank": -1
             },
             {
                 "id": "259854978",
@@ -203,7 +219,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 25
+                "points": 25,
+                "rank": -1
             },
             {
                 "id": "259854989",
@@ -215,7 +232,8 @@ export const Bladers = {
                 "first": true,
                 "second": false,
                 "third": false,
-                "points": 135
+                "points": 135,
+                "rank": -1
             },
             {
                 "id": "259854967",
@@ -227,7 +245,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 25
+                "points": 25,
+                "rank": -1
             },
             {
                 "id": "259854973",
@@ -239,7 +258,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 15
+                "points": 15,
+                "rank": -1
             },
             {
                 "id": "259854996",
@@ -251,7 +271,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 15
+                "points": 15,
+                "rank": -1
             },
             {
                 "id": "259854972",
@@ -263,7 +284,8 @@ export const Bladers = {
                 "first": false,
                 "second": true,
                 "third": false,
-                "points": 130
+                "points": 130,
+                "rank": -1
             },
             {
                 "id": "259854965",
@@ -275,7 +297,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 20
+                "points": 20,
+                "rank": -1
             },
             {
                 "id": "259854975",
@@ -287,7 +310,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 20
+                "points": 20,
+                "rank": -1
             },
             {
                 "id": "259855001",
@@ -299,7 +323,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 10
+                "points": 10,
+                "rank": -1
             },
             {
                 "id": "259854997",
@@ -311,7 +336,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 80
+                "points": 80,
+                "rank": -1
             },
             {
                 "id": "259854964",
@@ -323,7 +349,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 60
+                "points": 60,
+                "rank": -1
             },
             {
                 "id": "259854995",
@@ -335,7 +362,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 15
+                "points": 15,
+                "rank": -1
             },
             {
                 "id": "259854966",
@@ -347,7 +375,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 20
+                "points": 20,
+                "rank": -1
             },
             {
                 "id": "259855004",
@@ -359,7 +388,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 15
+                "points": 15,
+                "rank": -1
             },
             {
                 "id": "259854986",
@@ -371,7 +401,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 25
+                "points": 25,
+                "rank": -1
             },
             {
                 "id": "259854985",
@@ -383,7 +414,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 20
+                "points": 20,
+                "rank": -1
             },
             {
                 "id": "259854971",
@@ -395,7 +427,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 45
+                "points": 45,
+                "rank": -1
             },
             {
                 "id": "259854998",
@@ -407,7 +440,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 30
+                "points": 30,
+                "rank": -1
             },
             {
                 "id": "259854988",
@@ -419,7 +453,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 55
+                "points": 55,
+                "rank": -1
             },
             {
                 "id": "259855000",
@@ -431,7 +466,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 30
+                "points": 30,
+                "rank": -1
             },
             {
                 "id": "259854999",
@@ -443,7 +479,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 40
+                "points": 40,
+                "rank": -1
             },
             {
                 "id": "259854994",
@@ -455,7 +492,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 15
+                "points": 15,
+                "rank": -1
             },
             {
                 "id": "259854990",
@@ -467,7 +505,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 20
+                "points": 20,
+                "rank": -1
             },
             {
                 "id": "259854980",
@@ -479,7 +518,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 50
+                "points": 50,
+                "rank": -1
             },
             {
                 "id": "259854979",
@@ -491,7 +531,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 20
+                "points": 20,
+                "rank": -1
             },
             {
                 "id": "259855043",
@@ -503,7 +544,8 @@ export const Bladers = {
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 10
+                "points": 10,
+                "rank": -1
             }
         ]
     }

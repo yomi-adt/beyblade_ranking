@@ -31,6 +31,7 @@ for item in playerData:
             'second': False,
             'third': False,
             'points': 10,
+            'rank': -1,
         }
     )
 

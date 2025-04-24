@@ -5,7 +5,7 @@ import threading
 
 mouse = Controller()
 clicking = False  # toggle for clicking
-delay = 0.1       # time between clicks (adjust as needed)
+delay = 20      # time between clicks (adjust as needed)
 
 def clicker():
     while True:
