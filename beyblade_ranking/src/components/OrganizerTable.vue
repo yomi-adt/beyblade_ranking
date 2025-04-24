@@ -55,7 +55,7 @@
         showCommand.value = true
 
         let curlHeaders = '-H "Content-Type: application/vnd.api+json" -H "Accept: application/json" -H "Authorization: '+apiKey.value+'" '
-        let curlData = '-d "{\\"data\\":{\\"type\\":\\"Participants\\",\\"attributes\\":{\\"name\\":\\"'+name.value+'\\",\\"seed\\":1,\\"misc\\":\\"id: '+blader_id.value+'\\",\\"blader_name\\":\\"'+blader_name.value+'\\",\\"deck\\":\\"'+build1.value+' '+build2.value+' '+build3.value+'\\"}}}"'
+        let curlData = '-d "{\\"data\\":{\\"type\\":\\"Participants\\",\\"attributes\\":{\\"name\\":\\"'+name.value+'\\",\\"seed\\":1,\\"misc\\":\\"id:'+blader_id.value+', blader_name:'+blader_name.value+', deck:'+build1.value+' '+build2.value+' '+build3.value+',\\"}}}"'
         let curlCommand = "curl -X POST https://api.challonge.com/v2.1/communities/"+communityId.value+"/tournaments/"+tournamentId.value+"/participants.json "
                         + curlHeaders + curlData
 
