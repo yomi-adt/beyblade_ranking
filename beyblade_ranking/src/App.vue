@@ -19,7 +19,6 @@ import { Button } from 'primevue';
       <RouterView />
     </div>
 
-    <a href="/organizer">hi</a>
     <p style="font-style: italic">Last updated April 24th, 2025 (With fake data)</p>
   </div>
 </template>
