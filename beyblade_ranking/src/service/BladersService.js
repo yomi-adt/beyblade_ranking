@@ -236,7 +236,7 @@ export const Bladers = {
                 "third": false,
                 "points": 135,
                 "rank": -1,
-                "desc": 'By day, Patrick crunches numbers at the Canada Revenue Agency; by night, he unleashes Golem Rock, a powerhouse Beyblade forged from sheer resolve. With unshakable defense and seismic strikes, he battles to balance justice—both fiscal and Beyblade.',
+                "desc": 'Patrick, a fierce Blader, unleashed his Golem Rock attack-type Beyblade with unmatched power, crushing opponents in every battle. Built for speed and impact, it was a true testament to his skill and strategy. With every spin, Patrick aimed for greatness, always striving to be the ultimate Blader.',
                 "signature": 'Golem Rock 1-60 LR'
             },
             {
