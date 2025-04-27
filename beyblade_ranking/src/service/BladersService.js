@@ -235,7 +235,9 @@ export const Bladers = {
                 "second": false,
                 "third": false,
                 "points": 135,
-                "rank": -1
+                "rank": -1,
+                "desc": 'By day, Patrick crunches numbers at the Canada Revenue Agency; by night, he unleashes Golem Rock, a powerhouse Beyblade forged from sheer resolve. With unshakable defense and seismic strikes, he battles to balance justice—both fiscal and Beyblade.',
+                "signature": 'Golem Rock 1-60 LR'
             },
             {
                 "id": "259854967",
