@@ -47,7 +47,7 @@
         <Column v-for="col of columns" sortable :key="col.field" :field="col.field" :header="col.header"></Column>
     </DataTable>
 
-    <Dialog v-model:visible="bladerPopup" style="min-width: 20vw;">
+    <Dialog v-model:visible="bladerPopup" style="min-width: 20vw; max-width: 70vw;">
         <template #header>
         <div class="fadeIn">
             <Avatar :label="'#' + selectedBladerRef.data['rank']" shape="circle"></Avatar> {{ selectedBladerRef.data["name"] }}<span v-show="selectedBladerRef.data['blader_name']">, "{{ selectedBladerRef.data['blader_name'] }}"</span>
@@ -55,8 +55,8 @@
         </template>
         <div class="fadeInDelay1Sec">
         <Panel header="Description:">
-            <div v-if="selectedBladerRef.data['Description']">{{selectedBladerRef.data['Description']}}</div>
-            <div v-if="!selectedBladerRef.data['Description']">[NO DATA AVAILABLE]</div>
+            <div v-if="selectedBladerRef.data['desc']">{{selectedBladerRef.data['desc']}}</div>
+            <div v-if="!selectedBladerRef.data['desc']">[NO DATA AVAILABLE]</div>
         </Panel>
         </div>
         
@@ -85,10 +85,10 @@
 
         <Divider></Divider>
 
-        <Message v-if="selectedBladerRef.data['Signature Combo']" severity="warn" icon="pi pi-exclamation-triangle">
-            Signature Combo: {{ selectedBladerRef.data['Signature Combo'] }}
+        <Message v-if="selectedBladerRef.data['signature']" severity="warn" icon="pi pi-exclamation-triangle">
+            Signature Combo: {{ selectedBladerRef.data['signature'] }}
         </Message>
-        <Message v-if="!selectedBladerRef.data['Signature Combo']" severity="info" icon="pi pi-info">
+        <Message v-if="!selectedBladerRef.data['signature']" severity="info" icon="pi pi-info">
             Signature Combo: [NO DATA AVAILABLE]
         </Message>
         </div>

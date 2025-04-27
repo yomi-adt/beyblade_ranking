@@ -64,7 +64,9 @@ export const Bladers = {
                 "second": false,
                 "third": true,
                 "points": 90,
-                "rank": -1
+                "rank": -1,
+                "desc": 'Heyo My name is Arvine ~ Beyblading is a completely different hobby for me and it’s been so fun! This is my first time on the podium. I got all my unrestricted blades from my closest people in the community!  S/O JM - Trish - Trystan. A lot of people say Impact Drake is my ace bey, but it’s not aha. It’s such a fun blade though! “Basta Blader, Sweet Lover”.',
+                "signature": 'Impact Drake 3-60 P'
             },
             {
                 "id": "259855003",
