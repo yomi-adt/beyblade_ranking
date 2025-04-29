@@ -284,5 +284,31 @@
         "third": false,
         "points": 15,
         "rank": -1
+    },
+    {
+        "id": "261054005",
+        "name": "ALFRED",
+        "swissWins": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
+        "rank": -1
+    },
+    {
+        "id": "261053989",
+        "name": "JARED",
+        "swissWins": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
+        "rank": -1
     }
 ]

@@ -2,14 +2,14 @@
     {
         "id": "259854970",
         "name": "JARED",
-        "swissWins": 3,
+        "swissWins": 5,
         "top16": true,
         "winnersWins": 1,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 45,
+        "points": 65,
         "rank": -1
     },
     {
@@ -261,7 +261,7 @@
     },
     {
         "id": "259854973",
-        "name": "ALFREDO",
+        "name": "ALFRED V",
         "swissWins": 1,
         "top16": false,
         "winnersWins": 0,
@@ -818,4 +818,17 @@
         "points": 15,
         "rank": -1
     },
+    {
+        "id": "261054005",
+        "name": "ALFRED S",
+        "swissWins": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
+        "rank": -1
+    }
 ]
