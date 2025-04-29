@@ -1,18 +1,5 @@
 [
     {
-        "id": "261054010",
-        "name": "ITAMI",
-        "swissWins": 2,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 20,
-        "rank": -1
-    },
-    {
         "id": "261054014",
         "name": "JAKE",
         "swissWins": 4,
@@ -195,19 +182,6 @@
         "rank": -1
     },
     {
-        "id": "261053987",
-        "name": "JEREL",
-        "swissWins": 3,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 25,
-        "rank": -1
-    },
-    {
         "id": "261053989",
         "name": "JAROD",
         "swissWins": 2,
@@ -218,45 +192,6 @@
         "second": false,
         "third": false,
         "points": 20,
-        "rank": -1
-    },
-    {
-        "id": "261054015",
-        "name": "SETH",
-        "swissWins": 4,
-        "top16": true,
-        "winnersWins": 2,
-        "losersWins": 2,
-        "first": false,
-        "second": false,
-        "third": true,
-        "points": 90,
-        "rank": -1
-    },
-    {
-        "id": "261054020",
-        "name": "AARYA",
-        "swissWins": 1,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 15,
-        "rank": -1
-    },
-    {
-        "id": "261053996",
-        "name": "CZ",
-        "swissWins": 4,
-        "top16": true,
-        "winnersWins": 2,
-        "losersWins": 1,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 65,
         "rank": -1
     },
     {
@@ -272,56 +207,4 @@
         "points": 20,
         "rank": -1
     },
-    {
-        "id": "261054002",
-        "name": "CHIEF",
-        "swissWins": 1,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 15,
-        "rank": -1
-    },
-    {
-        "id": "261054003",
-        "name": "BLACS",
-        "swissWins": 3,
-        "top16": true,
-        "winnersWins": 1,
-        "losersWins": 2,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 55,
-        "rank": -1
-    },
-    {
-        "id": "261054018",
-        "name": "RICK",
-        "swissWins": 0,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 10,
-        "rank": -1
-    },
-    {
-        "id": "261053999",
-        "name": "SHIRO",
-        "swissWins": 3,
-        "top16": true,
-        "winnersWins": 1,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 45,
-        "rank": -1
-    }
 ]
