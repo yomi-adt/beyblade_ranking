@@ -47,6 +47,8 @@ for item in matchesData:
     currMatchData = item['attributes']
     currRound = currMatchData['round']
 
+    print(currMatchData)
+
     # Get firstPlacer id, cast to string, find player by that id
     firstPlacer = getPlayerById(str(item['attributes']['winner_id']))
 
