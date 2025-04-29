@@ -1,0 +1,41 @@
+[
+    {
+        "id": "261053990",
+        "name": "RALPH",
+        "swissWins": 1,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 15,
+        "rank": -1
+    },
+    {
+        "id": "261053986",
+        "name": "KRIS G",
+        "swissWins": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
+        "rank": -1
+    },
+    {
+        "id": "261054001",
+        "name": "JAREN JAMES",
+        "swissWins": 4,
+        "top16": true,
+        "winnersWins": 0,
+        "losersWins": 3,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 55,
+        "rank": -1
+    },
+]
