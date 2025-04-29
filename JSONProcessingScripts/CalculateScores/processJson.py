@@ -47,8 +47,6 @@ for item in matchesData:
     currMatchData = item['attributes']
     currRound = currMatchData['round']
 
-    print(currMatchData)
-
     # Get firstPlacer id, cast to string, find player by that id
     firstPlacer = getPlayerById(str(item['attributes']['winner_id']))
 
@@ -69,14 +67,6 @@ for item in matchesData:
 
     prevRound = currRound
 
-# print("Swiss")
-# print(swiss)
-# print("DE")
-# print(de)
-
-# print(getPlayerById(de[-1]['attributes']['points_by_participant'][0]['participant_id']), " vs ", getPlayerById(de[-1]['attributes']['points_by_participant'][1]['participant_id']))
-# print(getPlayerById(de[-2]['attributes']['points_by_participant'][0]['participant_id']), " vs ", getPlayerById(de[-2]['attributes']['points_by_participant'][1]['participant_id']))
-
 # Determine first and second place
 finalsGame = de[-1]
 winnersParticipants = {
@@ -91,6 +81,8 @@ if(int(finalsGame['attributes']['winner_id']) != int(firstPlacer['id'])):
 
 # Determine third place
 finalsGame = de[-2]
+if(len(de)==31):
+    finalsGame = de[-3]
 winnersParticipants = {
     'player1': getPlayerById(finalsGame['attributes']['points_by_participant'][0]['participant_id']),
     'player2': getPlayerById(finalsGame['attributes']['points_by_participant'][1]['participant_id']),
