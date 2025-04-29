@@ -8934,29 +8934,38 @@
             "id": "410236190",
             "type": "match",
             "attributes": {
-                "state": "open",
+                "state": "complete",
                 "round": 5,
                 "identifier": "P",
-                "scores": "0 - 0",
+                "scores": "6 - 7",
                 "suggested_play_order": 30,
-                "score_in_sets": [],
+                "score_in_sets": [
+                    [
+                        6,
+                        7
+                    ]
+                ],
                 "points_by_participant": [
                     {
                         "participant_id": 261054006,
-                        "scores": []
+                        "scores": [
+                            6
+                        ]
                     },
                     {
                         "participant_id": 261054026,
-                        "scores": []
+                        "scores": [
+                            7
+                        ]
                     }
                 ],
                 "timestamps": {
                     "started_at": "2025-04-28T02:13:23.390Z",
                     "created_at": "2025-04-28T01:34:04.837Z",
-                    "updated_at": "2025-04-28T02:13:23.394Z",
+                    "updated_at": "2025-04-29T02:16:08.307Z",
                     "underway_at": null
                 },
-                "winner_id": null,
+                "winner_id": 261054026,
                 "tie": false
             },
             "relationships": {
@@ -8968,15 +8977,6 @@
                             "count": 0
                         }
                     }
-                },
-                "station": {
-                    "data": {
-                        "id": "545934",
-                        "type": "station"
-                    },
-                    "links": {
-                        "related": "https://api.challonge.com/v2.1/tournaments/16146526/stations/545934.json"
-                    }
                 }
             }
         },
@@ -8984,29 +8984,38 @@
             "id": "410236191",
             "type": "match",
             "attributes": {
-                "state": "pending",
+                "state": "complete",
                 "round": 5,
                 "identifier": "Q",
-                "scores": "0 - 0",
+                "scores": "5 - 7",
                 "suggested_play_order": 31,
-                "score_in_sets": [],
+                "score_in_sets": [
+                    [
+                        5,
+                        7
+                    ]
+                ],
                 "points_by_participant": [
                     {
-                        "participant_id": null,
-                        "scores": []
+                        "participant_id": 261054026,
+                        "scores": [
+                            5
+                        ]
                     },
                     {
-                        "participant_id": null,
-                        "scores": []
+                        "participant_id": 261054006,
+                        "scores": [
+                            7
+                        ]
                     }
                 ],
                 "timestamps": {
-                    "started_at": null,
+                    "started_at": "2025-04-29T02:16:08.333Z",
                     "created_at": "2025-04-28T01:34:04.840Z",
-                    "updated_at": "2025-04-28T01:34:04.840Z",
+                    "updated_at": "2025-04-29T02:16:26.013Z",
                     "underway_at": null
                 },
-                "winner_id": null,
+                "winner_id": 261054006,
                 "tie": false
             },
             "relationships": {
@@ -10101,37 +10110,6 @@
             },
             "relationships": {
                 "invitation": {}
-            }
-        },
-        {
-            "id": "545934",
-            "type": "station",
-            "attributes": {
-                "id": 545934,
-                "name": "STADIUM 1",
-                "stream_url": "",
-                "details": "",
-                "details_format": "html"
-            },
-            "relationships": {
-                "match": {
-                    "data": {
-                        "id": "410236190",
-                        "type": "match"
-                    },
-                    "links": {
-                        "related": "https://api.challonge.com/v2.1/tournaments/16146526/matches/410236190.json"
-                    }
-                },
-                "station_queuers": {
-                    "data": [],
-                    "links": {
-                        "related": "https://api.challonge.com/v2.1/tournaments/16146526/stations/545934/station_queuers.json",
-                        "meta": {
-                            "count": 0
-                        }
-                    }
-                }
             }
         }
     ],
