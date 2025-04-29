@@ -636,4 +636,43 @@
         "points": 25,
         "rank": -1
     },
+    {
+        "id": "261054019",
+        "name": "JIYA",
+        "swissWins": 0,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 10,
+        "rank": -1
+    },
+    {
+        "id": "261054006",
+        "name": "Cj",
+        "swissWins": 4,
+        "top16": true,
+        "winnersWins": 5,
+        "losersWins": 0,
+        "first": true,
+        "second": false,
+        "third": false,
+        "points": 140,
+        "rank": -1
+    },
+    {
+        "id": "261054007",
+        "name": "STEPH",
+        "swissWins": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
+        "rank": -1
+    },
 ]
