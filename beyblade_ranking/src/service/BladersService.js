@@ -64,7 +64,10 @@ export const Bladers = {
                 "second": false,
                 "third": true,
                 "points": 135,
-                "rank": -1
+                "rank": -1,
+                "desc": 'Heyo My name is Arvine ~ Beyblading is a completely different hobby for me and its been so fun! This is my first time on the podium. I got all my unrestricted blades from my closest people in the community! S/O JM - Trish - Trystan. A lot of people say Impact Drake is my ace bey, but its not aha. Its such a fun blade though! Impact Drake 360Point “Basta Blader, Sweet Lover”.',
+                "signature": 'Impact Drake 3-60 P',
+
             },
             {
                 "id": "259855003",
@@ -247,7 +250,8 @@ export const Bladers = {
                 "second": false,
                 "third": false,
                 "points": 155,
-                "rank": -1
+                "rank": -1,
+                "desc": 'Patrick, a fierce Blader, unleashed his Golem Rock attack-type Beyblade with unmatched power, crushing opponents in every battle. Built for speed and impact, it was a true testament to his skill and strategy. With every spin, Patrick aimed for greatness, always striving to be the ultimate Blader.',
             },
             {
                 "id": "259854967",
@@ -290,7 +294,8 @@ export const Bladers = {
             },
             {
                 "id": "259854972",
-                "name": "ZEPH",
+                "name": "MICHAEL",
+                "blader_name": "ZEPH",
                 "swissWins": 7,
                 "top16": true,
                 "winnersWins": 3,
@@ -299,7 +304,9 @@ export const Bladers = {
                 "second": true,
                 "third": false,
                 "points": 150,
-                "rank": -1
+                "rank": -1,
+                "signature": 'Cobalt Dragoon 1-60 Level',
+                "desc": 'Representing Team Soju, Michael (“Zeph”) built his name on Phoenix Wing 1-60 Rush, a reliable right-spin attacker known for its consistency in the stadium. For a while, he ran Cobalt Dragoon on Elevate, a strong meta combo, but the passive playstyle never suited him. He was just biding his time—waiting for the left-spin winder to drop. Once it did, he switched to Cobalt Dragoon 1-60 Level, unlocking a fast, aggressive setup that matched his high-risk, high-reward playstyle.'
             },
             {
                 "id": "259854965",
@@ -473,14 +480,14 @@ export const Bladers = {
             {
                 "id": "259854988",
                 "name": "SUNGANATOR",
-                "swissWins": 3,
+                "swissWins": 5,
                 "top16": true,
                 "winnersWins": 2,
                 "losersWins": 0,
                 "first": false,
                 "second": false,
                 "third": false,
-                "points": 55,
+                "points": 75,
                 "rank": -1
             },
             {
@@ -546,7 +553,9 @@ export const Bladers = {
                 "second": false,
                 "third": false,
                 "points": 165,
-                "rank": -1
+                "rank": -1,
+                "signature": 'Phoenix Wing 1-60 LR',
+                "desc": 'Born through the flames of perseverance and determination. Flying on the wings of freedom, soaring to new heights. With a balance of technical skill and raw power, Mig will fight tooth and nail to reach the top',
             },
             {
                 "id": "259854979",
@@ -729,7 +738,9 @@ export const Bladers = {
                 "second": false,
                 "third": false,
                 "points": 140,
-                "rank": -1
+                "rank": -1,
+                "signature": 'Hells Hammer 7-60 LF',
+                "desc": 'CJ (“HellsSuboh”) made his post-exam return this season, and just like his previous win, his loyal 3 partner Beys never fail to Hammer out the competition! Beware of his secret Stance, put him in a tough spot and he may need to Rise from the Ashes to drag you into the depths of Hell!' ,
             },
             {
                 "id": "261054007",
@@ -755,19 +766,6 @@ export const Bladers = {
                 "second": false,
                 "third": false,
                 "points": 30,
-                "rank": -1
-            },
-            {
-                "id": "261054021",
-                "name": "JUSTIN",
-                "swissWins": 2,
-                "top16": false,
-                "winnersWins": 0,
-                "losersWins": 0,
-                "first": false,
-                "second": false,
-                "third": false,
-                "points": 20,
                 "rank": -1
             },
             {
