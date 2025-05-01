@@ -303,7 +303,7 @@
         "third": false,
         "points": 150,
         "rank": -1,
-        "signature": "Cobalt Dragoon 1-60 Level",
+        "signature": "Cobalt Dragoon 1-60 L",
         "desc": "Representing Team Soju, Michael (“Zeph”) built his name on Phoenix Wing 1-60 Rush, a reliable right-spin attacker known for its consistency in the stadium. For a while, he ran Cobalt Dragoon on Elevate, a strong meta combo, but the passive playstyle never suited him. He was just biding his time—waiting for the left-spin winder to drop. Once it did, he switched to Cobalt Dragoon 1-60 Level, unlocking a fast, aggressive setup that matched his high-risk, high-reward playstyle."
     },
     {
@@ -356,7 +356,9 @@
         "second": false,
         "third": false,
         "points": 120,
-        "rank": -1
+        "rank": -1,
+        "desc": "I was once like any man—living day to day, clocking in, clocking out, munching sinigang without a second thought. But then, something deep inside me snapped. I realized I wasn’t just some guy... I had that fire in me. No—not fire. I had that dog in me. No... that dragon. No...THAT BLADING GOD OF WAR.",
+        "signature": "Cobalt Dragoon 5-60 R"
     },
     {
         "id": "259854964",
