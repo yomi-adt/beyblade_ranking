@@ -31,6 +31,10 @@ for playerInput in input:
             playerDB['swissWins'] = playerDB['swissWins'] + playerInput['swissWins'] # Add swissWins and points to db listing
             playerDB['points'] = playerDB['points'] + playerInput['points']
             inDB = True
+        elif ('blader_name' in playerDB and playerInput['name'] == playerDB['blader_name']):
+            playerDB['swissWins'] = playerDB['swissWins'] + playerInput['swissWins'] # Add swissWins and points to db listing
+            playerDB['points'] = playerDB['points'] + playerInput['points']
+            inDB = True  
     if (inDB == False):
         newPlayers.append(playerInput)
 

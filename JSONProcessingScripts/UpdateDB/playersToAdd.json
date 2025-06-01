@@ -1,7 +1,7 @@
 [
     {
-        "id": "262701018",
-        "name": "REI",
+        "id": "263388685",
+        "name": "TATOKE",
         "swissWins": 3,
         "top16": false,
         "winnersWins": 0,
@@ -9,7 +9,46 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 25,
+        "points": 50,
+        "rank": -1
+    },
+    {
+        "id": "263388703",
+        "name": "BRAYDEN",
+        "swissWins": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 40,
+        "rank": -1
+    },
+    {
+        "id": "263388698",
+        "name": "RUMBLECC",
+        "swissWins": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 40,
+        "rank": -1
+    },
+    {
+        "id": "263388684",
+        "name": "OMARDEMESA",
+        "swissWins": 4,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 60,
         "rank": -1
     }
 ]
