@@ -6,7 +6,7 @@ import json
 
 
 # Open db json file and update
-with open('db.json', 'r') as file:
+with open('db.json', 'r', encoding="utf-8") as file:
     db = json.load(file)
 
 
@@ -18,7 +18,7 @@ with open('db.json', 'r') as file:
 #     print(player)
 #     print(player.name)
 
-with open('input.json', 'r') as file:
+with open('input.json', 'r', encoding="utf-8") as file:
     input = json.load(file)
 
 
