@@ -117,6 +117,8 @@ for player in players:
     data['points'] = data['points'] + (data['winnersWins']*10)
     data['points'] = data['points'] + (data['losersWins']*5)
 
+    # 2x Multiplier
+    data['points'] = data['points']*2
 # Write JSON data to a file
 with open('output.json', 'w') as file:
     json.dump(players, file, indent=4)  # 'indent' makes the output more readable
