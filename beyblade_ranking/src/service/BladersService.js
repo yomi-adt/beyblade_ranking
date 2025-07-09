@@ -922,6 +922,8 @@ export const Bladers = {
     {
         "id": "266989973",
         "name": "PAUL",
+        "signature": "Cobalt Dragoon 1-60 Elevate",
+        "desc": "I am the wind beneath my blade. Each launch brings me closer to perfection, and my Bey never misses its mark. You cannot escape its wrath once it spins, the battle is over. Victory is in every clash, every cut. I am the master of my blade. and this arena is mine.",
         "swissWins": 9,
         "top16": true,
         "winnersWins": 3,
