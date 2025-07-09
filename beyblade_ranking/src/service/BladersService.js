@@ -1080,7 +1080,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 430,
+        "points": 345,
         "rank": -1
     },
     {
