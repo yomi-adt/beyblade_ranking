@@ -1,6 +1,7 @@
 export const Bladers = {
     getBladers() {
         return [
+[
     {
         "id": "259854970",
         "name": "JARED",
@@ -203,6 +204,8 @@ export const Bladers = {
         "third": false,
         "points": 530,
         "blader_name": "3SH",
+        "desc": "I'm not Superman, that's for sure. And I'm not Batman, or Spiderman, or Aquaman, or a merman, or a wolfman. I'm not a brahman, or common, or ramen. I'm not a caiman either, so you really don't need to worry about anything. My name is Trish.I guess you could say...I am no man.",
+        "signature": "Tyranno Beat 1-60 K",
         "rank": -1
     },
     {
@@ -922,8 +925,6 @@ export const Bladers = {
     {
         "id": "266989973",
         "name": "PAUL",
-        "signature": "Cobalt Dragoon 1-60 Elevate",
-        "desc": "I am the wind beneath my blade. Each launch brings me closer to perfection, and my Bey never misses its mark. You cannot escape its wrath once it spins, the battle is over. Victory is in every clash, every cut. I am the master of my blade. and this arena is mine.",
         "swissWins": 9,
         "top16": true,
         "winnersWins": 3,
@@ -932,6 +933,8 @@ export const Bladers = {
         "second": false,
         "third": true,
         "points": 170,
+        "desc": "I am the wind beneath my blade. Each launch brings me closer to perfection, and my Bey never misses its mark. You cannot escape its wrath once it spins, the battle is over. Victory is in every clash, every cut. I am the master of my blade. and this arena is mine.",
+        "signature": "Cobalt Dragoon 1-60 E",
         "rank": -1
     },
     {
@@ -1080,7 +1083,9 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 345,
+        "points": 430,
+        "desc": "Known across the scene as the Wyvern GOAT, this 10-year-old isn’t just a blader — he’s a myth in motion. They say he once launched a Bey so hard, someone’s mom called the ref and asked if that was even allowed. Seasoned bladers say when he rolls up, their confidence disappears, food tastes like defeat, and they start practicing their ‘good game’ handshakes.",
+        "signature": "Hover Wyvern 1-60 LR",
         "rank": -1
     },
     {
@@ -1219,5 +1224,6 @@ export const Bladers = {
         "rank": -1
     }
 ]
+        ]
     }
 }
