@@ -24,6 +24,7 @@ with open('input.json', 'r', encoding="utf-8") as file:
 
 
 newPlayers = [] # List of new players not in db
+newPlayersNames = [] # Readible list of names
 for playerInput in input:
     inDB = False
     for playerDB in db:
@@ -37,9 +38,13 @@ for playerInput in input:
             inDB = True  
     if (inDB == False):
         newPlayers.append(playerInput)
+        newPlayersNames.append(playerInput['name'])
 
 with open('playersToAdd.json', 'w') as file:
     json.dump(newPlayers, file, indent=4)  # 'indent' makes the output more readable
+
+with open('playersToAddReadible.json', 'w') as file:
+    json.dump(newPlayersNames, file, indent=4)  # 'indent' makes the output more readable
 
 
 
