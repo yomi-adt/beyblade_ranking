@@ -1124,7 +1124,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 65,
         "rank": -1
     },
     {
@@ -1190,19 +1190,6 @@ export const Bladers = {
         "second": false,
         "third": false,
         "points": 50,
-        "rank": -1
-    },
-    {
-        "id": "268811604",
-        "name": "IRIS",
-        "swissWins": 1,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 15,
         "rank": -1
     },
     {
