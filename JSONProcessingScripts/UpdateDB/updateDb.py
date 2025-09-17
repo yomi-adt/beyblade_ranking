@@ -39,6 +39,7 @@ for playerInput in input:
     if (inDB == False):
         newPlayers.append(playerInput)
         newPlayersNames.append(playerInput['name'])
+    print(playerInput['name'])
 
 with open('playersToAdd.json', 'w') as file:
     json.dump(newPlayers, file, indent=4)  # 'indent' makes the output more readable

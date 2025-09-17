@@ -1,2 +1,54 @@
 [
+    {
+        "id": "272458880",
+        "name": "CHILL BRO",
+        "swissWins": 1,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 15,
+        "rank": -1
+    },
+    {
+        "id": "272458865",
+        "name": "AARON",
+        "swissWins": 4,
+        "top16": true,
+        "winnersWins": 1,
+        "losersWins": 3,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 65,
+        "rank": -1
+    },
+    {
+        "id": "272458884",
+        "name": "ADI",
+        "swissWins": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 25,
+        "rank": -1
+    },
+    {
+        "id": "272458868",
+        "name": "CHRIS A",
+        "swissWins": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
+        "rank": -1
+    }
 ]
