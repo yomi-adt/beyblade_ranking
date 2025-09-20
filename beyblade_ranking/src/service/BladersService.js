@@ -1221,6 +1221,8 @@ export const Bladers = {
     {
         "id": "268811603",
         "name": "FOXOF2FACES",
+        "signature":"Hover Wyvern 1-60 R",
+        "desc":"This blader is the kind to show up once in a millenia. (No seriously, he barely ever shows up to tournaments.) When he is there, however, you're guaranteed to see some sparks fly as he uses his hover wyvern to send other beyblades out of the stadium.",
         "swissWins": 4,
         "top16": true,
         "winnersWins": 5,
