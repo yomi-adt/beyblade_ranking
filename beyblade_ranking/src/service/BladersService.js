@@ -339,7 +339,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 885,
+        "points": 870,
         "rank": -1,
         "desc": "I am the Bone of my Rod, Steel is my Scorpio and Dragoon is my Blood. I have created over a Thousand Blades, Unaware of beginning, Nor aware of the end. Unlimited Blade Works. 1/3 of StartEnd -SHIRO(Jeff)",
         "signature": "Cobalt Dragoon 4-55 E"
@@ -1244,7 +1244,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 55,
         "rank": -1
     },
     {
