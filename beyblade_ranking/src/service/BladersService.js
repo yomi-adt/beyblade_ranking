@@ -31,6 +31,7 @@ export const Bladers = {
     {
         "id": "262700982",
         "name": "KYOYA",
+        "signature": "Shelter Drake 1-60 LR",
         "swissWins": 13,
         "top16": false,
         "winnersWins": 0,
