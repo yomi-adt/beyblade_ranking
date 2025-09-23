@@ -19,7 +19,7 @@ import { Button } from 'primevue';
       <RouterView />
     </div>
 
-    <p style="font-style: italic">Last updated September 20, 2025</p>
+    <p style="font-style: italic">Last updated September 22, 2025</p>
   </div>
 </template>
 
