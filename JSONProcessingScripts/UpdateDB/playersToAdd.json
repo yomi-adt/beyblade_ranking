@@ -1,33 +1,7 @@
 [
     {
-        "id": "273579856",
-        "name": "ERNEL",
-        "swissWins": 1,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 15,
-        "rank": -1
-    },
-    {
-        "id": "273579875",
-        "name": "JAAAPIII",
-        "swissWins": 4,
-        "top16": true,
-        "winnersWins": 1,
-        "losersWins": 1,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 55,
-        "rank": -1
-    },
-    {
-        "id": "273579860",
-        "name": "WILLIAM",
+        "id": "274733103",
+        "name": "SURGE",
         "swissWins": 2,
         "top16": false,
         "winnersWins": 0,
@@ -39,21 +13,34 @@
         "rank": -1
     },
     {
-        "id": "273579861",
-        "name": "Chris A",
-        "swissWins": 3,
+        "id": "274733104",
+        "name": "BRADDY",
+        "swissWins": 0,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 25,
+        "points": 10,
         "rank": -1
     },
     {
-        "id": "273579882",
-        "name": "ETHAN A",
+        "id": "274733105",
+        "name": "XAVIER",
+        "swissWins": 0,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 10,
+        "rank": -1
+    },
+    {
+        "id": "274733115",
+        "name": "ASHER",
         "swissWins": 1,
         "top16": false,
         "winnersWins": 0,
@@ -65,8 +52,8 @@
         "rank": -1
     },
     {
-        "id": "273579864",
-        "name": "MIKECAR",
+        "id": "274733116",
+        "name": "RIC",
         "swissWins": 3,
         "top16": false,
         "winnersWins": 0,
@@ -78,8 +65,8 @@
         "rank": -1
     },
     {
-        "id": "273579866",
-        "name": "MATT.DADDY",
+        "id": "274733095",
+        "name": "FRANZ",
         "swissWins": 1,
         "top16": false,
         "winnersWins": 0,
@@ -91,8 +78,34 @@
         "rank": -1
     },
     {
-        "id": "273579886",
-        "name": "ADIAWESUM",
+        "id": "274733096",
+        "name": "KIRT",
+        "swissWins": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
+        "rank": -1
+    },
+    {
+        "id": "274733121",
+        "name": "BEAN",
+        "swissWins": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 25,
+        "rank": -1
+    },
+    {
+        "id": "274733097",
+        "name": "RAINIER",
         "swissWins": 1,
         "top16": false,
         "winnersWins": 0,
