@@ -11,98 +11,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 155,
-        "rank": -1
-    },
-    {
-        "id": "277045572",
-        "name": "PSYBLADE",
-        "swissWins": 3,
-        "top16": true,
-        "winnersWins": 1,
-        "losersWins": 2,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 55,
-        "rank": -1
-    },
-    {
-        "id": "277045576",
-        "name": "LEGEND",
-        "swissWins": 3,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 25,
-        "rank": -1
-    },
-    {
-        "id": "277045590",
-        "name": "AUSTIN",
-        "swissWins": 2,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 20,
-        "rank": -1
-    },
-    {
-        "id": "277045594",
-        "name": "CEEJAYWORX",
-        "swissWins": 2,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 20,
-        "rank": -1
-    },
-    {
-        "id": "277045589",
-        "name": "BRAN",
-        "swissWins": 3,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 25,
-        "rank": -1
-    },
-    {
-        "id": "277045575",
-        "name": "JOHN ACE",
-        "swissWins": 3,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 25,
-        "rank": -1
-    },
-    {
-        "id": "277045561",
-        "name": "ROYALCOOKIEX",
-        "swissWins": 2,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 20,
+        "points": 270,
         "rank": -1
     },
     {
@@ -141,7 +50,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 30,
         "rank": -1
     },
     {
@@ -154,7 +63,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 50,
         "rank": -1
     },
     {
@@ -167,7 +76,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 25,
+        "points": 40,
         "rank": -1
     },
     {
@@ -324,7 +233,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 425,
+        "points": 440,
         "rank": -1
     },
     {
@@ -351,7 +260,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 245,
+        "points": 260,
         "rank": -1
     },
     {
@@ -403,7 +312,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 200,
+        "points": 335,
         "rank": -1
     },
     {
@@ -416,7 +325,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 55,
         "rank": -1
     },
     {
@@ -444,7 +353,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 760,
+        "points": 785,
         "rank": -1
     },
     {
@@ -457,7 +366,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 475,
+        "points": 500,
         "rank": -1,
         "desc": "An enthusiast since plastic gen, Caster is no stranger to blading. The allure of Beyblade has brought this fighter back looking for a challenge. Armed with his trusty Samurai Saber 9-60 LR, he seeks the glory of X. He travels the land believing that the answer lies in the heart of battle.",
         "signature": "Samurai Saber 9-60 LR"
@@ -473,7 +382,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": true,
-        "points": 1155,
+        "points": 1175,
         "rank": -1,
         "desc": "Heyo My name is Arvine ~ Beyblading is a completely different hobby for me and its been so fun! This is my first time on the podium. I got all my unrestricted blades from my closest people in the community! S/O JM - Trish - Trystan. A lot of people say Impact Drake is my ace bey, but its not aha. Its such a fun blade though! Impact Drake 360Point \u201cBasta Blader, Sweet Lover\u201d.",
         "signature": "Impact Drake 3-60 P"
@@ -527,7 +436,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 150,
+        "points": 170,
         "rank": -1
     },
     {
@@ -541,7 +450,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 305,
+        "points": 330,
         "rank": -1
     },
     {
@@ -554,7 +463,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 895,
+        "points": 915,
         "blader_name": "3SH",
         "desc": "I'm not Superman, that's for sure. And I'm not Batman, or Spiderman, or Aquaman, or a merman, or a wolfman. I'm not a brahman, or common, or ramen. I'm not a caiman either, so you really don't need to worry about anything. My name is Trish.I guess you could say...I am no man.",
         "signature": "Tyranno Beat 1-60 K",
@@ -570,7 +479,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 710,
+        "points": 770,
         "rank": -1,
         "desc": "BladerWrekcy, long called the \u201cPractice King,\u201d defied all odds to take 2nd place. With Aero Pegasus\u2019 speed, Scorpio Spear\u2019s power, and Wizard Rod\u2019s precision, he turned heads and silenced doubts. No longer just a sparring legend\u2014BladerWrekcy has entered the real fight."
     },
@@ -585,7 +494,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 360,
+        "points": 405,
         "rank": -1
     },
     {
@@ -598,7 +507,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 65,
+        "points": 85,
         "rank": -1
     },
     {
@@ -652,7 +561,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 1065,
+        "points": 1110,
         "rank": -1,
         "desc": "I am the Bone of my Rod, Steel is my Scorpio and Dragoon is my Blood. I have created over a Thousand Blades, Unaware of beginning, Nor aware of the end. Unlimited Blade Works. 1/3 of StartEnd -SHIRO(Jeff)",
         "signature": "Cobalt Dragoon 4-55 E"
@@ -668,7 +577,7 @@ export const Bladers = {
         "first": true,
         "second": false,
         "third": false,
-        "points": 425,
+        "points": 455,
         "rank": -1,
         "desc": "Patrick, a fierce Blader, unleashed his Golem Rock attack-type Beyblade with unmatched power, crushing opponents in every battle. Built for speed and impact, it was a true testament to his skill and strategy. With every spin, Patrick aimed for greatness, always striving to be the ultimate Blader."
     },
@@ -708,7 +617,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 265,
+        "points": 285,
         "rank": -1
     },
     {
@@ -762,7 +671,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 215,
+        "points": 240,
         "rank": -1
     },
     {
@@ -792,7 +701,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 415,
+        "points": 430,
         "rank": -1
     },
     {
@@ -818,7 +727,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 505,
+        "points": 520,
         "rank": -1,
         "signature": "Shark Scale 9-60 LO"
     },
@@ -832,7 +741,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 380,
+        "points": 400,
         "rank": -1,
         "desc": "I was once like any man\u2014living day to day, clocking in, clocking out, munching sinigang without a second thought. But then, something deep inside me snapped. I realized I wasn\u2019t just some guy... I had that fire in me. No\u2014not fire. I had that dog in me. No... that dragon. No...THAT BLADING GOD OF WAR.",
         "signature": "Cobalt Dragoon 5-60 R"
@@ -848,7 +757,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 455,
+        "points": 560,
         "rank": -1
     },
     {
@@ -862,7 +771,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 275,
+        "points": 295,
         "rank": -1
     },
     {
@@ -875,7 +784,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 240,
+        "points": 260,
         "rank": -1
     },
     {
@@ -901,7 +810,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 85,
+        "points": 105,
         "rank": -1
     },
     {
@@ -927,7 +836,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 70,
+        "points": 85,
         "rank": -1
     },
     {
@@ -966,7 +875,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 375,
+        "points": 395,
         "rank": -1
     },
     {
@@ -1005,7 +914,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 425,
+        "points": 475,
         "rank": -1
     },
     {
@@ -1018,24 +927,115 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 910,
+        "points": 955,
         "rank": -1
     },
     {
         "id": "259854980",
         "name": "MIG",
         "blader_name": "MIGZ",
-        "swissWins": 16,
+        "swissWins": 18,
         "top16": true,
         "winnersWins": 0,
         "losersWins": 3,
         "first": false,
         "second": false,
         "third": false,
-        "points": 335,
+        "points": 355,
         "rank": -1,
         "signature": "Phoenix Wing 1-60 LR",
         "desc": "Born through the flames of perseverance and determination. Flying on the wings of freedom, soaring to new heights. With a balance of technical skill and raw power, Mig will fight tooth and nail to reach the top"
+    },
+    {
+        "id": "277045572",
+        "name": "PSYBLADE",
+        "swissWins": 3,
+        "top16": true,
+        "winnersWins": 1,
+        "losersWins": 2,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 110,
+        "rank": -1
+    },
+    {
+        "id": "277045576",
+        "name": "LEGEND",
+        "swissWins": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 50,
+        "rank": -1
+    },
+    {
+        "id": "277045590",
+        "name": "AUSTIN",
+        "swissWins": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 40,
+        "rank": -1
+    },
+    {
+        "id": "277045594",
+        "name": "CEEJAYWORX",
+        "swissWins": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 40,
+        "rank": -1
+    },
+    {
+        "id": "277045589",
+        "name": "BRAN",
+        "swissWins": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 50,
+        "rank": -1
+    },
+    {
+        "id": "277045575",
+        "name": "JOHN ACE",
+        "swissWins": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 50,
+        "rank": -1
+    },
+    {
+        "id": "277045561",
+        "name": "ROYALCOOKIEX",
+        "swissWins": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 40,
+        "rank": -1
     },
     {
         "id": "259854979",
@@ -1047,7 +1047,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 195,
+        "points": 220,
         "rank": -1
     },
     {
@@ -1061,7 +1061,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 285,
+        "points": 310,
         "rank": -1
     },
     {
@@ -1100,7 +1100,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 355,
+        "points": 435,
         "rank": -1
     },
     {
@@ -1167,7 +1167,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 395,
+        "points": 415,
         "rank": -1
     },
     {
@@ -1271,7 +1271,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": true,
-        "points": 400,
+        "points": 425,
         "desc": "I am the wind beneath my blade. Each launch brings me closer to perfection, and my Bey never misses its mark. You cannot escape its wrath once it spins, the battle is over. Victory is in every clash, every cut. I am the master of my blade. and this arena is mine.",
         "signature": "Cobalt Dragoon 1-60 E",
         "rank": -1
@@ -1409,7 +1409,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 345,
+        "points": 365,
         "rank": -1
     },
     {
@@ -1531,7 +1531,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 405,
+        "points": 430,
         "rank": -1
     },
     {
@@ -1596,7 +1596,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 270,
+        "points": 320,
         "rank": -1
     },
     {
@@ -1648,7 +1648,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 210,
+        "points": 235,
         "rank": -1
     },
     {
@@ -1713,7 +1713,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 35,
+        "points": 50,
         "rank": -1
     },
     {
@@ -1792,7 +1792,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 135,
+        "points": 145,
         "rank": -1
     },
     {
@@ -1900,7 +1900,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 125,
+        "points": 185,
         "rank": -1
     },
     {

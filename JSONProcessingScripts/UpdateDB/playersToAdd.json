@@ -9,7 +9,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 55,
+        "points": 110,
         "rank": -1
     },
     {
@@ -22,7 +22,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 25,
+        "points": 50,
         "rank": -1
     },
     {
@@ -35,7 +35,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 40,
         "rank": -1
     },
     {
@@ -48,20 +48,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
-        "rank": -1
-    },
-    {
-        "id": "277045562",
-        "name": "MIGS",
-        "swissWins": 2,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 20,
+        "points": 40,
         "rank": -1
     },
     {
@@ -74,7 +61,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 25,
+        "points": 50,
         "rank": -1
     },
     {
@@ -87,7 +74,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 25,
+        "points": 50,
         "rank": -1
     },
     {
@@ -100,7 +87,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 40,
         "rank": -1
     }
 ]
