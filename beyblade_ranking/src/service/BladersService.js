@@ -67,19 +67,6 @@ export const Bladers = {
         "rank": -1
     },
     {
-        "id": "277045562",
-        "name": "MIGS",
-        "swissWins": 2,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 20,
-        "rank": -1
-    },
-    {
         "id": "277045589",
         "name": "BRAN",
         "swissWins": 3,
@@ -1045,7 +1032,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 315,
+        "points": 335,
         "rank": -1,
         "signature": "Phoenix Wing 1-60 LR",
         "desc": "Born through the flames of perseverance and determination. Flying on the wings of freedom, soaring to new heights. With a balance of technical skill and raw power, Mig will fight tooth and nail to reach the top"
