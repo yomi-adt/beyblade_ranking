@@ -729,7 +729,7 @@ export const Bladers = {
         "third": false,
         "points": 490,
         "rank": -1,
-        "signature": "Pheonix Wing 3-60 L"
+        "signature": "Shark Scale 9-60 LO"
     },
     {
         "id": "259854997",

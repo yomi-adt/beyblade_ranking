@@ -19,6 +19,7 @@ def getPlayerById(id):
 playerData = data['included']
 for item in playerData:
     # Add player to players array
+    # Note: 10 points for entry
     players.append(
         {
             'id': item['id'],
