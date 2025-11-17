@@ -102,7 +102,7 @@ for player in players:
     if(data['top16']):
         data['points'] = data['points'] + 10
     # Swiss king
-    if(int(data['swissWins'])==5):
+    if(int(data['swissWins'])==7):
         data['points'] = data['points'] + 20
     # First place
     if(data['first']):
