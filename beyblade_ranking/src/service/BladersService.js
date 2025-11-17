@@ -745,6 +745,8 @@ export const Bladers = {
         "second": false,
         "third": false,
         "points": 560,
+        "desc":"Idk how i got here",
+        "signature":"Phoenix Wing 3-60 O/LO",
         "rank": -1
     },
     {
