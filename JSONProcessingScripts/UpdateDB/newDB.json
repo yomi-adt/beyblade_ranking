@@ -1026,16 +1026,30 @@
         "rank": -1
     },
     {
-        "id": "277045576",
-        "name": "LEGEND",
-        "swissWins": 3,
+        "id": "282923561",
+        "name": "GAVIN",
+        "swissWins": 2,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 60,
+        "rank": -1
+    },
+    {
+        "id": "277045576",
+        "name": "LEGEND",
+        "blader_name": "EX",
+        "swissWins": 7,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 90,
         "rank": -1
     },
     {
@@ -1265,6 +1279,19 @@
     {
         "id": "282923560",
         "name": "GEM",
+        "swissWins": 6,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 100,
+        "rank": -1
+    },
+    {
+        "id": "282923599",
+        "name": "SEL",
         "swissWins": 6,
         "top16": false,
         "winnersWins": 0,

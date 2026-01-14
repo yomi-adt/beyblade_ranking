@@ -369,7 +369,7 @@
         "third": true,
         "points": 0,
         "rank": -1,
-        "desc": "Heyo My name is Arvine ~ Beyblading is a completely different hobby for me and its been so fun! This is my first time on the podium. I got all my unrestricted blades from my closest people in the community! S/O JM - Trish - Trystan. A lot of people say Impact Drake is my ace bey, but its not aha. Its such a fun blade though! Impact Drake 360Point \u201cBasta Blader, Sweet Lover\u201d.",
+        "desc": "I’m \"RvN\" Arvine — officially your LGHS Season 1 Rank #1 Blader. This rank is a proof that consistency matters more than luck, every top cut was a lesson. I didn’t reach rank 1 in a single battle, every top cut, every close call, every moment I thought I’d fail - those were the steps that built this rank. #1 doesn’t mean I’m above anyone. It just means I’ve been blessed against stronger bladers who pushed me to level up every game. Reading opponents decks, snipe launches were my best skill on this grind. No shortcuts. Just grind. LGHS-Season 1, Ranked 1. (May—November 2025) RvN",
         "signature": "Impact Drake 3-60 P"
     },
     {
@@ -1026,8 +1026,22 @@
         "rank": -1
     },
     {
+        "id": "282923561",
+        "name": "GAVIN",
+        "swissWins": 1,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 30,
+        "rank": -1
+    },
+    {
         "id": "277045576",
         "name": "LEGEND",
+        "blader_name": "EX",
         "swissWins": 3,
         "top16": false,
         "winnersWins": 0,
@@ -1266,6 +1280,19 @@
     {
         "id": "282923560",
         "name": "GEM",
+        "swissWins": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 50,
+        "rank": -1
+    },
+    {
+        "id": "282923599",
+        "name": "SEL",
         "swissWins": 3,
         "top16": false,
         "winnersWins": 0,
