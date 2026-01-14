@@ -4,9 +4,9 @@ import { Button } from 'primevue';
 </script>
 
 <template>
-  <h3 class="fadeIn">LGHS x Yomi Presents...</h3>
-  <h1 class="fadeInDelay1Sec">The Peg's Best Bladers (Final name pending)</h1>
-  <h3 class="fadeInDelay1Sec">Winnipeg's Competitive Beyblade X Rankings</h3>
+  <h3>LGHS x Yomi Presents...</h3>
+  <h1>Winnipeg's Competitive Beyblade X Rankings</h1>
+  <h3>Let it Rip!</h3>
   <div class="fadeInDelay2Sec">
     <div class="scrollDown bounce">
       <i class="pi pi-angle-down"></i>
