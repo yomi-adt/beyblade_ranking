@@ -154,7 +154,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 60,
+        "points": 30,
         "rank": -1
     },
     {
@@ -220,7 +220,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -247,7 +247,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 15,
         "rank": -1
     },
     {
@@ -260,7 +260,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 110,
+        "points": 55,
         "rank": -1
     },
     {
@@ -340,7 +340,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 60,
+        "points": 30,
         "rank": -1
     },
     {
@@ -353,7 +353,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1,
         "desc": "An enthusiast since plastic gen, Caster is no stranger to blading. The allure of Beyblade has brought this fighter back looking for a challenge. Armed with his trusty Samurai Saber 9-60 LR, he seeks the glory of X. He travels the land believing that the answer lies in the heart of battle.",
         "signature": "Samurai Saber 9-60 LR"
@@ -369,7 +369,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": true,
-        "points": 50,
+        "points": 25,
         "rank": -1,
         "desc": "I\u2019m \"RvN\" Arvine \u2014 officially your LGHS Season 1 Rank #1 Blader. This rank is a proof that consistency matters more than luck, every top cut was a lesson. I didn\u2019t reach rank 1 in a single battle, every top cut, every close call, every moment I thought I\u2019d fail - those were the steps that built this rank. #1 doesn\u2019t mean I\u2019m above anyone. It just means I\u2019ve been blessed against stronger bladers who pushed me to level up every game. Reading opponents decks, snipe launches were my best skill on this grind. No shortcuts. Just grind. LGHS-Season 1, Ranked 1. (May\u2014November 2025) RvN",
         "signature": "Impact Drake 3-60 P"
@@ -437,7 +437,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -450,7 +450,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "blader_name": "3SH",
         "desc": "I'm not Superman, that's for sure. And I'm not Batman, or Spiderman, or Aquaman, or a merman, or a wolfman. I'm not a brahman, or common, or ramen. I'm not a caiman either, so you really don't need to worry about anything. My name is Trish.I guess you could say...I am no man.",
         "signature": "Tyranno Beat 1-60 K",
@@ -466,9 +466,9 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 290,
+        "points": 145,
         "rank": -1,
-        "desc": "BladerWrekcy, long called the \u201cPractice King,\u201d defied all odds to take 2nd place. With Aero Pegasus\u2019 speed, Scorpio Spear\u2019s power, and Wizard Rod\u2019s precision, he turned heads and silenced doubts. No longer just a sparring legend\u2014BladerWrekcy has entered the real fight."
+        "desc": "I AM THE ONE WHO KNOCKS"
     },
     {
         "id": "259854977",
@@ -481,7 +481,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 15,
         "rank": -1
     },
     {
@@ -548,7 +548,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 90,
+        "points": 45,
         "rank": -1,
         "desc": "I am the Bone of my Rod, Steel is my Scorpio and Dragoon is my Blood. I have created over a Thousand Blades, Unaware of beginning, Nor aware of the end. Unlimited Blade Works. 1/3 of StartEnd -SHIRO(Jeff)",
         "signature": "Cobalt Dragoon 4-55 E"
@@ -564,7 +564,7 @@ export const Bladers = {
         "first": true,
         "second": false,
         "third": false,
-        "points": 130,
+        "points": 65,
         "rank": -1,
         "desc": "Patrick, a fierce Blader, unleashed his Golem Rock attack-type Beyblade with unmatched power, crushing opponents in every battle. Built for speed and impact, it was a true testament to his skill and strategy. With every spin, Patrick aimed for greatness, always striving to be the ultimate Blader."
     },
@@ -592,7 +592,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -605,7 +605,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -658,7 +658,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -671,7 +671,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 90,
+        "points": 45,
         "rank": -1
     },
     {
@@ -684,7 +684,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -697,7 +697,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -710,7 +710,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 60,
+        "points": 30,
         "rank": -1
     },
     {
@@ -723,7 +723,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -737,7 +737,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 190,
+        "points": 95,
         "rank": -1
     },
     {
@@ -767,7 +767,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -793,7 +793,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 10,
         "rank": -1,
         "signature": "Shark Scale 9-60 LO"
     },
@@ -807,7 +807,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1,
         "desc": "I was once like any man\u2014living day to day, clocking in, clocking out, munching sinigang without a second thought. But then, something deep inside me snapped. I realized I wasn\u2019t just some guy... I had that fire in me. No\u2014not fire. I had that dog in me. No... that dragon. No...THAT BLADING GOD OF WAR.",
         "signature": "Cobalt Dragoon 5-60 R"
@@ -891,7 +891,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -956,7 +956,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -969,7 +969,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 130,
+        "points": 65,
         "rank": -1
     },
     {
@@ -995,7 +995,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -1037,7 +1037,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 15,
         "rank": -1
     },
     {
@@ -1051,7 +1051,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 90,
+        "points": 45,
         "rank": -1
     },
     {
@@ -1090,7 +1090,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 120,
+        "points": 60,
         "rank": -1
     },
     {
@@ -1103,7 +1103,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -1129,7 +1129,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -1143,7 +1143,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 60,
+        "points": 30,
         "rank": -1
     },
     {
@@ -1262,7 +1262,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -1275,7 +1275,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -1288,7 +1288,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -1301,7 +1301,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -1314,7 +1314,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -1328,7 +1328,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -1406,7 +1406,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 60,
+        "points": 30,
         "rank": -1
     },
     {
@@ -1419,7 +1419,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": true,
-        "points": 30,
+        "points": 15,
         "desc": "I am the wind beneath my blade. Each launch brings me closer to perfection, and my Bey never misses its mark. You cannot escape its wrath once it spins, the battle is over. Victory is in every clash, every cut. I am the master of my blade. and this arena is mine.",
         "signature": "Cobalt Dragoon 1-60 E",
         "rank": -1
@@ -1488,7 +1488,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": true,
-        "points": 210,
+        "points": 105,
         "rank": -1
     },
     {
@@ -1528,7 +1528,7 @@ export const Bladers = {
         "first": true,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1,
         "signature": "Hells Hammer 7-60 LF",
         "desc": "CJ (\u201cHellsSuboh\u201d) made his post-exam return this season, and just like his previous win, his loyal 3 partner Beys never fail to Hammer out the competition! Beware of his secret Stance, put him in a tough spot and he may need to Rise from the Ashes to drag you into the depths of Hell!"
@@ -1679,7 +1679,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 130,
+        "points": 65,
         "rank": -1
     },
     {
@@ -1796,7 +1796,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 90,
+        "points": 45,
         "rank": -1
     },
     {
@@ -1861,7 +1861,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -1940,7 +1940,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 70,
+        "points": 35,
         "rank": -1
     },
     {
@@ -1980,7 +1980,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 10,
         "rank": -1,
         "signature": "Aero Pegasus 1-60 K",
         "desc": "Feel pain. Accept pain. And know pain. I will never forget the pain that my Attack blades  suffered. And now... these Bladers shall know pain."
@@ -2009,7 +2009,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 15,
         "rank": -1
     },
     {
@@ -2049,7 +2049,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -2101,7 +2101,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     }
 ]
