@@ -9,7 +9,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 130,
+        "points": 65,
         "rank": -1
     },
     {
@@ -22,7 +22,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -35,7 +35,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 15,
         "rank": -1
     },
     {
@@ -48,7 +48,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 15,
         "rank": -1
     },
     {
@@ -61,7 +61,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 90,
+        "points": 45,
         "rank": -1
     },
     {
@@ -74,7 +74,7 @@
         "first": false,
         "second": true,
         "third": false,
-        "points": 210,
+        "points": 105,
         "rank": -1
     },
     {
@@ -87,7 +87,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -100,7 +100,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 120,
+        "points": 60,
         "rank": -1
     },
     {
@@ -113,7 +113,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -126,7 +126,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -139,7 +139,7 @@
         "first": true,
         "second": false,
         "third": false,
-        "points": 290,
+        "points": 145,
         "rank": -1
     },
     {
@@ -152,7 +152,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 10,
         "rank": -1
     },
     {
@@ -165,7 +165,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -178,7 +178,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -191,7 +191,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -204,7 +204,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 90,
+        "points": 45,
         "rank": -1
     },
     {
@@ -217,7 +217,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -230,7 +230,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -243,7 +243,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 130,
+        "points": 65,
         "rank": -1
     },
     {
@@ -256,7 +256,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 15,
         "rank": -1
     },
     {
@@ -269,7 +269,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 60,
+        "points": 30,
         "rank": -1
     },
     {
@@ -282,7 +282,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -295,7 +295,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -308,7 +308,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -321,20 +321,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 15,
         "rank": -1
     },
     {
         "id": "282923574",
         "name": "RIC",
         "swissWins": 4,
-        "top16": false,
+        "top16": true,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 60,
+        "points": 40,
         "rank": -1
     },
     {
@@ -347,7 +347,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 10,
         "rank": -1
     },
     {
@@ -360,7 +360,7 @@
         "first": false,
         "second": false,
         "third": true,
-        "points": 190,
+        "points": 95,
         "rank": -1
     },
     {
@@ -373,7 +373,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 90,
+        "points": 45,
         "rank": -1
     },
     {
@@ -386,7 +386,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -399,7 +399,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -412,7 +412,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 60,
+        "points": 30,
         "rank": -1
     },
     {
@@ -425,7 +425,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -438,7 +438,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -451,7 +451,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 110,
+        "points": 55,
         "rank": -1
     },
     {
@@ -464,7 +464,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -477,7 +477,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -490,7 +490,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -503,7 +503,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -516,20 +516,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
         "id": "282923601",
         "name": "REI",
         "swissWins": 4,
-        "top16": false,
+        "top16": true,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 60,
+        "points": 40,
         "rank": -1
     },
     {
@@ -542,7 +542,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 130,
+        "points": 65,
         "rank": -1
     },
     {
@@ -555,7 +555,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
@@ -568,7 +568,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 90,
+        "points": 45,
         "rank": -1
     },
     {
@@ -581,7 +581,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 15,
         "rank": -1
     },
     {
@@ -594,7 +594,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -607,7 +607,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -620,7 +620,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 25,
         "rank": -1
     },
     {
@@ -633,20 +633,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
         "id": "282923587",
         "name": "OMARGAWSH",
         "swissWins": 5,
-        "top16": false,
+        "top16": true,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 70,
+        "points": 45,
         "rank": -1
     },
     {
@@ -659,20 +659,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     },
     {
         "id": "282923567",
-        "name": "LEX",
+        "name": "LITEWORK",
         "swissWins": 4,
-        "top16": false,
+        "top16": true,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 60,
+        "points": 40,
         "rank": -1
     },
     {
@@ -685,7 +685,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 20,
         "rank": -1
     }
 ]

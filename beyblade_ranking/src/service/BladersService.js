@@ -154,7 +154,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 40,
         "rank": -1
     },
     {
@@ -340,7 +340,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 40,
         "rank": -1
     },
     {
@@ -468,7 +468,7 @@ export const Bladers = {
         "third": false,
         "points": 145,
         "rank": -1,
-        "desc": "I AM THE ONE WHO KNOCKS"
+        "desc": "BladerWrekcy, long called the \u201cPractice King,\u201d defied all odds to take 2nd place. With Aero Pegasus\u2019 speed, Scorpio Spear\u2019s power, and Wizard Rod\u2019s precision, he turned heads and silenced doubts. No longer just a sparring legend\u2014BladerWrekcy has entered the real fight."
     },
     {
         "id": "259854977",
@@ -1135,7 +1135,7 @@ export const Bladers = {
     {
         "id": "261054017",
         "name": "LEX",
-        "blader_name": "LITEWERK",
+        "blader_name": "LITEWORK",
         "swissWins": 25,
         "top16": false,
         "winnersWins": 0,
@@ -1143,7 +1143,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 40,
         "rank": -1
     },
     {
@@ -1940,7 +1940,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 35,
+        "points": 45,
         "rank": -1
     },
     {

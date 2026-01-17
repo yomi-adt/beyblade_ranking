@@ -328,13 +328,13 @@
         "id": "282923574",
         "name": "RIC",
         "swissWins": 4,
-        "top16": false,
+        "top16": true,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 40,
         "rank": -1
     },
     {
@@ -523,13 +523,13 @@
         "id": "282923601",
         "name": "REI",
         "swissWins": 4,
-        "top16": false,
+        "top16": true,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 40,
         "rank": -1
     },
     {
@@ -640,13 +640,13 @@
         "id": "282923587",
         "name": "OMARGAWSH",
         "swissWins": 5,
-        "top16": false,
+        "top16": true,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 35,
+        "points": 45,
         "rank": -1
     },
     {
@@ -666,13 +666,13 @@
         "id": "282923567",
         "name": "LITEWORK LEX",
         "swissWins": 4,
-        "top16": false,
+        "top16": true,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 40,
         "rank": -1
     },
     {

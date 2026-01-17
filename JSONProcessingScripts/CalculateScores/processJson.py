@@ -51,6 +51,14 @@ for item in matchesData:
     # Get firstPlacer id, cast to string, find player by that id
     firstPlacer = getPlayerById(str(item['attributes']['winner_id']))
 
+    # Set both winner and loser to make top 16 if not a swiss round
+    if not isSwiss:
+        participant1 = getPlayerById(str(item['attributes']['points_by_participant'][0]['participant_id']))
+        participant2 = getPlayerById(str(item['attributes']['points_by_participant'][1]['participant_id']))
+        participant1['top16'] = True
+        participant2['top16'] = True
+    
+
     if (currRound < prevRound) and (isSwiss):
         isSwiss = False
 

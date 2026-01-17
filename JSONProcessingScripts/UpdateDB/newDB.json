@@ -152,7 +152,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 40,
         "rank": -1
     },
     {
@@ -338,7 +338,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 40,
         "rank": -1
     },
     {
@@ -1133,7 +1133,7 @@
     {
         "id": "261054017",
         "name": "LEX",
-        "blader_name": "LITEWERK",
+        "blader_name": "LITEWORK",
         "swissWins": 25,
         "top16": false,
         "winnersWins": 0,
@@ -1141,7 +1141,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 40,
         "rank": -1
     },
     {
@@ -1938,7 +1938,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 35,
+        "points": 45,
         "rank": -1
     },
     {
