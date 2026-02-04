@@ -303,19 +303,6 @@ export const Bladers = {
         "rank": -1
     },
     {
-        "id": "272458884",
-        "name": "ADI",
-        "swissWins": 4,
-        "top16": false,
-        "winnersWins": 0,
-        "losersWins": 0,
-        "first": false,
-        "second": false,
-        "third": false,
-        "points": 10,
-        "rank": -1
-    },
-    {
         "id": "272458868",
         "name": "CHRIS A",
         "swissWins": 2,
