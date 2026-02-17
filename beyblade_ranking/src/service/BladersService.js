@@ -440,7 +440,7 @@ export const Bladers = {
         "points": 130,
         "blader_name": "3SH",
         "desc": "I'm not Superman, that's for sure. And I'm not Batman, or Spiderman, or Aquaman, or a merman, or a wolfman. I'm not a brahman, or common, or ramen. I'm not a caiman either, so you really don't need to worry about anything. My name is Trish.I guess you could say...I am no man.",
-        "signature": "Tyranno Beat 1-60 K",
+        "signature": "Wizard Rod 1-60 LR",
         "rank": -1
     },
     {
@@ -455,7 +455,7 @@ export const Bladers = {
         "third": false,
         "points": 235,
         "rank": -1,
-        "desc": "BladerWrekcy, long called the \u201cPractice King,\u201d defied all odds to take 2nd place. With Aero Pegasus\u2019 speed, Scorpio Spear\u2019s power, and Wizard Rod\u2019s precision, he turned heads and silenced doubts. No longer just a sparring legend\u2014BladerWrekcy has entered the real fight."
+        "desc": "I AM THE ONE WHO KNOCKS"
     },
     {
         "id": "259854977",
