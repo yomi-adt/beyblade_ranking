@@ -951,7 +951,7 @@ export const Bladers = {
         "third": false,
         "points": 170,
         "rank": -1,
-        "signature": "Shark Scale 9-60 LO"
+        "signature": "WizardArcHeavy 1-60 R"
     },
     {
         "id": "259854997",
