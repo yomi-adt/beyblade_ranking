@@ -25,9 +25,11 @@ for item in playerData:
             'id': item['id'],
             'name': item['attributes']['name'],
             'swissWins': 0,
+            'swissLosses': 0,
             'top16': False,
             'winnersWins': 0,
             'losersWins': 0,
+            'swissChamp': False,
             'first': False,
             'second': False,
             'third': False,
@@ -51,6 +53,10 @@ for item in matchesData:
     # Get firstPlacer id, cast to string, find player by that id
     firstPlacer = getPlayerById(str(item['attributes']['winner_id']))
 
+    # Get the two participants
+    participant1 = getPlayerById(str(item['attributes']['points_by_participant'][0]['participant_id']))
+    participant2 = getPlayerById(str(item['attributes']['points_by_participant'][1]['participant_id']))
+
     # Set both winner and loser to make top 16 if not a swiss round
     if not isSwiss:
         participant1 = getPlayerById(str(item['attributes']['points_by_participant'][0]['participant_id']))
@@ -65,6 +71,12 @@ for item in matchesData:
     if isSwiss:
         swiss.append(item)
         firstPlacer['swissWins'] = firstPlacer['swissWins'] + 1 
+        if(participant1 == firstPlacer):
+            print(firstPlacer['name'] + " Won. Adding swiss loss to " + participant2['name'])
+            participant2['swissLosses'] = participant2['swissLosses'] + 1
+        else:
+            print(firstPlacer['name'] + " Won. Adding swiss loss to " + participant1['name'])
+            participant1['swissLosses'] = participant1['swissLosses'] + 1
     elif currRound < 0: # If negative means secondPlacer bracket
         de.append(item)
         firstPlacer['top16'] = True
@@ -110,7 +122,8 @@ for player in players:
     if(data['top16']):
         data['points'] = data['points'] + 10
     # Swiss king
-    if(int(data['swissWins'])==7):
+    if(int(data['swissLosses'])==0):
+        data['swissChamp'] = True
         data['points'] = data['points'] + 20
     # First place
     if(data['first']):
