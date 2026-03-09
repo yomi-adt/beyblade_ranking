@@ -7,8 +7,8 @@ import { Button } from 'primevue';
   <h3>LGHS x Yomi Presents...</h3>
   <h1>Winnipeg's Competitive Beyblade X Rankings</h1>
   <h3>Let it Rip!</h3>
-  <div class="fadeInDelay2Sec">
-    <div class="scrollDown bounce">
+  <div>
+    <div>
       <i class="pi pi-angle-down"></i>
       Click on a Blader To See More Info!
       <i class="pi pi-angle-down"></i>
@@ -19,7 +19,7 @@ import { Button } from 'primevue';
       <RouterView />
     </div>
 
-    <p style="font-style: italic">Last updated March 3rd, 2026</p>
+    <p style="font-style: italic">Last updated March 9th, 2026</p>
   </div>
 </template>
 
