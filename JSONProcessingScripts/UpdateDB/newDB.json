@@ -13,6 +13,81 @@
         "rank": -1
     },
     {
+        "id": "289792864",
+        "name": "REMI",
+        "swissWins": 2,
+        "swissLosses": 4,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
+        "rank": -1
+    },
+    {
+        "id": "289792865",
+        "name": "NICO",
+        "swissWins": 4,
+        "swissLosses": 2,
+        "top16": true,
+        "winnersWins": 0,
+        "losersWins": 1,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 45,
+        "rank": -1
+    },
+    {
+        "id": "289792883",
+        "name": "JASON",
+        "swissWins": 4,
+        "swissLosses": 2,
+        "top16": true,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 40,
+        "rank": -1
+    },
+    {
+        "id": "289792884",
+        "name": "EMILY",
+        "swissWins": 3,
+        "swissLosses": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 25,
+        "rank": -1
+    },
+    {
+        "id": "289792885",
+        "name": "ERNEST",
+        "swissWins": 2,
+        "swissLosses": 4,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
+        "rank": -1
+    },
+    {
         "id": "275883274",
         "name": "YSHI",
         "swissWins": 1,
@@ -668,14 +743,14 @@
     {
         "id": "259854968",
         "name": "ANDREW",
-        "swissWins": 1,
+        "swissWins": 6,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 45,
         "rank": -1
     },
     {
@@ -1805,7 +1880,7 @@
     {
         "id": "287902950",
         "name": "KINGSTONS GRAMP",
-        "swissWins": 1,
+        "swissWins": 2,
         "swissLosses": 5,
         "top16": false,
         "winnersWins": 0,
@@ -1814,7 +1889,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 15,
+        "points": 30,
         "rank": -1
     },
     {
@@ -1835,7 +1910,7 @@
     {
         "id": "287902949",
         "name": "KINGSTONS DAD",
-        "swissWins": 3,
+        "swissWins": 6,
         "swissLosses": 3,
         "top16": false,
         "winnersWins": 0,
@@ -1844,7 +1919,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 25,
+        "points": 50,
         "rank": -1
     },
     {
