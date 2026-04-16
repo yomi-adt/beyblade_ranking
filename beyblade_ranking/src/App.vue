@@ -15,7 +15,7 @@ import { Button } from 'primevue';
     </div>
 
     <br>
-    <div class="fadeInDelay2Sec" v-animateonscroll="{ enterClass: 'fadeIn', leaveClass: 'fadeOut'}">
+    <div>
       <RouterView />
     </div>
 
