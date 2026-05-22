@@ -12,7 +12,7 @@ import {
   Toolbar,
   ToggleSwitch,
 } from "primevue";
-import { Bladers } from "../service/BladersService";
+import { Bladers } from "../service/ClansService";
 import { onMounted, ref } from "vue";
 import { FilterMatchMode } from "@primevue/core/api";
 
@@ -49,7 +49,7 @@ function popupBlader(selectedBlader) {
 </script>
 
 <template>
-  <h3>Bladers</h3>
+  <h3>Clans</h3>
   <Toolbar>
     <template #start>
       <InputText
