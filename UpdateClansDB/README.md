@@ -6,7 +6,7 @@ Small README describing how to update the flat-file clan DB from the scoring out
 
 ## Files
 
-- `updateClans.py` — merges `input.json` (preferred) or `output.json` into `db_clans.json` and writes review files (`clansToAdd.json`, `clansToAddReadable.json`, `newClansDB.json`).
+- `updateClans.py` — reads clan inputs from `input.json`, updates `db_clans.json`, writes the merged results to `output.json`, and writes review files (`clansToAdd.json`, `clansToAddReadable.json`, `newClansDB.json`).
 - `db_clans.json` — current clan DB (flat JSON array).
 
 ## Typical workflow
@@ -21,7 +21,7 @@ Small README describing how to update the flat-file clan DB from the scoring out
    ```
 
 2. Manually copy the scorer output into this folder before running the updater.
-   - Run `processClans.py` in `JSONProcessingScripts/CalculateScores`; it should write `input.json` and `output.json` in that folder.
+   - Run `processClans.py` in `JSONProcessingScripts/CalculateScores`; it should write `input.json` in that folder.
    - Manually copy `input.json` into this folder before running the updater.
 
    Example (Windows PowerShell):
@@ -39,13 +39,14 @@ Small README describing how to update the flat-file clan DB from the scoring out
 
 ## Outputs produced in this folder
 
+- `output.json` — updated clan scores after merging with the existing DB, excluding new clans to add.
 - `clansToAdd.json` — list of unmatched/new clans (for manual review).
 - `clansToAddReadable.json` — readable list of `[{TAG}] name` strings for quick review.
 - `newClansDB.json` — snapshot of the DB after processing (same format as `db_clans.json`).
 
 ## Notes
 
-- `updateClans.py` looks for `input.json` first, then `output.json`.
+- `updateClans.py` reads `input.json` from this folder and writes merged results to `output.json`.
 - If you prefer the updater to consume files from the scoring folder directly, I can change the scripts to write/read from a shared path instead of copying files.
 
 If you want, I can also merge the current `clansToAdd.json` entries into `db_clans.json` automatically.

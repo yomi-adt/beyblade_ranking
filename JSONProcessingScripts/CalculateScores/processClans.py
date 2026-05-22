@@ -191,19 +191,8 @@ for clan in clans:
 
 clans = list(aggregated_clans.values())
 
-# Write JSON data to files
-with open('output_clans.json', 'w') as file:
-    json.dump(clans, file, indent=4)
-with open('output.json', 'w') as file:
-    json.dump(clans, file, indent=4)
-
-# Also emit an "added" file to mirror the players workflow so the
-# updater can prioritize a reviewed-added feed. By default this is
-# a copy of the scoring output; the DB updater can still detect
-# truly new clans and write `clansToAdd.json` for manual review.
-with open('addedClans.json', 'w') as file:
-    json.dump(clans, file, indent=4)
+# Write the scorer input file for the updater
 with open('input.json', 'w') as file:
     json.dump(clans, file, indent=4)
 
-print('Wrote output_clans.json, output.json, addedClans.json, and input.json with', len(clans), 'clans')
+print('Wrote input.json with', len(clans), 'clans')

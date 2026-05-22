@@ -4,7 +4,7 @@ export const Bladers = {
     {
         "id": "BNC",
         "clan_tag": "BNC",
-        "name": "JUSTICE",
+        "name": "BEY N CHILL",
         "swissWins": 3,
         "swissLosses": 6,
         "topCut": false,
@@ -20,7 +20,7 @@ export const Bladers = {
     {
         "id": "BBCLB",
         "clan_tag": "BBCLB",
-        "name": "BULLET BEY",
+        "name": "BULLET BEY CLUB",
         "swissWins": 4,
         "swissLosses": 6,
         "topCut": false,
@@ -84,7 +84,7 @@ export const Bladers = {
     {
         "id": "UNDRTD",
         "clan_tag": "UNDRTD",
-        "name": "UNDRTD",
+        "name": "UNDERRATED",
         "swissWins": 3,
         "swissLosses": 6,
         "topCut": true,

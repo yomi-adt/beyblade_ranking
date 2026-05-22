@@ -1,11 +1,12 @@
 import json
 import os
 
-# Update clans DB from input.json (preferred) or fallback to output.json
+# Update clans DB from input.json and write updated results to output.json
 # Use script directory as base so outputs always land in UpdateClansDB
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, 'db_clans.json')
-INPUT_PATHS = [os.path.join(BASE_DIR, 'input.json'), os.path.join(BASE_DIR, 'output.json')]
+INPUT_PATH = os.path.join(BASE_DIR, 'input.json')
+OUTPUT_PATH = os.path.join(BASE_DIR, 'output.json')
 CLANS_TO_ADD = os.path.join(BASE_DIR, 'clansToAdd.json')
 CLANS_TO_ADD_READABLE = os.path.join(BASE_DIR, 'clansToAddReadable.json')
 NEW_DB_PATH = os.path.join(BASE_DIR, 'newClansDB.json')
@@ -20,17 +21,16 @@ if os.path.exists(DB_PATH):
 else:
     db = []
 
-# Load input (added clans) from first available path
-input_data = None
-for p in INPUT_PATHS:
-    if os.path.exists(p):
-        with open(p, 'r', encoding='utf-8') as f:
-            input_data = json.load(f)
-        break
+# Load input points per clan from input.json
+input_data = []
+if os.path.exists(INPUT_PATH):
+    with open(INPUT_PATH, 'r', encoding='utf-8') as f:
+        input_data = json.load(f)
+else:
+    print('No input file found. Expected:', INPUT_PATH)
 
-if input_data is None:
-    print('No input file found. Expected one of:', INPUT_PATHS)
-    input_data = []
+if not isinstance(input_data, list):
+    raise ValueError(f'Expected {INPUT_PATH} to contain a JSON array of clan objects')
 
 # Helper: find clan in db by clan_tag (primary key)
 def find_clan_in_db_by_tag(tag):
@@ -81,9 +81,14 @@ with open(CLANS_TO_ADD, 'w', encoding='utf-8') as f:
 with open(CLANS_TO_ADD_READABLE, 'w', encoding='utf-8') as f:
     json.dump(new_clans_readable, f, indent=4)
 
-# Write updated DB to new file in UpdateClansDB
+# Write updated DB to output.json in UpdateClansDB
+with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
+    json.dump(db, f, indent=4)
+
+# Keep an optional snapshot if you still want a second DB file
 with open(NEW_DB_PATH, 'w', encoding='utf-8') as f:
     json.dump(db, f, indent=4)
 
 print('Processed', len(input_data), 'clans —', len(new_clans), 'new clans detected')
-print('All outputs written to', BASE_DIR)
+print('Wrote updated clan scores to', OUTPUT_PATH)
+print('Wrote unmatched clans to', CLANS_TO_ADD, 'and', CLANS_TO_ADD_READABLE)
