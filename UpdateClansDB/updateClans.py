@@ -1,11 +1,11 @@
 import json
 import os
 
-# Update clans DB from addedClans.json (or fallback to output_clans.json)
+# Update clans DB from input.json (preferred) or fallback to output.json
 # Use script directory as base so outputs always land in UpdateClansDB
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, 'db_clans.json')
-INPUT_PATHS = [os.path.join(BASE_DIR, 'addedClans.json'), os.path.join(BASE_DIR, 'output_clans.json')]
+INPUT_PATHS = [os.path.join(BASE_DIR, 'input.json'), os.path.join(BASE_DIR, 'output.json')]
 CLANS_TO_ADD = os.path.join(BASE_DIR, 'clansToAdd.json')
 CLANS_TO_ADD_READABLE = os.path.join(BASE_DIR, 'clansToAddReadable.json')
 NEW_DB_PATH = os.path.join(BASE_DIR, 'newClansDB.json')
@@ -13,7 +13,10 @@ NEW_DB_PATH = os.path.join(BASE_DIR, 'newClansDB.json')
 # Load existing DB if present
 if os.path.exists(DB_PATH):
     with open(DB_PATH, 'r', encoding='utf-8') as f:
-        db = json.load(f)
+        try:
+            db = json.load(f)
+        except json.decoder.JSONDecodeError:
+            db = []
 else:
     db = []
 

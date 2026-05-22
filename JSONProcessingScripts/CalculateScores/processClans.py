@@ -155,8 +155,46 @@ for clan in clans:
     data['points'] += (data['winnersWins'] * 10)
     data['points'] += (data['losersWins'] * 10)
 
-# Write JSON data to a file
+# Combine teams with the same clan tag into one aggregated clan entry
+aggregated_clans = {}
+for clan in clans:
+    tag = clan['clan_tag']
+    if tag not in aggregated_clans:
+        aggregated_clans[tag] = {
+            'id': tag,
+            'clan_tag': tag,
+            'name': clan['name'],
+            'swissWins': 0,
+            'swissLosses': 0,
+            'topCut': False,
+            'winnersWins': 0,
+            'losersWins': 0,
+            'swissChamp': False,
+            'first': False,
+            'second': False,
+            'third': False,
+            'points': 0,
+            'rank': -1,
+        }
+
+    aggregated = aggregated_clans[tag]
+    aggregated['swissWins'] += clan['swissWins']
+    aggregated['swissLosses'] += clan['swissLosses']
+    aggregated['winnersWins'] += clan['winnersWins']
+    aggregated['losersWins'] += clan['losersWins']
+    aggregated['points'] += clan['points']
+    aggregated['topCut'] = aggregated['topCut'] or clan['topCut']
+    aggregated['swissChamp'] = aggregated['swissChamp'] or clan['swissChamp']
+    aggregated['first'] = aggregated['first'] or clan['first']
+    aggregated['second'] = aggregated['second'] or clan['second']
+    aggregated['third'] = aggregated['third'] or clan['third']
+
+clans = list(aggregated_clans.values())
+
+# Write JSON data to files
 with open('output_clans.json', 'w') as file:
+    json.dump(clans, file, indent=4)
+with open('output.json', 'w') as file:
     json.dump(clans, file, indent=4)
 
 # Also emit an "added" file to mirror the players workflow so the
@@ -165,5 +203,7 @@ with open('output_clans.json', 'w') as file:
 # truly new clans and write `clansToAdd.json` for manual review.
 with open('addedClans.json', 'w') as file:
     json.dump(clans, file, indent=4)
+with open('input.json', 'w') as file:
+    json.dump(clans, file, indent=4)
 
-print('Wrote output_clans.json and addedClans.json with', len(clans), 'clans')
+print('Wrote output_clans.json, output.json, addedClans.json, and input.json with', len(clans), 'clans')

@@ -6,7 +6,7 @@ Small README describing how to update the flat-file clan DB from the scoring out
 
 ## Files
 
-- `updateClans.py` — merges `addedClans.json` (preferred) or `output_clans.json` into `db_clans.json` and writes review files (`clansToAdd.json`, `clansToAddReadable.json`, `newClansDB.json`).
+- `updateClans.py` — merges `input.json` (preferred) or `output.json` into `db_clans.json` and writes review files (`clansToAdd.json`, `clansToAddReadable.json`, `newClansDB.json`).
 - `db_clans.json` — current clan DB (flat JSON array).
 
 ## Typical workflow
@@ -21,13 +21,13 @@ Small README describing how to update the flat-file clan DB from the scoring out
    ```
 
 2. Manually copy the scorer output into this folder before running the updater.
-   - Run `processClans.py` in `JSONProcessingScripts/CalculateScores`; it will write `output_clans.json` and `addedClans.json` in that folder.
-   - Manually copy _one_ of those files into this folder (typically `addedClans.json`) before running the updater.
+   - Run `processClans.py` in `JSONProcessingScripts/CalculateScores`; it should write `input.json` and `output.json` in that folder.
+   - Manually copy `input.json` into this folder before running the updater.
 
    Example (Windows PowerShell):
 
    ```powershell
-   copy ..\JSONProcessingScripts\CalculateScores\addedClans.json .\addedClans.json
+   copy ..\JSONProcessingScripts\CalculateScores\input.json .\input.json
    ```
 
 3. Run the updater (runs inside `UpdateClansDB` and writes outputs here):
@@ -45,7 +45,7 @@ Small README describing how to update the flat-file clan DB from the scoring out
 
 ## Notes
 
-- `updateClans.py` looks for `addedClans.json` first, then `output_clans.json`.
+- `updateClans.py` looks for `input.json` first, then `output.json`.
 - If you prefer the updater to consume files from the scoring folder directly, I can change the scripts to write/read from a shared path instead of copying files.
 
 If you want, I can also merge the current `clansToAdd.json` entries into `db_clans.json` automatically.
