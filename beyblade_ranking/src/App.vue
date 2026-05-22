@@ -1,6 +1,6 @@
 <script setup>
-import { RouterView } from 'vue-router';
-import { Button } from 'primevue';
+import { RouterView } from "vue-router";
+import { Button } from "primevue";
 </script>
 
 <template>
@@ -14,29 +14,43 @@ import { Button } from 'primevue';
       <i class="pi pi-angle-down"></i>
     </div>
 
-    <br>
+    <br />
     <div>
       <RouterView />
     </div>
 
-    <p style="font-style: italic">Last updated April 16th, 2026</p>
+    <p style="font-style: italic">Last updated May 21st, 2026</p>
   </div>
 </template>
 
 <style scoped>
 /* The animation code */
 @keyframes bounce {
-  0%   {top:0px;}
-  50% {top:10px;}
-  100%   {top:0px;}
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0px;
+  }
 }
 @keyframes fadeIn {
-  0% {opacity:0}
-  100% {opacity:1}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fadeOut {
-  0% {opacity:1}
-  100% {opacity:0}
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* The element to apply the animation to */
