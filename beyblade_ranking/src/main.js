@@ -4,6 +4,7 @@ import App from './App.vue'
 
 import PrimeVue from 'primevue/config'
 import Aura from '@primeuix/themes/aura'
+import 'primeflex/primeflex.css';
 
 import 'primeicons/primeicons.css'
 import AnimateOnScroll from 'primevue/animateonscroll';

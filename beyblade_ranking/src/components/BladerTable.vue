@@ -35,6 +35,13 @@ const filters = ref({
   name: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
 });
 
+async function copyToClipboard(data) {
+  const challongeName = data.name + " (#" + data.id + ")" 
+  await navigator.clipboard.writeText(challongeName)
+
+  console.log('Copied ' + challongeName + ' to clipboard!')
+}
+
 const organizerMode = ref(false);
 const apiKey = ref("");
 const communityId = ref("wbbx");
@@ -78,6 +85,16 @@ function popupBlader(selectedBlader) {
       :field="col.field"
       :header="col.header"
     ></Column>
+    <Column 
+      header="Add to Challonge"
+    >
+      <template #body="slotProps">
+        <Button
+          icon="pi pi-copy"
+          @click="copyToClipboard(slotProps.data)"
+        />
+      </template>
+    </Column>
   </DataTable>
 
   <Dialog

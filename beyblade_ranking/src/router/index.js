@@ -4,6 +4,8 @@ import {createRouter, createWebHashHistory} from 'vue-router'
 import Home from '../views/Home.vue'
 import Organizer from '../views/Organizer.vue'
 import Organizer3 from '../views/Organizer3.vue'
+import Players from '../views/Players.vue'
+import Clans from '../views/Clans.vue'
 
 // Create and export router
 const router = createRouter({
@@ -13,6 +15,12 @@ const router = createRouter({
       path: '/',
       name: 'Home',
       component: Home,
+    },
+    { path: '/players', component: Players 
+
+    },
+    { path: '/clans', component: Clans 
+
     },
     {
       path: '/organizer', // Todo: Set path to some random UUID string so that it's harder to access
