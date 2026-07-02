@@ -2,15 +2,207 @@
     {
         "id": "274733103",
         "name": "SURGE",
-        "swissWins": 22,
+        "swissWins": 24,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 35,
+        "points": 145,
         "rank": -1
+    },
+    {
+        "id": "294684403",
+        "name": "TDAWG",
+        "swissWins": 3,
+        "swissLosses": 1,
+        "top16": true,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 45,
+        "rank": -1,
+        "isSpecial": false
+    },
+    {
+        "id": "294684391",
+        "name": "KAI SMITH",
+        "swissWins": 1,
+        "swissLosses": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 15,
+        "rank": -1,
+        "isSpecial": false
+    },
+    {
+        "id": "294684399",
+        "name": "SHADE",
+        "swissWins": 1,
+        "swissLosses": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 15,
+        "rank": -1,
+        "isSpecial": false
+    },
+    {
+        "id": "294684398",
+        "name": "KIKIAM",
+        "swissWins": 2,
+        "swissLosses": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
+        "rank": -1,
+        "isSpecial": false
+    },
+    {
+        "id": "294684404",
+        "name": "REDMAN",
+        "swissWins": 2,
+        "swissLosses": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
+        "rank": -1,
+        "isSpecial": false
+    },
+    {
+        "id": "294684380",
+        "name": "KUYA NIISAN",
+        "swissWins": 1,
+        "swissLosses": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 15,
+        "rank": -1,
+        "isSpecial": false
+    },
+    {
+        "id": "294684411",
+        "name": "KYLE",
+        "swissWins": 4,
+        "swissLosses": 0,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 60,
+        "rank": -1,
+        "isSpecial": false
+    },
+    {
+        "id": "294684400",
+        "name": "FRANCIS",
+        "swissWins": 3,
+        "swissLosses": 1,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 35,
+        "rank": -1,
+        "isSpecial": false
+    },
+    {
+        "id": "294684414",
+        "name": "FUTANAKA",
+        "swissWins": 2,
+        "swissLosses": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
+        "rank": -1,
+        "isSpecial": false
+    },
+    {
+        "id": "294684390",
+        "name": "ACE",
+        "swissWins": 0,
+        "swissLosses": 4,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 10,
+        "rank": -1,
+        "isSpecial": false
+    },
+    {
+        "id": "294684410",
+        "name": "MILKED",
+        "swissWins": 3,
+        "swissLosses": 1,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 35,
+        "rank": -1,
+        "isSpecial": false
+    },
+    {
+        "id": "294684383",
+        "name": "DAQUAN",
+        "swissWins": 1,
+        "swissLosses": 2,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 15,
+        "rank": -1,
+        "isSpecial": false
     },
     {
         "id": "289792864",
@@ -24,7 +216,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 20,
         "rank": -1
     },
     {
@@ -39,7 +231,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 45,
         "rank": -1
     },
     {
@@ -54,7 +246,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 15,
+        "points": 55,
         "rank": -1
     },
     {
@@ -69,13 +261,13 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 45,
         "rank": -1
     },
     {
         "id": "289792885",
         "name": "ERNEST",
-        "swissWins": 2,
+        "swissWins": 5,
         "swissLosses": 4,
         "top16": false,
         "winnersWins": 0,
@@ -84,7 +276,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 45,
         "rank": -1
     },
     {
@@ -123,20 +315,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 65,
         "rank": -1
     },
     {
         "id": "286560937",
         "name": "MEGUMI",
-        "swissWins": 3,
+        "swissWins": 5,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 45,
         "rank": -1
     },
     {
@@ -149,7 +341,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 15,
         "rank": -1
     },
     {
@@ -162,7 +354,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 20,
         "rank": -1
     },
     {
@@ -175,7 +367,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 20,
         "rank": -1
     },
     {
@@ -188,7 +380,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 45,
         "rank": -1
     },
     {
@@ -201,7 +393,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 20,
         "rank": -1
     },
     {
@@ -214,20 +406,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 30,
         "rank": -1
     },
     {
         "id": "286560936",
         "name": "GRIMSTAR",
-        "swissWins": 4,
+        "swissWins": 7,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 55,
         "rank": -1
     },
     {
@@ -240,20 +432,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 20,
         "rank": -1
     },
     {
         "id": "286560939",
         "name": "JANKS",
-        "swissWins": 3,
+        "swissWins": 6,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 50,
         "rank": -1
     },
     {
@@ -266,7 +458,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 25,
         "rank": -1
     },
     {
@@ -279,7 +471,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 20,
         "rank": -1
     },
     {
@@ -389,14 +581,14 @@
     {
         "id": "274733116",
         "name": "RIC",
-        "swissWins": 19,
+        "swissWins": 21,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 190,
         "rank": -1
     },
     {
@@ -409,7 +601,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 20,
         "rank": -1
     },
     {
@@ -435,7 +627,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 10,
         "rank": -1
     },
     {
@@ -455,14 +647,14 @@
         "id": "259854970",
         "name": "JARED",
         "blader_name": "BONESHELLY",
-        "swissWins": 45,
+        "swissWins": 47,
         "top16": true,
         "winnersWins": 1,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 160,
         "rank": -1
     },
     {
@@ -481,16 +673,15 @@
     {
         "id": "262700982",
         "name": "KYOYA",
-        "blader_name": "KUSO",
         "signature": "Shelter Drake 1-60 LR",
-        "swissWins": 33,
+        "swissWins": 35,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 80,
+        "points": 235,
         "rank": -1
     },
     {
@@ -503,7 +694,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 180,
         "rank": -1
     },
     {
@@ -542,7 +733,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 105,
         "rank": -1
     },
     {
@@ -563,14 +754,14 @@
         "name": "REI",
         "blader_name": "SSREI",
         "signature": "Shark Scale 1-70 LR",
-        "swissWins": 50,
+        "swissWins": 54,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 30,
+        "points": 230,
         "rank": -1
     },
     {
@@ -583,7 +774,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 220,
         "rank": -1,
         "desc": "An enthusiast since plastic gen, Caster is no stranger to blading. The allure of Beyblade has brought this fighter back looking for a challenge. Armed with his trusty Samurai Saber 9-60 LR, he seeks the glory of X. He travels the land believing that the answer lies in the heart of battle.",
         "signature": "Samurai Saber 9-60 LR"
@@ -592,14 +783,14 @@
         "id": "259854992",
         "name": "ARVINE",
         "blader_name": "RVN",
-        "swissWins": 65,
+        "swissWins": 70,
         "top16": true,
         "winnersWins": 2,
         "losersWins": 2,
         "first": false,
         "second": false,
         "third": true,
-        "points": 15,
+        "points": 260,
         "rank": -1,
         "desc": "I\u2019m \"RvN\" Arvine \u2014 officially your LGHS Season 1 Rank #1 Blader. This rank is a proof that consistency matters more than luck, every top cut was a lesson. I didn\u2019t reach rank 1 in a single battle, every top cut, every close call, every moment I thought I\u2019d fail - those were the steps that built this rank. #1 doesn\u2019t mean I\u2019m above anyone. It just means I\u2019ve been blessed against stronger bladers who pushed me to level up every game. Reading opponents decks, snipe launches were my best skill on this grind. No shortcuts. Just grind. LGHS-Season 1, Ranked 1. (May\u2014November 2025) RvN",
         "signature": "Impact Drake 3-60 P"
@@ -640,34 +831,34 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 65,
         "rank": -1
     },
     {
         "id": "259855002",
         "name": "LANS",
-        "swissWins": 31,
+        "swissWins": 33,
         "top16": true,
         "winnersWins": 0,
         "losersWins": 2,
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 215,
         "rank": -1
     },
     {
         "id": "259854981",
         "name": "JAREN JAMES",
         "blader_name": "JJC",
-        "swissWins": 33,
+        "swissWins": 36,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 3,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 115,
         "rank": -1
     },
     {
@@ -680,7 +871,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 95,
+        "points": 280,
         "blader_name": "3SH",
         "desc": "I'm not Superman, that's for sure. And I'm not Batman, or Spiderman, or Aquaman, or a merman, or a wolfman. I'm not a brahman, or common, or ramen. I'm not a caiman either, so you really don't need to worry about anything. My name is Trish.I guess you could say...I am no man.",
         "signature": "Wizard Rod 1-60 LR",
@@ -689,14 +880,14 @@
     {
         "id": "259854969",
         "name": "WREKCY",
-        "swissWins": 58,
+        "swissWins": 62,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 35,
+        "points": 365,
         "rank": -1,
         "desc": "I AM THE ONE WHO KNOCKS"
     },
@@ -704,27 +895,27 @@
         "id": "259854977",
         "name": "ALLEN",
         "blader_name": "BBROAD",
-        "swissWins": 31,
+        "swissWins": 35,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 100,
         "rank": -1
     },
     {
         "id": "259854976",
         "name": "JINZOH",
-        "swissWins": 18,
+        "swissWins": 21,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 130,
         "rank": -1
     },
     {
@@ -745,14 +936,14 @@
         "id": "259854968",
         "name": "ANDREW",
         "blader_name": "ANDREW_G3",
-        "swissWins": 7,
+        "swissWins": 10,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 15,
+        "points": 85,
         "rank": -1
     },
     {
@@ -772,14 +963,14 @@
         "id": "259854978",
         "name": "JEFF",
         "blader_name": "SHIRO",
-        "swissWins": 67,
+        "swissWins": 70,
         "top16": false,
         "winnersWins": 6,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 195,
         "rank": -1,
         "desc": "I am the Bone of my Rod, Steel is my Scorpio and Dragoon is my Blood. I have created over a Thousand Blades, Unaware of beginning, Nor aware of the end. Unlimited Blade Works. 1/3 of StartEnd -SHIRO(Jeff)",
         "signature": "Cobalt Dragoon 4-55 E"
@@ -788,14 +979,14 @@
         "id": "259854989",
         "name": "PATRICK G",
         "blader_name": "LAZAROID",
-        "swissWins": 46,
+        "swissWins": 51,
         "top16": true,
         "winnersWins": 5,
         "losersWins": 0,
         "first": true,
         "second": false,
         "third": false,
-        "points": 60,
+        "points": 300,
         "rank": -1,
         "desc": "Patrick, a fierce Blader, unleashed his Golem Rock attack-type Beyblade with unmatched power, crushing opponents in every battle. Built for speed and impact, it was a true testament to his skill and strategy. With every spin, Patrick aimed for greatness, always striving to be the ultimate Blader."
     },
@@ -816,14 +1007,14 @@
         "id": "262701011",
         "name": "SHERWIN",
         "blader_name": "DRANZER GOD",
-        "swissWins": 20,
+        "swissWins": 22,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 165,
         "rank": -1
     },
     {
@@ -836,7 +1027,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 75,
         "rank": -1
     },
     {
@@ -850,20 +1041,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 15,
         "rank": -1
     },
     {
         "id": "259854996",
         "name": "MATT",
-        "swissWins": 36,
+        "swissWins": 37,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 335,
         "rank": -1
     },
     {
@@ -889,20 +1080,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 40,
         "rank": -1
     },
     {
         "id": "282923580",
         "name": "PSIONARA",
-        "swissWins": 22,
+        "swissWins": 24,
         "top16": true,
         "winnersWins": 0,
         "losersWins": 1,
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 195,
         "rank": -1
     },
     {
@@ -915,7 +1106,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 25,
         "rank": -1
     },
     {
@@ -928,33 +1119,33 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 35,
         "rank": -1
     },
     {
         "id": "282923581",
         "name": "SHIRUA",
-        "swissWins": 22,
+        "swissWins": 24,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 45,
+        "points": 190,
         "rank": -1
     },
     {
         "id": "282923557",
         "name": "BLADER LOKAJ",
-        "swissWins": 18,
+        "swissWins": 23,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 250,
         "rank": -1
     },
     {
@@ -968,7 +1159,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 185,
         "rank": -1
     },
     {
@@ -991,14 +1182,14 @@
         "id": "259854965",
         "name": "REN",
         "blader_name": "RUBYSEASON",
-        "swissWins": 49,
+        "swissWins": 53,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 110,
+        "points": 390,
         "rank": -1
     },
     {
@@ -1024,21 +1215,21 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 35,
+        "points": 310,
         "rank": -1,
         "signature": "WizardArcHeavy 1-60 R"
     },
     {
         "id": "259854997",
         "name": "DROAM",
-        "swissWins": 37,
+        "swissWins": 40,
         "top16": true,
         "winnersWins": 1,
         "losersWins": 1,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 165,
         "rank": -1,
         "desc": "I was once like any man\u2014living day to day, clocking in, clocking out, munching sinigang without a second thought. But then, something deep inside me snapped. I realized I wasn\u2019t just some guy... I had that fire in me. No\u2014not fire. I had that dog in me. No... that dragon. No...THAT BLADING GOD OF WAR.",
         "signature": "Cobalt Dragoon 5-60 R"
@@ -1047,14 +1238,14 @@
         "id": "259854964",
         "name": "PAU",
         "blader_name": "JPZL",
-        "swissWins": 46,
+        "swissWins": 49,
         "top16": true,
         "winnersWins": 1,
         "losersWins": 3,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 200,
         "desc": "Idk how i got here",
         "signature": "Phoenix Wing 3-60 O/LO",
         "rank": -1
@@ -1070,7 +1261,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 75,
         "rank": -1
     },
     {
@@ -1083,7 +1274,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 35,
+        "points": 55,
         "rank": -1
     },
     {
@@ -1122,7 +1313,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 90,
         "rank": -1
     },
     {
@@ -1154,41 +1345,40 @@
     {
         "id": "259854998",
         "name": "JEPOY",
-        "blader_name": "FUTANAKA",
-        "swissWins": 13,
+        "swissWins": 11,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 30,
         "rank": -1
     },
     {
         "id": "259854988",
         "name": "SUNGANATOR",
-        "swissWins": 34,
+        "swissWins": 40,
         "top16": true,
         "winnersWins": 2,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 290,
         "rank": -1
     },
     {
         "id": "259855000",
         "name": "JWRECK",
-        "swissWins": 24,
+        "swissWins": 27,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 15,
+        "points": 220,
         "rank": -1
     },
     {
@@ -1201,7 +1391,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 215,
         "rank": -1
     },
     {
@@ -1214,20 +1404,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 15,
+        "points": 230,
         "rank": -1
     },
     {
         "id": "259854990",
         "name": "TAN2",
-        "swissWins": 60,
+        "swissWins": 63,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 235,
         "rank": -1
     },
     {
@@ -1241,7 +1431,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 45,
         "rank": -1,
         "signature": "Phoenix Wing 1-60 LR",
         "desc": "Born through the flames of perseverance and determination. Flying on the wings of freedom, soaring to new heights. With a balance of technical skill and raw power, Mig will fight tooth and nail to reach the top"
@@ -1249,27 +1439,27 @@
     {
         "id": "277045572",
         "name": "PSYBLADE",
-        "swissWins": 22,
+        "swissWins": 26,
         "top16": true,
         "winnersWins": 1,
         "losersWins": 2,
         "first": false,
         "second": false,
         "third": false,
-        "points": 25,
+        "points": 200,
         "rank": -1
     },
     {
         "id": "282923561",
         "name": "GAVIN",
-        "swissWins": 4,
+        "swissWins": 6,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 75,
         "rank": -1
     },
     {
@@ -1283,7 +1473,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 105,
         "rank": -1
     },
     {
@@ -1296,7 +1486,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 35,
+        "points": 215,
         "rank": -1
     },
     {
@@ -1309,20 +1499,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 45,
         "rank": -1
     },
     {
         "id": "284118147",
         "name": "CHOI",
-        "swissWins": 20,
+        "swissWins": 24,
         "top16": true,
         "winnersWins": 4,
         "losersWins": 1,
         "first": false,
         "second": true,
         "third": false,
-        "points": 20,
+        "points": 295,
         "rank": -1
     },
     {
@@ -1335,7 +1525,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 15,
         "rank": -1
     },
     {
@@ -1348,20 +1538,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 50,
         "rank": -1
     },
     {
         "id": "284118202",
         "name": "BEVERAGE",
-        "swissWins": 17,
+        "swissWins": 21,
         "top16": true,
         "winnersWins": 0,
         "losersWins": 3,
         "first": false,
         "second": false,
         "third": false,
-        "points": 40,
+        "points": 355,
         "rank": -1
     },
     {
@@ -1374,20 +1564,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 15,
+        "points": 180,
         "rank": -1
     },
     {
         "id": "284118142",
         "name": "HARU REN",
-        "swissWins": 4,
+        "swissWins": 6,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 15,
+        "points": 60,
         "rank": -1
     },
     {
@@ -1400,7 +1590,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 85,
         "rank": -1
     },
     {
@@ -1413,7 +1603,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 30,
         "rank": -1
     },
     {
@@ -1426,7 +1616,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 50,
         "rank": -1
     },
     {
@@ -1439,7 +1629,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 25,
         "rank": -1
     },
     {
@@ -1452,7 +1642,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 15,
         "rank": -1
     },
     {
@@ -1465,7 +1655,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 55,
         "rank": -1
     },
     {
@@ -1478,7 +1668,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 10,
         "rank": -1
     },
     {
@@ -1492,7 +1682,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 305,
         "rank": -1
     },
     {
@@ -1505,7 +1695,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 35,
+        "points": 245,
         "rank": -1
     },
     {
@@ -1518,7 +1708,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 250,
         "rank": -1
     },
     {
@@ -1531,20 +1721,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 15,
         "rank": -1
     },
     {
         "id": "259854979",
         "name": "STEVEN",
-        "swissWins": 39,
+        "swissWins": 43,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 205,
         "rank": -1
     },
     {
@@ -1558,7 +1748,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 90,
         "rank": -1
     },
     {
@@ -1590,14 +1780,14 @@
     {
         "id": "261054003",
         "name": "BLACS",
-        "swissWins": 30,
+        "swissWins": 33,
         "top16": true,
         "winnersWins": 1,
         "losersWins": 2,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 90,
         "rank": -1
     },
     {
@@ -1664,7 +1854,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 55,
         "rank": -1
     },
     {
@@ -1677,34 +1867,34 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 95,
         "rank": -1
     },
     {
         "id": "282923558",
         "name": "CONN",
         "blader_name": "CON",
-        "swissWins": 13,
+        "swissWins": 18,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 130,
         "rank": -1
     },
     {
         "id": "282923560",
         "name": "GEM",
-        "swissWins": 15,
+        "swissWins": 18,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 70,
+        "points": 170,
         "rank": -1
     },
     {
@@ -1717,35 +1907,35 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 165,
         "rank": -1
     },
     {
         "id": "282923559",
         "name": "JAKOBS",
         "blader_name": "KODALES",
-        "swissWins": 17,
+        "swissWins": 20,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 15,
+        "points": 165,
         "rank": -1
     },
     {
         "id": "261054002",
         "name": "CHIEF",
         "blader_name": "WHITE BUFFALO",
-        "swissWins": 7,
+        "swissWins": 10,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 65,
         "rank": -1
     },
     {
@@ -1823,46 +2013,46 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 245,
         "rank": -1
     },
     {
         "id": "285327579",
         "name": "ZOOKE",
-        "swissWins": 18,
+        "swissWins": 21,
         "top16": true,
         "winnersWins": 1,
         "losersWins": 2,
         "first": false,
         "second": false,
         "third": false,
-        "points": 35,
+        "points": 225,
         "rank": -1
     },
     {
         "id": "285327603",
         "name": "SQUIRTLE",
-        "swissWins": 10,
+        "swissWins": 14,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 260,
         "rank": -1
     },
     {
         "id": "285327580",
         "name": "SHUN",
-        "swissWins": 10,
+        "swissWins": 14,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 140,
         "rank": -1
     },
     {
@@ -1877,7 +2067,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 55,
+        "points": 150,
         "rank": -1
     },
     {
@@ -1892,7 +2082,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 30,
         "rank": -1
     },
     {
@@ -1907,7 +2097,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 25,
         "rank": -1
     },
     {
@@ -1922,14 +2112,14 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 15,
+        "points": 65,
         "rank": -1
     },
     {
         "id": "287902967",
         "name": "REGGIE",
         "blader_name": "DRYBEAR",
-        "swissWins": 3,
+        "swissWins": 4,
         "swissLosses": 4,
         "top16": false,
         "winnersWins": 0,
@@ -1938,20 +2128,20 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 15,
+        "points": 50,
         "rank": -1
     },
     {
         "id": "266989973",
         "name": "PAUL",
-        "swissWins": 48,
+        "swissWins": 52,
         "top16": true,
         "winnersWins": 3,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": true,
-        "points": 0,
+        "points": 345,
         "desc": "I am the wind beneath my blade. Each launch brings me closer to perfection, and my Bey never misses its mark. You cannot escape its wrath once it spins, the battle is over. Victory is in every clash, every cut. I am the master of my blade. and this arena is mine.",
         "signature": "Cobalt Dragoon 1-60 E",
         "rank": -1
@@ -1993,7 +2183,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 10,
+        "points": 75,
         "rank": -1
     },
     {
@@ -2020,7 +2210,7 @@
         "first": false,
         "second": false,
         "third": true,
-        "points": 0,
+        "points": 105,
         "rank": -1
     },
     {
@@ -2060,7 +2250,7 @@
         "first": true,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 20,
         "rank": -1,
         "signature": "Hells Hammer 7-60 LF",
         "desc": "CJ (\u201cHellsSuboh\u201d) made his post-exam return this season, and just like his previous win, his loyal 3 partner Beys never fail to Hammer out the competition! Beware of his secret Stance, put him in a tough spot and he may need to Rise from the Ashes to drag you into the depths of Hell!"
@@ -2082,14 +2272,14 @@
         "id": "261054014",
         "name": "JAKE",
         "blader_name": "JVKE",
-        "swissWins": 39,
+        "swissWins": 43,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 20,
+        "points": 210,
         "rank": -1
     },
     {
@@ -2198,20 +2388,20 @@
         "first": true,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 25,
         "rank": -1
     },
     {
         "id": "268811599",
         "name": "NEIL",
-        "swissWins": 36,
+        "swissWins": 41,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 310,
         "rank": -1
     },
     {
@@ -2237,7 +2427,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 15,
         "rank": -1
     },
     {
@@ -2276,7 +2466,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 165,
         "rank": -1
     },
     {
@@ -2302,7 +2492,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 30,
         "rank": -1
     },
     {
@@ -2328,7 +2518,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 250,
         "rank": -1
     },
     {
@@ -2393,7 +2583,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 95,
         "rank": -1
     },
     {
@@ -2472,7 +2662,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 110,
+        "points": 225,
         "rank": -1
     },
     {
@@ -2505,14 +2695,14 @@
         "id": "261053994",
         "name": "JP",
         "blader_name": "NAGA",
-        "swissWins": 35,
+        "swissWins": 37,
         "top16": false,
         "winnersWins": 0,
         "losersWins": 0,
         "first": false,
         "second": false,
         "third": false,
-        "points": 45,
+        "points": 240,
         "rank": -1,
         "signature": "Aero Pegasus 1-60 K",
         "desc": "Feel pain. Accept pain. And know pain. I will never forget the pain that my Attack blades  suffered. And now... these Bladers shall know pain."
@@ -2541,7 +2731,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 40,
         "rank": -1
     },
     {
@@ -2581,7 +2771,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 60,
         "rank": -1
     },
     {
@@ -2633,7 +2823,97 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 145,
+        "rank": -1
+    },
+    {
+        "id": "291016280",
+        "name": "KIESMAN",
+        "swissWins": 4,
+        "swissLosses": 5,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 50,
+        "rank": -1
+    },
+    {
+        "id": "291016258",
+        "name": "DISABEL",
+        "swissWins": 3,
+        "swissLosses": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 25,
+        "rank": -1
+    },
+    {
+        "id": "291016259",
+        "name": "RHANZ",
+        "swissWins": 3,
+        "swissLosses": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 25,
+        "rank": -1
+    },
+    {
+        "id": "291016298",
+        "name": "BLADER RAMBO",
+        "swissWins": 3,
+        "swissLosses": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 25,
+        "rank": -1
+    },
+    {
+        "id": "291016275",
+        "name": "GUAVA",
+        "swissWins": 3,
+        "swissLosses": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 25,
+        "rank": -1
+    },
+    {
+        "id": "291016276",
+        "name": "HANKYPANKY",
+        "swissWins": 2,
+        "swissLosses": 4,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
         "rank": -1
     }
 ]

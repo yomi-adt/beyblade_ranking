@@ -210,8 +210,9 @@ for player in players:
     if(data['top16']):
         data['points'] = data['points'] + 10
     # Swiss king
+    # Manual this time around
     if(int(data['swissLosses'])==0 and not data['isSpecial']):
-        data['swissChamp'] = True
+        data['swissChamp'] = False
         data['points'] = data['points'] + 20
     # First place
     if(data['first']):
