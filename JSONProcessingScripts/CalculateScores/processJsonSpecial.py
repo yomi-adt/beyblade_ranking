@@ -1,5 +1,18 @@
 import json
 
+def parse_clan_name(raw_name):
+    # Expected format: "[CLAN_TAG] clan_name"
+    if not raw_name:
+        return (None, raw_name)
+    raw_name = raw_name.strip()
+    if raw_name.startswith('['):
+        end = raw_name.find(']')
+        if end != -1:
+            tag = raw_name[1:end]
+            name = raw_name[end+1:].strip()
+            return (tag, name)
+    return (None, raw_name)
+
 # Open the JSON file and load its content
 with open('input.json', 'r') as file:
     data = json.load(file)
@@ -20,10 +33,14 @@ playerData = data['included']
 for item in playerData:
     # Add player to players array
     # Note: 10 points for entry
+    raw_name = item['attributes'].get('name', '')
+    tag, player_name = parse_clan_name(raw_name)
+    #'clan_tag': tag if tag is not None else "Not Applicable ERR:679",
+    
     players.append(
         {
             'id': item['id'],
-            'name': item['attributes']['name'],
+            'name': item['attributes']['name'] if tag is None else player_name,
             'swissWins': 0,
             'swissLosses': 0,
             'top16': False,
@@ -35,7 +52,6 @@ for item in playerData:
             'third': False,
             'points': 10,
             'rank': -1,
-            'isSpecial': False,
         }
     )
 
@@ -51,140 +67,53 @@ for item in matchesData:
     currMatchData = item['attributes']
     currRound = currMatchData['round']
 
-    if currRound != 5:
+    # Get firstPlacer id, cast to string, find player by that id
+    firstPlacer = getPlayerById(str(item['attributes']['winners']))
 
-        # Get firstPlacer id, cast to string, find player by that id
-        firstPlacer = getPlayerById(str(item['attributes']['winner_id']))
+    # Get the two participants
+    participant1 = getPlayerById(str(item['attributes']['pointsByParticipant'][0]['participantId']))
+    participant2 = getPlayerById(str(item['attributes']['pointsByParticipant'][1]['participantId']))
 
-        # Get the two participants
-        participant1 = getPlayerById(str(item['attributes']['points_by_participant'][0]['participant_id']))
-        participant2 = getPlayerById(str(item['attributes']['points_by_participant'][1]['participant_id']))
+    # Set both winner and loser to make top 16 if not a swiss round
+    if not isSwiss:
+        participant1 = getPlayerById(str(item['attributes']['pointsByParticipant'][0]['participantId']))
+        participant2 = getPlayerById(str(item['attributes']['pointsByParticipant'][1]['participantId']))
+        participant1['top16'] = True
+        participant2['top16'] = True
+    
 
-        # Set both winner and loser to make top 16 if not a swiss round
-        if not isSwiss:
-            participant1 = getPlayerById(str(item['attributes']['points_by_participant'][0]['participant_id']))
-            participant2 = getPlayerById(str(item['attributes']['points_by_participant'][1]['participant_id']))
-            participant1['top16'] = True
-            participant2['top16'] = True
-        
+    if (currRound < prevRound) and (isSwiss):
+        isSwiss = False
 
-        if (currRound < prevRound) and (isSwiss):
-            isSwiss = False
-
-        if isSwiss:
-            swiss.append(item)
-            firstPlacer['swissWins'] = firstPlacer['swissWins'] + 1 
-            if(participant1 == firstPlacer):
-                print(firstPlacer['name'] + " Won. Adding swiss loss to " + participant2['name'])
-                participant2['swissLosses'] = participant2['swissLosses'] + 1
-            else:
-                print(firstPlacer['name'] + " Won. Adding swiss loss to " + participant1['name'])
-                participant1['swissLosses'] = participant1['swissLosses'] + 1
-        elif currRound < 0: # If negative means secondPlacer bracket
-            de.append(item)
-            firstPlacer['top16'] = True
-            firstPlacer['losersWins'] = firstPlacer['losersWins'] + 1
+    if isSwiss:
+        swiss.append(item)
+        firstPlacer['swissWins'] = firstPlacer['swissWins'] + 1 
+        if(participant1 == firstPlacer):
+            # print(firstPlacer['name'] + " Won. Adding swiss loss to " + participant2['name'])
+            participant2['swissLosses'] = participant2['swissLosses'] + 1
         else:
-            de.append(item)
-            firstPlacer['top16'] = True
-            firstPlacer['winnersWins'] = firstPlacer['winnersWins'] + 1
+            # print(firstPlacer['name'] + " Won. Adding swiss loss to " + participant1['name'])
+            participant1['swissLosses'] = participant1['swissLosses'] + 1
+    elif currRound < 0: # If negative means secondPlacer bracket
+        de.append(item)
+        firstPlacer['top16'] = True
+        firstPlacer['losersWins'] = firstPlacer['losersWins'] + 1
+    else:
+        de.append(item)
+        firstPlacer['top16'] = True
+        firstPlacer['winnersWins'] = firstPlacer['winnersWins'] + 1
 
-        prevRound = currRound
-
-with open('input2.json', 'r') as file:
-    data = json.load(file)
-matchesData = data['data']
-
-# Players
-currIndex = 0
-
-# Get player data from JSON obj
-playerData = data['included']
-for item in playerData:
-    # Add player to players array
-    # Note: 10 points for entry
-    print(item['id'] + " " + item['attributes']['name'])
-    players.append(
-        {
-            'id': item['id'],
-            'name': item['attributes']['name'],
-            'swissWins': 0,
-            'swissLosses': 0,
-            'top16': False,
-            'winnersWins': 0,
-            'losersWins': 0,
-            'swissChamp': False,
-            'first': False,
-            'second': False,
-            'third': False,
-            'points': 10,
-            'rank': -1,
-            'isSpecial': True,
-        }
-    )
-
-    # Add id to index to dictionary
-    idToIndex[item['id']] = currIndex
-    currIndex = currIndex+1
-
-isSwiss = False
-prevRound = 0
-for item in matchesData:
-    currMatchData = item['attributes']
-    currRound = currMatchData['round']
-
-    print(currRound)
-
-    if True:
-
-        # Get firstPlacer id, cast to string, find player by that id
-        print(item['attributes'])
-        firstPlacer = getPlayerById(str(item['attributes']['winner_id']))
-
-        # Get the two participants
-        participant1 = getPlayerById(str(item['attributes']['points_by_participant'][0]['participant_id']))
-        participant2 = getPlayerById(str(item['attributes']['points_by_participant'][1]['participant_id']))
-
-        # Set both winner and loser to make top 16 if not a swiss round
-        if not isSwiss:
-            participant1 = getPlayerById(str(item['attributes']['points_by_participant'][0]['participant_id']))
-            participant2 = getPlayerById(str(item['attributes']['points_by_participant'][1]['participant_id']))
-            participant1['top16'] = True
-            participant2['top16'] = True
-        
-
-        if (currRound < prevRound) and (isSwiss):
-            isSwiss = False
-
-        if isSwiss:
-            swiss.append(item)
-            firstPlacer['swissWins'] = firstPlacer['swissWins'] + 1 
-            if(participant1 == firstPlacer):
-                print(firstPlacer['name'] + " Won. Adding swiss loss to " + participant2['name'])
-                participant2['swissLosses'] = participant2['swissLosses'] + 1
-            else:
-                print(firstPlacer['name'] + " Won. Adding swiss loss to " + participant1['name'])
-                participant1['swissLosses'] = participant1['swissLosses'] + 1
-        elif currRound < 0: # If negative means secondPlacer bracket
-            de.append(item)
-            firstPlacer['top16'] = True
-            firstPlacer['losersWins'] = firstPlacer['losersWins'] + 1
-        else:
-            de.append(item)
-            firstPlacer['top16'] = True
-            firstPlacer['winnersWins'] = firstPlacer['winnersWins'] + 1
-
-        prevRound = currRound
+    prevRound = currRound
 
 # Determine first and second place
 finalsGame = de[-1]
 winnersParticipants = {
-    'player1': getPlayerById(finalsGame['attributes']['points_by_participant'][0]['participant_id']),
-    'player2': getPlayerById(finalsGame['attributes']['points_by_participant'][1]['participant_id']),
+    'player1': getPlayerById(finalsGame['attributes']['pointsByParticipant'][0]['participantId']),
+    'player2': getPlayerById(finalsGame['attributes']['pointsByParticipant'][1]['participantId']),
 }
 firstPlacer = winnersParticipants['player1']
 secondPlacer = winnersParticipants['player2']
-if(int(finalsGame['attributes']['winner_id']) != int(firstPlacer['id'])):
+if(int(finalsGame['attributes']['winners']) != int(firstPlacer['id'])):
     firstPlacer = winnersParticipants['player2']
     secondPlacer = winnersParticipants['player1']
 
@@ -193,11 +122,11 @@ finalsGame = de[-2]
 if(len(de)==31):
     finalsGame = de[-3]
 winnersParticipants = {
-    'player1': getPlayerById(finalsGame['attributes']['points_by_participant'][0]['participant_id']),
-    'player2': getPlayerById(finalsGame['attributes']['points_by_participant'][1]['participant_id']),
+    'player1': getPlayerById(finalsGame['attributes']['pointsByParticipant'][0]['participantId']),
+    'player2': getPlayerById(finalsGame['attributes']['pointsByParticipant'][1]['participantId']),
 }
 thirdPlacer = winnersParticipants['player1']
-if(int(finalsGame['attributes']['winner_id']) == int(thirdPlacer['id'])):
+if(int(finalsGame['attributes']['winners']) == int(thirdPlacer['id'])):
     thirdPlacer = winnersParticipants['player2']
 
 getPlayerById(firstPlacer['id'])['first'] = True
@@ -210,9 +139,8 @@ for player in players:
     if(data['top16']):
         data['points'] = data['points'] + 10
     # Swiss king
-    # Manual this time around
-    if(int(data['swissLosses'])==0 and not data['isSpecial']):
-        data['swissChamp'] = False
+    if(int(data['swissLosses'])==0):
+        data['swissChamp'] = True
         data['points'] = data['points'] + 20
     # First place
     if(data['first']):
@@ -228,8 +156,187 @@ for player in players:
     data['points'] = data['points'] + (data['winnersWins']*10)
     data['points'] = data['points'] + (data['losersWins']*5)
 
+print("processing clans")
+# CLANS
+# Match types
+swiss = []
+de = []
+
+# Clans
+clans = []
+idToIndex = {}
+currIndex = 0
+
+def getClanById(id):
+    return clans[idToIndex[str(id)]]
+
+with open('input.json', 'r') as file:
+    data = json.load(file)
+# Get clan data from JSON obj
+clanData = data.get('included', [])
+for item in clanData:
+    raw_name = item['attributes'].get('name', '')
+    tag, clan_name = parse_clan_name(raw_name)
+
+    clans.append(
+        {
+            'id': item['id'],
+            'clan_tag': tag if tag is not None else "Not Applicable ERR:679",
+            'name': clan_name,
+            'swissWins': 0,
+            'swissLosses': 0,
+            'topCut': False,
+            'winnersWins': 0,
+            'losersWins': 0,
+            'swissChamp': False,
+            'first': False,
+            'second': False,
+            'third': False,
+            'points': 10,
+            'rank': -1,
+        }
+    )
+    # print(item)
+    # print()
+
+    # Add id to index map
+    idToIndex[item['id']] = currIndex
+    currIndex += 1
+
+# Process matches
+matchesData = data.get('data', [])
+isSwiss = True
+prevRound = 0
+for item in matchesData:
+    currMatchData = item['attributes']
+    currRound = currMatchData.get('round', 0)
+
+    # Get winner
+    firstPlacer = getClanById(str(item['attributes']['winners']))
+
+    # Get participants
+    participant1 = getClanById(str(item['attributes']['pointsByParticipant'][0]['participantId']))
+    participant2 = getClanById(str(item['attributes']['pointsByParticipant'][1]['participantId']))
+
+    # Set top cut flag when leaving swiss
+    if not isSwiss:
+        participant1['topCut'] = True
+        participant2['topCut'] = True
+
+    if (currRound < prevRound) and (isSwiss):
+        isSwiss = False
+
+    if isSwiss:
+        swiss.append(item)
+        firstPlacer['swissWins'] += 1
+        if participant1 == firstPlacer:
+            participant2['swissLosses'] += 1
+        else:
+            participant1['swissLosses'] += 1
+    elif currRound < 0:  # losers bracket
+        de.append(item)
+        firstPlacer['topCut'] = True
+        firstPlacer['losersWins'] += 1
+    else:
+        de.append(item)
+        firstPlacer['topCut'] = True
+        firstPlacer['winnersWins'] += 1
+
+    prevRound = currRound
+
+# Determine first and second place
+if de:
+    finalsGame = de[-1]
+    winnersParticipants = {
+        'player1': getClanById(finalsGame['attributes']['pointsByParticipant'][0]['participantId']),
+        'player2': getClanById(finalsGame['attributes']['pointsByParticipant'][1]['participantId']),
+    }
+    firstPlacer = winnersParticipants['player1']
+    secondPlacer = winnersParticipants['player2']
+    if int(finalsGame['attributes']['winners']) != int(firstPlacer['id']):
+        firstPlacer = winnersParticipants['player2']
+        secondPlacer = winnersParticipants['player1']
+
+    # Determine third place
+    finalsGame = de[-2]
+    if len(de) == 31:
+        finalsGame = de[-3]
+    winnersParticipants = {
+        'player1': getClanById(finalsGame['attributes']['pointsByParticipant'][0]['participantId']),
+        'player2': getClanById(finalsGame['attributes']['pointsByParticipant'][1]['participantId']),
+    }
+    thirdPlacer = winnersParticipants['player1']
+    if int(finalsGame['attributes']['winners']) == int(thirdPlacer['id']):
+        thirdPlacer = winnersParticipants['player2']
+
+    getClanById(firstPlacer['id'])['first'] = True
+    getClanById(secondPlacer['id'])['second'] = True
+    getClanById(thirdPlacer['id'])['third'] = True
+
+    # Apply scoring rules for clans
+for clan in clans:
+    data = clan
+
+    # Made top cut
+    if data['topCut']:
+        data['points'] += 2
+    # Swiss king (no swiss losses)
+    if int(data['swissLosses']) == 0:
+        data['swissChamp'] = True
+        data['points'] += 10
+    # First place
+    if data['first']:
+        data['points'] += 15
+    # Second place
+    if data['second']:
+        data['points'] += 10
+    # Third place
+    if data['third']:
+        data['points'] += 5
+
+# Combine teams with the same clan tag into one aggregated clan entry
+aggregated_clans = {}
+for clan in clans:
+    tag = clan['clan_tag']
+    if tag not in aggregated_clans:
+        if(tag!="Not Applicable ERR:679"):
+            aggregated_clans[tag] = {
+                'id': tag,
+                'clan_tag': tag,
+                'name': clan['name'],
+                'swissWins': 0,
+                'swissLosses': 0,
+                'topCut': False,
+                'winnersWins': 0,
+                'losersWins': 0,
+                'swissChamp': False,
+                'first': False,
+                'second': False,
+                'third': False,
+                'points': 0,
+                'rank': -1,
+            }
+    if(tag!="Not Applicable ERR:679"):
+        aggregated = aggregated_clans[tag]
+        aggregated['swissWins'] += clan['swissWins']
+        aggregated['swissLosses'] += clan['swissLosses']
+        aggregated['winnersWins'] += clan['winnersWins']
+        aggregated['losersWins'] += clan['losersWins']
+        aggregated['points'] += clan['points']
+        aggregated['topCut'] = aggregated['topCut'] or clan['topCut']
+        aggregated['swissChamp'] = aggregated['swissChamp'] or clan['swissChamp']
+        aggregated['first'] = aggregated['first'] or clan['first']
+        aggregated['second'] = aggregated['second'] or clan['second']
+        aggregated['third'] = aggregated['third'] or clan['third']
+
+clans = list(aggregated_clans.values())
+
     # 2x Multiplier
     # data['points'] = data['points']*2
 # Write JSON data to a file
 with open('output.json', 'w') as file:
     json.dump(players, file, indent=4)  # 'indent' makes the output more readable
+
+# Write JSON data to a file
+with open('output_clans.json', 'w') as file:
+    json.dump(clans, file, indent=4)  # 'indent' makes the output more readable
