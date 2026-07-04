@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "id": "Not Applicable ERR:679",
+        "clan_tag": "Not Applicable ERR:679",
+        "name": "ANDREW G3",
+        "swissWins": 48,
+        "swissLosses": 65,
+        "topCut": true,
+        "winnersWins": 6,
+        "losersWins": 2,
+        "swissChamp": false,
+        "first": false,
+        "second": true,
+        "third": false,
+        "points": 12,
+        "rank": -1
+    }
+]
