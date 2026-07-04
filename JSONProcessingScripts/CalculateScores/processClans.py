@@ -133,6 +133,42 @@ if de:
     getClanById(secondPlacer['id'])['second'] = True
     getClanById(thirdPlacer['id'])['third'] = True
 
+# Combine by name, since there's two participant entries for first stage/second stage
+aggregated_clans = {}
+for clan in clans:
+    tag = clan['name']
+    if tag not in aggregated_clans:
+        aggregated_clans[tag] = {
+            'id': tag,
+            'clan_tag': tag,
+            'name': clan['name'],
+            'swissWins': 0,
+            'swissLosses': 0,
+            'topCut': False,
+            'winnersWins': 0,
+            'losersWins': 0,
+            'swissChamp': False,
+            'first': False,
+            'second': False,
+            'third': False,
+            'points': 0,
+            'rank': -1,
+        }
+
+    aggregated = aggregated_clans[tag]
+    aggregated['swissWins'] += clan['swissWins']
+    aggregated['swissLosses'] += clan['swissLosses']
+    aggregated['winnersWins'] += clan['winnersWins']
+    aggregated['losersWins'] += clan['losersWins']
+    aggregated['points'] += clan['points']
+    aggregated['topCut'] = aggregated['topCut'] or clan['topCut']
+    aggregated['swissChamp'] = aggregated['swissChamp'] or clan['swissChamp']
+    aggregated['first'] = aggregated['first'] or clan['first']
+    aggregated['second'] = aggregated['second'] or clan['second']
+    aggregated['third'] = aggregated['third'] or clan['third']
+
+clans = list(aggregated_clans.values())
+
 # Apply scoring rules for clans
 for clan in clans:
     data = clan
