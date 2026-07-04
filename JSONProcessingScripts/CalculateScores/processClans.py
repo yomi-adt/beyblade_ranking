@@ -139,8 +139,8 @@ for clan in clans:
     tag = clan['name']
     if tag not in aggregated_clans:
         aggregated_clans[tag] = {
-            'id': tag,
-            'clan_tag': tag,
+            'id': clan['id'],
+            'clan_tag': clan['clan_tag'],
             'name': clan['name'],
             'swissWins': 0,
             'swissLosses': 0,
