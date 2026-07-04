@@ -14,7 +14,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 122,
+        "points": 0,
         "rank": -1
     },
     {
@@ -30,7 +30,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 60,
+        "points": 0,
         "rank": -1
     },
     {
@@ -46,7 +46,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 226,
+        "points": 0,
         "rank": -1
     },
     {
@@ -62,7 +62,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 164,
+        "points": 0,
         "rank": -1
     },
     {
@@ -78,7 +78,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": true,
-        "points": 127,
+        "points": 0,
         "rank": -1
     },
     {
@@ -94,7 +94,7 @@ export const Bladers = {
         "first": true,
         "second": false,
         "third": false,
-        "points": 169,
+        "points": 0,
         "rank": -1
     },
     {
@@ -110,7 +110,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 82,
+        "points": 0,
         "rank": -1
     },
     {
@@ -126,7 +126,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": true,
-        "points": 90,
+        "points": 0,
         "rank": -1
     },
     {
@@ -142,7 +142,7 @@ export const Bladers = {
         "first": false,
         "second": true,
         "third": false,
-        "points": 202,
+        "points": 0,
         "rank": -1
     },
     {
@@ -158,7 +158,7 @@ export const Bladers = {
         "first": false,
         "second": false,
         "third": false,
-        "points": 50,
+        "points": 0,
         "rank": -1
     },
     {
@@ -174,7 +174,7 @@ export const Bladers = {
         "first": true,
         "second": false,
         "third": false,
-        "points": 162,
+        "points": 0,
         "rank": -1
     }
 ]

@@ -52,7 +52,7 @@ for item in clanData:
             'first': False,
             'second': False,
             'third': False,
-            'points': 10,
+            'points': 0,
             'rank': -1,
         }
     )
