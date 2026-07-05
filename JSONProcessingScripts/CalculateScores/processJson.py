@@ -124,40 +124,26 @@ aggregated_players = {}
 for player in players:
     tag = player['name']
     if tag not in aggregated_players:
-        aggregated_players[tag] = {
-            'id': player['id'],
-            'name': player['name'],
-            'swissWins': 0,
-            'swissLosses': 0,
-            'top16': False,
-            'winnersWins': 0,
-            'losersWins': 0,
-            'swissChamp': False,
-            'first': False,
-            'second': False,
-            'third': False,
-            'points': 0,
-            'rank': -1,
-        }
+        aggregated_players[tag] = player
     else:
         player['points'] -= 10 # Account for double dipping entry points
-    aggregated = aggregated_players[tag]
 
-    # Update first/second/third placer id so that it can be found
+        aggregated = aggregated_players[tag]
+        aggregated['swissWins'] += player['swissWins']
+        aggregated['swissLosses'] += player['swissLosses']
+        aggregated['winnersWins'] += player['winnersWins']
+        aggregated['losersWins'] += player['losersWins']
+        aggregated['points'] += player['points']
+        aggregated['top16'] = aggregated['top16'] or player['top16']
+        aggregated['swissChamp'] = aggregated['swissChamp'] or player['swissChamp']
+        aggregated['first'] = aggregated['first'] or player['first']
+        aggregated['second'] = aggregated['second'] or player['second']
+        aggregated['third'] = aggregated['third'] or player['third']
+
+   # Update first/second/third placer id so that it can be found
     # with getById
     if(player['first'] == True or player['second'] == True or player['third'] == True):
         aggregated['id'] = player['id']
-
-    aggregated['swissWins'] += player['swissWins']
-    aggregated['swissLosses'] += player['swissLosses']
-    aggregated['winnersWins'] += player['winnersWins']
-    aggregated['losersWins'] += player['losersWins']
-    aggregated['points'] += player['points']
-    aggregated['top16'] = aggregated['top16'] or player['top16']
-    aggregated['swissChamp'] = aggregated['swissChamp'] or player['swissChamp']
-    aggregated['first'] = aggregated['first'] or player['first']
-    aggregated['second'] = aggregated['second'] or player['second']
-    aggregated['third'] = aggregated['third'] or player['third']
 
 players = list(aggregated_players.values())
 

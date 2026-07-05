@@ -1,1 +1,77 @@
-[]
+[
+    {
+        "id": "45252463",
+        "name": "LANCE",
+        "swissWins": 0,
+        "swissLosses": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 10,
+        "rank": -1
+    },
+    {
+        "id": "45252469",
+        "name": "MR PREZ",
+        "swissWins": 3,
+        "swissLosses": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 25,
+        "rank": -1
+    },
+    {
+        "id": "45252472",
+        "name": "TGUSSY",
+        "swissWins": 1,
+        "swissLosses": 5,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 15,
+        "rank": -1
+    },
+    {
+        "id": "45252481",
+        "name": "TAN",
+        "swissWins": 4,
+        "swissLosses": 2,
+        "top16": true,
+        "winnersWins": 0,
+        "losersWins": 1,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 45,
+        "rank": -1
+    },
+    {
+        "id": "45252510",
+        "name": "AUSTIN RANK 1 KM",
+        "swissWins": 2,
+        "swissLosses": 3,
+        "top16": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
+        "rank": -1
+    }
+]
