@@ -11,7 +11,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 0,
+        "points": 10,
         "rank": -1
     },
     {
@@ -26,7 +26,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 15,
+        "points": 25,
         "rank": -1
     },
     {
@@ -41,7 +41,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 5,
+        "points": 15,
         "rank": -1
     },
     {
@@ -56,7 +56,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 35,
+        "points": 45,
         "rank": -1
     },
     {
@@ -71,7 +71,7 @@
         "first": false,
         "second": false,
         "third": false,
-        "points": 10,
+        "points": 20,
         "rank": -1
     }
 ]

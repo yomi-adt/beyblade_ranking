@@ -1,7 +1,7 @@
 import json
 
 # Open the JSON file and load its content
-with open('input.json', 'r') as file:
+with open('C:\\Users\\nbarl\\Desktop\\bbx\\beyblade_ranking\\JSONProcessingScripts\\CalculateScores\\input.json', 'r') as file:
     data = json.load(file)
 
 # Match types
@@ -139,7 +139,8 @@ for player in players:
             'points': 0,
             'rank': -1,
         }
-
+    else:
+        player['points'] -= 10 # Account for double dipping entry points
     aggregated = aggregated_players[tag]
 
     # Update first/second/third placer id so that it can be found
@@ -152,7 +153,6 @@ for player in players:
     aggregated['winnersWins'] += player['winnersWins']
     aggregated['losersWins'] += player['losersWins']
     aggregated['points'] += player['points']
-    aggregated['points'] -= 10 # account for double dipping entry points
     aggregated['top16'] = aggregated['top16'] or player['top16']
     aggregated['swissChamp'] = aggregated['swissChamp'] or player['swissChamp']
     aggregated['first'] = aggregated['first'] or player['first']
@@ -186,5 +186,5 @@ for player in players:
     data['points'] = data['points'] + (data['losersWins']*5)
 
 # Write JSON data to a file
-with open('output.json', 'w') as file:
+with open('C:\\Users\\nbarl\\Desktop\\bbx\\beyblade_ranking\\JSONProcessingScripts\\CalculateScores\\output.json', 'w') as file:
     json.dump(players, file, indent=4)  # 'indent' makes the output more readable
