@@ -1,7 +1,7 @@
 import json
 
 # Open the JSON file and load its content
-with open('input.json', 'r') as file:
+with open("C:\\Users\\nbarl\\Desktop\\bbx\\beyblade_ranking\\JSONProcessingScripts\\CalculateScores\\input.json", 'r') as file:
     data = json.load(file)
 
 # CLANS
@@ -29,9 +29,6 @@ def parse_clan_name(raw_name):
             name = raw_name[end+1:].strip()
             return (tag, name)
     return (None, raw_name)
-
-with open('input.json', 'r') as file:
-    data = json.load(file)
 # Get clan data from JSON obj
 clanData = data.get('included', [])
 for item in clanData:
@@ -233,7 +230,7 @@ for clan in clans:
 clans = list(aggregated_clans.values())
 
 # Write the scorer input file for the updater
-with open('output.json', 'w') as file:
+with open("C:\\Users\\nbarl\\Desktop\\bbx\\beyblade_ranking\\JSONProcessingScripts\\CalculateScores\\output.json", 'w') as file:
     json.dump(clans, file, indent=4)
 
 print('Wrote input.json with', len(clans), 'clans')
