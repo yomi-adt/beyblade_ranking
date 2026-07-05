@@ -21,13 +21,12 @@ for item in playerData:
     # Add player to players array
     # Note: 10 points for entry
     raw_name = item['attributes'].get('name', '')
-    tag, player_name = parse_clan_name(raw_name)
-    #'clan_tag': tag if tag is not None else "Not Applicable ERR:679",
+    #'player_tag': tag if tag is not None else "Not Applicable ERR:679",
     
     players.append(
         {
             'id': item['id'],
-            'name': item['attributes']['name'] if tag is None else player_name,
+            'name': raw_name,
             'swissWins': 0,
             'swissLosses': 0,
             'top16': False,
@@ -119,6 +118,49 @@ if(int(finalsGame['attributes']['winners']) == int(thirdPlacer['id'])):
 getPlayerById(firstPlacer['id'])['first'] = True
 getPlayerById(secondPlacer['id'])['second'] = True
 getPlayerById(thirdPlacer['id'])['third'] = True
+
+# Combine by name, since there's two participant entries for first stage/second stage
+aggregated_players = {}
+for player in players:
+    tag = player['name']
+    if tag not in aggregated_players:
+        aggregated_players[tag] = {
+            'id': player['id'],
+            'name': player['name'],
+            'swissWins': 0,
+            'swissLosses': 0,
+            'top16': False,
+            'winnersWins': 0,
+            'losersWins': 0,
+            'swissChamp': False,
+            'first': False,
+            'second': False,
+            'third': False,
+            'points': 0,
+            'rank': -1,
+        }
+
+    aggregated = aggregated_players[tag]
+
+    # Update first/second/third placer id so that it can be found
+    # with getById
+    if(player['first'] == True or player['second'] == True or player['third'] == True):
+        aggregated['id'] = player['id']
+
+    aggregated['swissWins'] += player['swissWins']
+    aggregated['swissLosses'] += player['swissLosses']
+    aggregated['winnersWins'] += player['winnersWins']
+    aggregated['losersWins'] += player['losersWins']
+    aggregated['points'] += player['points']
+    aggregated['points'] -= 10 # account for double dipping entry points
+    aggregated['top16'] = aggregated['top16'] or player['top16']
+    aggregated['swissChamp'] = aggregated['swissChamp'] or player['swissChamp']
+    aggregated['first'] = aggregated['first'] or player['first']
+    aggregated['second'] = aggregated['second'] or player['second']
+    aggregated['third'] = aggregated['third'] or player['third']
+
+players = list(aggregated_players.values())
+
 for player in players:
     data = player
 
