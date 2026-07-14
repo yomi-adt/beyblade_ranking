@@ -12,6 +12,7 @@ const router = useRouter();
 
 <template>
   <h1 class="pt-5">Winnipeg's Competitive Beyblade X Rankings</h1>
+  <h2 class="pt-5">(Under construction. Be back soon!)</h2>
   <div div style="display: block; width: 100%; padding: 0 0.75rem">
     <Top3Bladers></Top3Bladers>
     <Button

@@ -16,8 +16,8 @@ import { Bladers } from "../service/ClansService";
 import { onMounted, ref } from "vue";
 import { FilterMatchMode } from "@primevue/core/api";
 
-onMounted(() => {
-  data.value = Bladers.getBladers();
+onMounted(async () => {
+  data.value = await Bladers.getBladers();
   data.value.sort((a, b) => b.points - a.points);
   for (let i = 1; i <= data.value.length; i++) {
     data.value[i - 1].rank = i.toString();
@@ -27,13 +27,20 @@ onMounted(() => {
 const data = ref([]);
 const columns = [
   { field: "rank", header: "Rank" },
-  { field: "name", header: "Name" },
+  { field: "username", header: "Name" },
   { field: "points", header: "Points" },
 ];
 
 const filters = ref({
-  name: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
+  username: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
 });
+
+async function copyToClipboard(data) {
+  const challongeName = data.username + " (#" + data.id + ")" 
+  await navigator.clipboard.writeText(challongeName)
+
+  console.log('Copied ' + challongeName + ' to clipboard!')
+}
 
 const organizerMode = ref(false);
 const apiKey = ref("");
@@ -53,7 +60,7 @@ function popupBlader(selectedBlader) {
   <Toolbar>
     <template #start>
       <InputText
-        v-model="filters['name'].value"
+        v-model="filters['username'].value"
         placeholder="Search for Blader"
       />
     </template>
@@ -78,6 +85,16 @@ function popupBlader(selectedBlader) {
       :field="col.field"
       :header="col.header"
     ></Column>
+    <Column 
+      header="Add to Challonge"
+    >
+      <template #body="slotProps">
+        <Button
+          icon="pi pi-copy"
+          @click="copyToClipboard(slotProps.data)"
+        />
+      </template>
+    </Column>
   </DataTable>
 
   <Dialog
@@ -90,18 +107,18 @@ function popupBlader(selectedBlader) {
           :label="'#' + selectedBladerRef.data['rank']"
           shape="circle"
         ></Avatar>
-        {{ selectedBladerRef.data["name"]
-        }}<span v-show="selectedBladerRef.data['blader_name']"
-          >, "{{ selectedBladerRef.data["blader_name"] }}"</span
+        {{ selectedBladerRef.data["username"]
+        }}<span v-show="selectedBladerRef.data['bladerName']"
+          >, "{{ selectedBladerRef.data["bladerName"] }}"</span
         >
       </div>
     </template>
     <div class="fadeInDelay1Sec">
       <Panel header="Description:">
-        <div v-if="selectedBladerRef.data['desc']">
-          {{ selectedBladerRef.data["desc"] }}
+        <div v-if="selectedBladerRef.data['lore']">
+          {{ selectedBladerRef.data["lore"] }}
         </div>
-        <div v-if="!selectedBladerRef.data['desc']">[NO DATA AVAILABLE]</div>
+        <div v-if="!selectedBladerRef.data['lore']">[NO DATA AVAILABLE]</div>
       </Panel>
     </div>
 
@@ -134,18 +151,18 @@ function popupBlader(selectedBlader) {
       <Divider></Divider>
 
       <Message
-        v-if="selectedBladerRef.data['signature']"
+        v-if="selectedBladerRef.data['signatureCombo']"
         severity="warn"
         icon="pi pi-exclamation-triangle"
       >
-        Signature Combo: {{ selectedBladerRef.data["signature"] }}
+        signatureCombo Combo: {{ selectedBladerRef.data["signatureCombo"] }}
       </Message>
       <Message
-        v-if="!selectedBladerRef.data['signature']"
+        v-if="!selectedBladerRef.data['signatureCombo']"
         severity="info"
         icon="pi pi-info"
       >
-        Signature Combo: [NO DATA AVAILABLE]
+        signatureCombo Combo: [NO DATA AVAILABLE]
       </Message>
     </div>
     <template #footer>
