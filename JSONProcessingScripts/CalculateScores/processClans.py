@@ -1,9 +1,10 @@
 import json
 
 # Open the JSON file and load its content
-with open('input.json', 'r') as file:
+with open("C:\\Users\\nbarl\\Desktop\\bbx\\beyblade_ranking\\JSONProcessingScripts\\CalculateScores\\input.json", 'r') as file:
     data = json.load(file)
 
+# CLANS
 # Match types
 swiss = []
 de = []
@@ -28,7 +29,6 @@ def parse_clan_name(raw_name):
             name = raw_name[end+1:].strip()
             return (tag, name)
     return (None, raw_name)
-
 # Get clan data from JSON obj
 clanData = data.get('included', [])
 for item in clanData:
@@ -38,7 +38,7 @@ for item in clanData:
     clans.append(
         {
             'id': item['id'],
-            'clan_tag': tag if tag is not None else str(item['id']),
+            'clan_tag': tag if tag is not None else "Not Applicable ERR:679",
             'name': clan_name,
             'swissWins': 0,
             'swissLosses': 0,
@@ -49,10 +49,12 @@ for item in clanData:
             'first': False,
             'second': False,
             'third': False,
-            'points': 10,
+            'points': 0,
             'rank': -1,
         }
     )
+    # print(item)
+    # print()
 
     # Add id to index map
     idToIndex[item['id']] = currIndex
@@ -67,11 +69,11 @@ for item in matchesData:
     currRound = currMatchData.get('round', 0)
 
     # Get winner
-    firstPlacer = getClanById(str(item['attributes']['winner_id']))
+    firstPlacer = getClanById(str(item['attributes']['winners']))
 
     # Get participants
-    participant1 = getClanById(str(item['attributes']['points_by_participant'][0]['participant_id']))
-    participant2 = getClanById(str(item['attributes']['points_by_participant'][1]['participant_id']))
+    participant1 = getClanById(str(item['attributes']['pointsByParticipant'][0]['participantId']))
+    participant2 = getClanById(str(item['attributes']['pointsByParticipant'][1]['participantId']))
 
     # Set top cut flag when leaving swiss
     if not isSwiss:
@@ -103,12 +105,12 @@ for item in matchesData:
 if de:
     finalsGame = de[-1]
     winnersParticipants = {
-        'player1': getClanById(finalsGame['attributes']['points_by_participant'][0]['participant_id']),
-        'player2': getClanById(finalsGame['attributes']['points_by_participant'][1]['participant_id']),
+        'player1': getClanById(finalsGame['attributes']['pointsByParticipant'][0]['participantId']),
+        'player2': getClanById(finalsGame['attributes']['pointsByParticipant'][1]['participantId']),
     }
     firstPlacer = winnersParticipants['player1']
     secondPlacer = winnersParticipants['player2']
-    if int(finalsGame['attributes']['winner_id']) != int(firstPlacer['id']):
+    if int(finalsGame['attributes']['winners']) != int(firstPlacer['id']):
         firstPlacer = winnersParticipants['player2']
         secondPlacer = winnersParticipants['player1']
 
@@ -117,16 +119,52 @@ if de:
     if len(de) == 31:
         finalsGame = de[-3]
     winnersParticipants = {
-        'player1': getClanById(finalsGame['attributes']['points_by_participant'][0]['participant_id']),
-        'player2': getClanById(finalsGame['attributes']['points_by_participant'][1]['participant_id']),
+        'player1': getClanById(finalsGame['attributes']['pointsByParticipant'][0]['participantId']),
+        'player2': getClanById(finalsGame['attributes']['pointsByParticipant'][1]['participantId']),
     }
     thirdPlacer = winnersParticipants['player1']
-    if int(finalsGame['attributes']['winner_id']) == int(thirdPlacer['id']):
+    if int(finalsGame['attributes']['winners']) == int(thirdPlacer['id']):
         thirdPlacer = winnersParticipants['player2']
 
     getClanById(firstPlacer['id'])['first'] = True
     getClanById(secondPlacer['id'])['second'] = True
     getClanById(thirdPlacer['id'])['third'] = True
+
+# Combine by name, since there's two participant entries for first stage/second stage
+aggregated_clans = {}
+for clan in clans:
+    tag = clan['name']
+    if tag not in aggregated_clans:
+        aggregated_clans[tag] = {
+            'id': clan['id'],
+            'clan_tag': clan['clan_tag'],
+            'name': clan['name'],
+            'swissWins': 0,
+            'swissLosses': 0,
+            'topCut': False,
+            'winnersWins': 0,
+            'losersWins': 0,
+            'swissChamp': False,
+            'first': False,
+            'second': False,
+            'third': False,
+            'points': 0,
+            'rank': -1,
+        }
+
+    aggregated = aggregated_clans[tag]
+    aggregated['swissWins'] += clan['swissWins']
+    aggregated['swissLosses'] += clan['swissLosses']
+    aggregated['winnersWins'] += clan['winnersWins']
+    aggregated['losersWins'] += clan['losersWins']
+    aggregated['points'] += clan['points']
+    aggregated['topCut'] = aggregated['topCut'] or clan['topCut']
+    aggregated['swissChamp'] = aggregated['swissChamp'] or clan['swissChamp']
+    aggregated['first'] = aggregated['first'] or clan['first']
+    aggregated['second'] = aggregated['second'] or clan['second']
+    aggregated['third'] = aggregated['third'] or clan['third']
+
+clans = list(aggregated_clans.values())
 
 # Apply scoring rules for clans
 for clan in clans:
@@ -192,7 +230,7 @@ for clan in clans:
 clans = list(aggregated_clans.values())
 
 # Write the scorer input file for the updater
-with open('input.json', 'w') as file:
+with open("C:\\Users\\nbarl\\Desktop\\bbx\\beyblade_ranking\\JSONProcessingScripts\\CalculateScores\\output.json", 'w') as file:
     json.dump(clans, file, indent=4)
 
 print('Wrote input.json with', len(clans), 'clans')

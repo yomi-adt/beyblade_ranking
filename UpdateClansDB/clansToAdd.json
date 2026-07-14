@@ -1,1 +1,34 @@
-[]
+[
+    {
+        "id": "WPG",
+        "clan_tag": "WPG",
+        "name": "WINNING PEGASUS 2",
+        "swissWins": 2,
+        "swissLosses": 7,
+        "topCut": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 20,
+        "rank": -1
+    },
+    {
+        "id": "NPC",
+        "clan_tag": "NPC",
+        "name": "NEW PLAYER COLLECTIVE",
+        "swissWins": 1,
+        "swissLosses": 4,
+        "topCut": false,
+        "winnersWins": 0,
+        "losersWins": 0,
+        "swissChamp": false,
+        "first": false,
+        "second": false,
+        "third": false,
+        "points": 10,
+        "rank": -1
+    }
+]

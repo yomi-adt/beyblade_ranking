@@ -55,7 +55,7 @@ const items = ref([
 
   <div class="pt-16">
     <RouterView />
-    <p style="font-style: italic">Last updated May 21st, 2026</p>
+    <p style="font-style: italic">Last updated July 4th, 2026</p>
   </div>
 
 </template>

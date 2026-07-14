@@ -1,10 +1,10 @@
-{
-    "FREEDOM":{
-        "id":"45467248",
+[
+    {
+        "id":"BNC",
         "clan_tag":"BNC",
         "name":"FREEDOM",
-        "swissWins":3,
-        "swissLosses":2,
+        "swissWins":7,
+        "swissLosses":3,
         "topCut":true,
         "winnersWins":0,
         "losersWins":0,
@@ -12,11 +12,11 @@
         "first":false,
         "second":false,
         "third":false,
-        "points":0,
+        "points":90,
         "rank":-1
     },
-    "BULLET BEYCLUB":{
-        "id":"45467257",
+    {
+        "id":"BBCLB",
         "clan_tag":"BBCLB",
         "name":"BULLET BEYCLUB",
         "swissWins":0,
@@ -31,59 +31,11 @@
         "points":0,
         "rank":-1
     },
-    "ASIAN JARVEE":{
-        "id":"45467249",
+    {
+        "id":"JARV",
         "clan_tag":"JARV",
         "name":"ASIAN JARVEE",
-        "swissWins":3,
-        "swissLosses":2,
-        "topCut":false,
-        "winnersWins":0,
-        "losersWins":0,
-        "swissChamp":false,
-        "first":false,
-        "second":false,
-        "third":false,
-        "points":0,
-        "rank":-1
-    },
-    "WINNING PEGASUS 2":{
-        "id":"45467258",
-        "clan_tag":"WPG",
-        "name":"WINNING PEGASUS 2",
-        "swissWins":2,
-        "swissLosses":3,
-        "topCut":false,
-        "winnersWins":0,
-        "losersWins":0,
-        "swissChamp":false,
-        "first":false,
-        "second":false,
-        "third":false,
-        "points":0,
-        "rank":-1
-    },
-    "JUSTICE":{
-        "id":"45467250",
-        "clan_tag":"BNC",
-        "name":"JUSTICE",
-        "swissWins":4,
-        "swissLosses":1,
-        "topCut":true,
-        "winnersWins":0,
-        "losersWins":0,
-        "swissChamp":false,
-        "first":false,
-        "second":false,
-        "third":false,
-        "points":0,
-        "rank":-1
-    },
-    "WINNIPEG PEGASUS":{
-        "id":"45467259",
-        "clan_tag":"WPG",
-        "name":"WINNIPEG PEGASUS",
-        "swissWins":0,
+        "swissWins":6,
         "swissLosses":4,
         "topCut":false,
         "winnersWins":0,
@@ -92,11 +44,27 @@
         "first":false,
         "second":false,
         "third":false,
-        "points":0,
+        "points":60,
         "rank":-1
     },
-    "NEW VESTROIA":{
-        "id":"45467251",
+    {
+        "id":"WPG",
+        "clan_tag":"WPG",
+        "name":"WINNING PEGASUS 2",
+        "swissWins":2,
+        "swissLosses":7,
+        "topCut":false,
+        "winnersWins":0,
+        "losersWins":0,
+        "swissChamp":false,
+        "first":false,
+        "second":false,
+        "third":false,
+        "points":20,
+        "rank":-1
+    },
+    {
+        "id":"NV",
         "clan_tag":"NV",
         "name":"NEW VESTROIA",
         "swissWins":4,
@@ -108,27 +76,27 @@
         "first":false,
         "second":false,
         "third":false,
-        "points":0,
+        "points":80,
         "rank":-1
     },
-    "SOJU NO.7":{
-        "id":"45467260",
+    {
+        "id":"SOJU",
         "clan_tag":"SOJU",
         "name":"SOJU NO.7",
-        "swissWins":2,
-        "swissLosses":3,
-        "topCut":false,
-        "winnersWins":0,
+        "swissWins":6,
+        "swissLosses":4,
+        "topCut":true,
+        "winnersWins":1,
         "losersWins":0,
         "swissChamp":false,
         "first":false,
-        "second":false,
+        "second":true,
         "third":false,
-        "points":0,
+        "points":110,
         "rank":-1
     },
-    "MAMBAS":{
-        "id":"45467252",
+    {
+        "id":"Not Applicable ERR:679",
         "clan_tag":"Not Applicable ERR:679",
         "name":"MAMBAS",
         "swissWins":2,
@@ -140,11 +108,11 @@
         "first":false,
         "second":false,
         "third":false,
-        "points":0,
+        "points":20,
         "rank":-1
     },
-    "CALMUNISTS":{
-        "id":"45467261",
+    {
+        "id":"DYN",
         "clan_tag":"DYN",
         "name":"CALMUNISTS",
         "swissWins":2,
@@ -156,15 +124,15 @@
         "first":false,
         "second":false,
         "third":false,
-        "points":0,
+        "points":20,
         "rank":-1
     },
-    "GANG GANG GALAXY":{
-        "id":"45467253",
+    {
+        "id":"T15",
         "clan_tag":"T15",
         "name":"GANG GANG GALAXY",
-        "swissWins":4,
-        "swissLosses":1,
+        "swissWins":6,
+        "swissLosses":4,
         "topCut":true,
         "winnersWins":2,
         "losersWins":0,
@@ -172,11 +140,11 @@
         "first":true,
         "second":false,
         "third":false,
-        "points":0,
+        "points":140,
         "rank":-1
     },
-    "KAOSBORN":{
-        "id":"45467262",
+    {
+        "id":"KAOS",
         "clan_tag":"KAOS",
         "name":"KAOSBORN",
         "swissWins":1,
@@ -188,43 +156,11 @@
         "first":false,
         "second":false,
         "third":false,
-        "points":0,
+        "points":10,
         "rank":-1
     },
-    "L DRAGO":{
-        "id":"45467254",
-        "clan_tag":"T15",
-        "name":"L DRAGO",
-        "swissWins":2,
-        "swissLosses":3,
-        "topCut":false,
-        "winnersWins":0,
-        "losersWins":0,
-        "swissChamp":false,
-        "first":false,
-        "second":false,
-        "third":false,
-        "points":0,
-        "rank":-1
-    },
-    "OG JARVEE":{
-        "id":"45467263",
-        "clan_tag":"JARV",
-        "name":"OG JARVEE",
-        "swissWins":3,
-        "swissLosses":2,
-        "topCut":false,
-        "winnersWins":0,
-        "losersWins":0,
-        "swissChamp":false,
-        "first":false,
-        "second":false,
-        "third":false,
-        "points":0,
-        "rank":-1
-    },
-    "NEW PLAYER COLLECTIVE":{
-        "id":"45467255",
+    {
+        "id":"NPC",
         "clan_tag":"NPC",
         "name":"NEW PLAYER COLLECTIVE",
         "swissWins":1,
@@ -236,27 +172,11 @@
         "first":false,
         "second":false,
         "third":false,
-        "points":0,
+        "points":10,
         "rank":-1
     },
-    "SOJU NO.6":{
-        "id":"45467264",
-        "clan_tag":"SOJU",
-        "name":"SOJU NO.6",
-        "swissWins":4,
-        "swissLosses":1,
-        "topCut":true,
-        "winnersWins":1,
-        "losersWins":0,
-        "swissChamp":false,
-        "first":false,
-        "second":true,
-        "third":false,
-        "points":0,
-        "rank":-1
-    },
-    "UNDERRATED":{
-        "id":"45467256",
+    {
+        "id":"UNDRTD",
         "clan_tag":"UNDRTD",
         "name":"UNDERRATED",
         "swissWins":2,
@@ -268,15 +188,15 @@
         "first":false,
         "second":false,
         "third":false,
-        "points":0,
+        "points":20,
         "rank":-1
     },
-    "STARTEND 1":{
-        "id":"45467265",
+    {
+        "id":"SEND",
         "clan_tag":"SEND",
         "name":"STARTEND 1",
-        "swissWins":3,
-        "swissLosses":1,
+        "swissWins":6,
+        "swissLosses":2,
         "topCut":true,
         "winnersWins":2,
         "losersWins":0,
@@ -284,23 +204,7 @@
         "first":false,
         "second":false,
         "third":true,
-        "points":0,
-        "rank":-1
-    },
-    "STARTEND 2":{
-        "id":"45467266",
-        "clan_tag":"SEND",
-        "name":"STARTEND 2",
-        "swissWins":3,
-        "swissLosses":1,
-        "topCut":true,
-        "winnersWins":0,
-        "losersWins":0,
-        "swissChamp":false,
-        "first":false,
-        "second":false,
-        "third":false,
-        "points":0,
+        "points":120,
         "rank":-1
     }
-}
+]
