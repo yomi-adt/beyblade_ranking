@@ -1,7 +1,9 @@
+import { endpoints } from "./BaseService";
+
 export const Bladers = {
   async getBladers() {
     try {
-      const response = await fetch('https://wpgbbx-backend.onrender.com/api/players');
+      const response = await fetch(endpoints.clans);
 
       if (!response.ok) {
         throw new Error(`Failed to fetch bladers: ${response.status} ${response.statusText}`);
