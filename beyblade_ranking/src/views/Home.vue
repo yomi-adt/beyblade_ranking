@@ -1,8 +1,4 @@
 <script setup>
-import BladerTable from "../components/BladerTable.vue";
-import ClansTable from "../components/ClansTable.vue";
-import Top3Bladers from "../components/Top3Bladers.vue";
-import Top3Clans from "../components/Top3Clans.vue";
 
 import { Button } from "primevue";
 import { useRouter } from 'vue-router';
@@ -13,7 +9,7 @@ const router = useRouter();
 <template>
   <h1 class="pt-5">Winnipeg's Competitive Beyblade X Rankings</h1>
   <h2 class="pt-5">(Under construction. Be back soon!)</h2>
-  <div div style="display: block; width: 100%; padding: 0 0.75rem">
+  <!-- <div div style="display: block; width: 100%; padding: 0 0.75rem">
     <Top3Bladers></Top3Bladers>
     <Button
       label="View Full Rankings"
@@ -28,5 +24,5 @@ const router = useRouter();
       class="mt-3"
       @click="() => {router.push('/clans');}"
     />
-  </div>
+  </div> -->
 </template>
