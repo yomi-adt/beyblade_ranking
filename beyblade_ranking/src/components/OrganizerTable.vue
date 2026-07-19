@@ -11,15 +11,49 @@
     <Card class="mb-4">
       <template #title>1. Point Rules</template>
       <template #content>
-        <div v-for="(rule, idx) in pointRules" :key="rule.id" class="flex align-items-center gap-2 mb-3">
-          <InputText v-model="rule.label" placeholder="e.g. Match win in Swiss" class="flex-1" />
-          <InputNumber v-model="rule.points" placeholder="Points" suffix=" pts" :min="0" class="w-8rem" />
+        <div v-if="rulesError" class="flex align-items-center gap-2 mb-3">
+          <Message severity="error" :closable="false" class="flex-1">{{ rulesError }}</Message>
+          <Button label="Retry" icon="pi pi-refresh" severity="secondary" outlined @click="fetchPointRules" />
+        </div>
+
+        <div v-if="rulesLoading" class="text-color-secondary mb-3">
+          <i class="pi pi-spin pi-spinner mr-2"></i>Loading point rules…
+        </div>
+
+        <div v-else-if="!pointRules.length && !rulesError" class="text-color-secondary mb-3">
+          No point rules yet — add your first one below.
+        </div>
+
+        <div v-for="rule in pointRules" :key="rule.id" class="flex align-items-center gap-2 mb-3">
+          <InputText
+            v-model="rule.label"
+            placeholder="e.g. Match win in Swiss"
+            class="flex-1"
+            @update:modelValue="markRuleDirty(rule)"
+          />
+          <InputNumber
+            v-model="rule.points"
+            placeholder="Points"
+            suffix=" pts"
+            :min="0"
+            class="w-8rem"
+            @update:modelValue="markRuleDirty(rule)"
+          />
+          <Button
+            icon="pi pi-check"
+            severity="success"
+            text
+            :disabled="!rule.dirty || rule.saving"
+            :loading="rule.saving"
+            @click="saveRule(rule)"
+            aria-label="Save rule"
+          />
           <Button
             icon="pi pi-trash"
             severity="danger"
             text
-            :disabled="pointRules.length <= 1"
-            @click="removeRule(idx)"
+            :disabled="pointRules.length <= 1 || rule.saving"
+            @click="removeRule(rule)"
             aria-label="Remove rule"
           />
         </div>
@@ -65,6 +99,9 @@
             @click="loadTournament"
           />
         </div>
+        <small v-if="!pointRules.length" class="text-color-secondary d-block mt-2">
+          Add at least one point rule above before loading a tournament.
+        </small>
         <Message v-if="loadError" severity="error" :closable="false" class="mt-3">{{ loadError }}</Message>
         <div v-if="tournament" class="mt-3 flex align-items-center gap-2">
           <Tag :value="tournament.name" severity="info" />
@@ -164,7 +201,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import axios from 'axios'
 
 import Card from 'primevue/card'
@@ -192,31 +229,97 @@ import Select from 'primevue/select'
 const RANKINGS_API_BASE = '/api/rankings'
 const CHALLONGE_API_BASE = '/api/challonge'
 const PLAYERS_API_BASE = '/api/players'
+const POINT_RULES_API_BASE = '/api/point-rules'
 
-let ruleIdCounter = 0
-function newRule(label = '', points = 0) {
-  return { id: `rule-${ruleIdCounter++}`, label, points }
-}
-
-const pointRules = ref([
-  newRule('Match win in Swiss', 10),
-  newRule('Made top cut', 20),
-  newRule('Winners bracket win', 20),
-])
+// Point rules are persisted server-side (Mongo) so they survive page
+// reloads and are shared across admins — fetched on mount, edited inline,
+// and saved individually per row.
+const pointRules = ref([])
+const rulesLoading = ref(false)
+const rulesError = ref('')
 const multiplier = ref(1)
 
-function addRule() {
-  pointRules.value.push(newRule())
+async function fetchPointRules() {
+  rulesLoading.value = true
+  rulesError.value = ''
+  try {
+    const res = await axios.get(POINT_RULES_API_BASE)
+    pointRules.value = (res.data || []).map((r) => ({ ...r, dirty: false, saving: false }))
+  } catch (err) {
+    rulesError.value = 'Could not load point rules.'
+  } finally {
+    rulesLoading.value = false
+  }
 }
 
-function removeRule(idx) {
-  const removedId = pointRules.value[idx].id
-  pointRules.value.splice(idx, 1)
-  participants.value.forEach((p) => {
-    const before = p.selectedRuleIds.length
-    p.selectedRuleIds = p.selectedRuleIds.filter((id) => id !== removedId)
-    if (p.selectedRuleIds.length !== before) markDirty(p)
+onMounted(fetchPointRules)
+
+function markRuleDirty(rule) {
+  rule.dirty = true
+}
+
+let tempIdCounter = 0
+
+function addRule() {
+  // Add a local-only row immediately so there's always an input to type into,
+  // even if the backend is unreachable or would reject a blank label/points.
+  // It's only persisted (POST) when the admin saves it with real content.
+  pointRules.value.push({
+    id: `temp-${tempIdCounter++}`,
+    label: '',
+    points: 0,
+    dirty: true,
+    saving: false,
+    isNew: true,
   })
+}
+
+async function saveRule(rule) {
+  if (!rule.label.trim()) {
+    rulesError.value = 'Give the rule a label before saving.'
+    return
+  }
+
+  rule.saving = true
+  rulesError.value = ''
+  try {
+    if (rule.isNew) {
+      const res = await axios.post(POINT_RULES_API_BASE, { label: rule.label, points: rule.points })
+      rule.id = res.data.id
+      rule.isNew = false
+    } else {
+      const res = await axios.put(`${POINT_RULES_API_BASE}/${rule.id}`, {
+        label: rule.label,
+        points: rule.points,
+      })
+      rule.label = res.data.label
+      rule.points = res.data.points
+    }
+    rule.dirty = false
+  } catch (err) {
+    rulesError.value = `Could not save "${rule.label || 'Untitled rule'}".`
+  } finally {
+    rule.saving = false
+  }
+}
+
+async function removeRule(rule) {
+  if (rule.isNew) {
+    // Never persisted — just drop the local row, no DELETE needed.
+    pointRules.value = pointRules.value.filter((r) => r.id !== rule.id)
+    return
+  }
+  try {
+    await axios.delete(`${POINT_RULES_API_BASE}/${rule.id}`)
+    pointRules.value = pointRules.value.filter((r) => r.id !== rule.id)
+    participants.value.forEach((p) => {
+      const before = p.selectedRuleIds.length
+      p.selectedRuleIds = p.selectedRuleIds.filter((id) => id !== rule.id)
+      if (p.selectedRuleIds.length !== before) markDirty(p)
+    })
+  } catch (err) {
+    rulesError.value = `Could not remove "${rule.label || 'Untitled rule'}".`
+  }
 }
 
 const challongeInput = ref('')
