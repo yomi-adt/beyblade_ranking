@@ -550,6 +550,7 @@ async function confirmMatch(p) {
 
 <style scoped>
 .dashboard :deep(.dirty-row) {
-  background-color: var(--p-yellow-50, #fffbeb);
+  background-color: rgba(245, 158, 11, 0.12);
+  box-shadow: inset 3px 0 0 0 var(--p-yellow-500, #f59e0b);
 }
 </style>

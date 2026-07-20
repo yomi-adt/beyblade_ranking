@@ -19,6 +19,11 @@ const items = ref([
         icon: 'pi pi-shield',
         route: '/clans'
     },
+    {
+        label: 'Admin Panel',
+        icon: 'pi pi-id-card',
+        route: '/organizer-dash'
+    },
 ]);
 </script>
 
