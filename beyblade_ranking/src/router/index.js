@@ -5,7 +5,7 @@ import Home from '../views/Home.vue'
 import Organizer from '../views/Organizer.vue'
 import Players from '../views/Players.vue'
 import Clans from '../views/Clans.vue'
-import ResetScores from '../components/ResetScores.vue'
+import ResetScores from '../protected/ResetScores.vue'
 import OrganizerDash from '../views/OrganizerDash.vue'
 
 // Create and export router
