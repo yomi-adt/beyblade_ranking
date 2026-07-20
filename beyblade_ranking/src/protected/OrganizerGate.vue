@@ -27,7 +27,7 @@ import Card from 'primevue/card'
 import Password from 'primevue/password'
 import Button from 'primevue/button'
 import Message from 'primevue/message'
-import { isUnlocked, setOrganizerKey, markUnlocked, clearOrganizerKey } from './organizerAuth'
+import { isUnlocked, setOrganizerKey, markUnlocked, clearOrganizerKey } from '../service/OrganizerAuth'
 import { API_ROOT } from './apiConfig'
 
 // Verifying the key requires an actual request — there's nothing to check
