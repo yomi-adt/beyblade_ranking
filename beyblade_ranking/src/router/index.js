@@ -6,6 +6,7 @@ import Organizer from '../views/Organizer.vue'
 import Organizer3 from '../views/Organizer3.vue'
 import Players from '../views/Players.vue'
 import Clans from '../views/Clans.vue'
+import ResetScores from '../components/ResetScores.vue'
 
 // Create and export router
 const router = createRouter({
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/organizer', // Todo: Set path to some random UUID string so that it's harder to access
       name: 'Organizer',
       component: Organizer,
+    },
+    {
+      path: '/reset-scores', // Todo: Set path to some random UUID string so that it's harder to access
+      name: 'Reset-Scores',
+      component: ResetScores,
     },
     {
       path: '/organizer3', // Todo: Set path to some random UUID string so that it's harder to access

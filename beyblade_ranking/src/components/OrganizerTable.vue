@@ -27,16 +27,24 @@
         <div v-for="rule in pointRules" :key="rule.id" class="flex align-items-center gap-2 mb-3">
           <InputText
             v-model="rule.label"
-            placeholder="e.g. Match win in Swiss"
+            :placeholder="rule.type === 'COUNT' ? 'e.g. Points per Swiss win' : 'e.g. Made top cut?'"
             class="flex-1"
             @update:modelValue="markRuleDirty(rule)"
           />
           <InputNumber
             v-model="rule.points"
-            placeholder="Points"
+            :placeholder="rule.type === 'COUNT' ? 'Points each' : 'Points'"
             suffix=" pts"
             :min="0"
-            class="w-8rem"
+            class="w-9rem"
+            @update:modelValue="markRuleDirty(rule)"
+          />
+          <SelectButton
+            v-model="rule.type"
+            :options="ruleTypeOptions"
+            optionLabel="label"
+            optionValue="value"
+            :allowEmpty="false"
             @update:modelValue="markRuleDirty(rule)"
           />
           <Button
@@ -145,17 +153,30 @@
           <Column field="name" header="Participant" style="width: 14rem" />
           <Column :header="`Achievements (${multiplier}× multiplier applied)`">
             <template #body="{ data }">
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap align-items-center gap-2">
                 <ToggleButton
-                  v-for="rule in pointRules"
+                  v-for="rule in booleanRules"
                   :key="rule.id"
-                  :modelValue="data.selectedRuleIds.includes(rule.id)"
+                  :modelValue="!!data.ruleValues[rule.id]"
                   :onLabel="`${rule.label || 'Untitled rule'} (${rule.points})`"
                   :offLabel="`${rule.label || 'Untitled rule'} (${rule.points})`"
                   :disabled="submitting"
-                  @update:modelValue="() => toggleRule(data, rule.id)"
+                  @update:modelValue="() => toggleBooleanRule(data, rule.id)"
                   class="p-button-sm"
                 />
+                <div v-for="rule in countRules" :key="rule.id" class="flex align-items-center gap-1">
+                  <span class="text-sm white-space-nowrap">{{ rule.label || 'Untitled rule' }} ({{ rule.points }} ea):</span>
+                  <InputNumber
+                    :modelValue="data.ruleValues[rule.id] || 0"
+                    @update:modelValue="(v) => setCountRule(data, rule.id, v)"
+                    :min="0"
+                    :disabled="submitting"
+                    showButtons
+                    buttonLayout="horizontal"
+                    class="w-6rem"
+                    inputStyle="width: 2.5rem"
+                  />
+                </div>
               </div>
             </template>
           </Column>
@@ -216,6 +237,7 @@ import DataTable from 'primevue/datatable'
 import Column from 'primevue/column'
 import ToggleButton from 'primevue/togglebutton'
 import Select from 'primevue/select'
+import SelectButton from 'primevue/selectbutton'
 
 // Assumes PrimeVue is already installed and registered with a theme preset
 // (e.g. Aura) in main.js:
@@ -231,6 +253,11 @@ const CHALLONGE_API_BASE = '/api/challonge'
 const PLAYERS_API_BASE = '/api/players'
 const POINT_RULES_API_BASE = '/api/point-rules'
 
+const ruleTypeOptions = [
+  { label: 'Yes/No', value: 'BOOLEAN' },
+  { label: 'Count ×', value: 'COUNT' },
+]
+
 // Point rules are persisted server-side (Mongo) so they survive page
 // reloads and are shared across admins — fetched on mount, edited inline,
 // and saved individually per row.
@@ -239,12 +266,20 @@ const rulesLoading = ref(false)
 const rulesError = ref('')
 const multiplier = ref(1)
 
+const booleanRules = computed(() => pointRules.value.filter((r) => r.type !== 'COUNT'))
+const countRules = computed(() => pointRules.value.filter((r) => r.type === 'COUNT'))
+
 async function fetchPointRules() {
   rulesLoading.value = true
   rulesError.value = ''
   try {
     const res = await axios.get(POINT_RULES_API_BASE)
-    pointRules.value = (res.data || []).map((r) => ({ ...r, dirty: false, saving: false }))
+    pointRules.value = (res.data || []).map((r) => ({
+      ...r,
+      type: r.type || 'BOOLEAN',
+      dirty: false,
+      saving: false,
+    }))
   } catch (err) {
     rulesError.value = 'Could not load point rules.'
   } finally {
@@ -268,6 +303,7 @@ function addRule() {
     id: `temp-${tempIdCounter++}`,
     label: '',
     points: 0,
+    type: 'BOOLEAN',
     dirty: true,
     saving: false,
     isNew: true,
@@ -283,17 +319,16 @@ async function saveRule(rule) {
   rule.saving = true
   rulesError.value = ''
   try {
+    const payload = { label: rule.label, points: rule.points, type: rule.type }
     if (rule.isNew) {
-      const res = await axios.post(POINT_RULES_API_BASE, { label: rule.label, points: rule.points })
+      const res = await axios.post(POINT_RULES_API_BASE, payload)
       rule.id = res.data.id
       rule.isNew = false
     } else {
-      const res = await axios.put(`${POINT_RULES_API_BASE}/${rule.id}`, {
-        label: rule.label,
-        points: rule.points,
-      })
+      const res = await axios.put(`${POINT_RULES_API_BASE}/${rule.id}`, payload)
       rule.label = res.data.label
       rule.points = res.data.points
+      rule.type = res.data.type
     }
     rule.dirty = false
   } catch (err) {
@@ -313,9 +348,11 @@ async function removeRule(rule) {
     await axios.delete(`${POINT_RULES_API_BASE}/${rule.id}`)
     pointRules.value = pointRules.value.filter((r) => r.id !== rule.id)
     participants.value.forEach((p) => {
-      const before = p.selectedRuleIds.length
-      p.selectedRuleIds = p.selectedRuleIds.filter((id) => id !== rule.id)
-      if (p.selectedRuleIds.length !== before) markDirty(p)
+      if (rule.id in p.ruleValues) {
+        const { [rule.id]: _removed, ...rest } = p.ruleValues
+        p.ruleValues = rest
+        markDirty(p)
+      }
     })
   } catch (err) {
     rulesError.value = `Could not remove "${rule.label || 'Untitled rule'}".`
@@ -372,8 +409,9 @@ async function loadTournament() {
       id: p.id,
       seed: p.seed,
       name: p.name,
-      selectedRuleIds: [],
-      originalRuleIds: [],
+      // Keyed by rule id. BOOLEAN rules store true/false; COUNT rules store a number.
+      ruleValues: {},
+      originalRuleValues: {},
       dirty: false,
       saveState: null,
       matchUsername: null, // set once the admin resolves a name mismatch
@@ -388,35 +426,42 @@ async function loadTournament() {
   }
 }
 
-function toggleRule(participant, ruleId) {
-  const idx = participant.selectedRuleIds.indexOf(ruleId)
-  if (idx === -1) {
-    participant.selectedRuleIds.push(ruleId)
-  } else {
-    participant.selectedRuleIds.splice(idx, 1)
+function toggleBooleanRule(participant, ruleId) {
+  participant.ruleValues = {
+    ...participant.ruleValues,
+    [ruleId]: !participant.ruleValues[ruleId],
+  }
+  markDirty(participant)
+}
+
+function setCountRule(participant, ruleId, value) {
+  participant.ruleValues = {
+    ...participant.ruleValues,
+    [ruleId]: Number(value) || 0,
   }
   markDirty(participant)
 }
 
 function markDirty(p) {
-  const same =
-    p.selectedRuleIds.length === p.originalRuleIds.length &&
-    p.selectedRuleIds.every((id) => p.originalRuleIds.includes(id))
+  const same = JSON.stringify(p.ruleValues) === JSON.stringify(p.originalRuleValues)
   p.dirty = !same
   if (p.saveState !== 'needs-match') p.saveState = null
 }
 
 function computeTotal(p) {
-  const base = p.selectedRuleIds.reduce((sum, ruleId) => {
-    const rule = pointRules.value.find((r) => r.id === ruleId)
-    return sum + (rule ? Number(rule.points) || 0 : 0)
+  const base = pointRules.value.reduce((sum, rule) => {
+    const raw = p.ruleValues[rule.id]
+    if (rule.type === 'COUNT') {
+      return sum + (Number(raw) || 0) * (Number(rule.points) || 0)
+    }
+    return sum + (raw ? Number(rule.points) || 0 : 0)
   }, 0)
   return base * (Number(multiplier.value) || 0)
 }
 
 function resetChanges() {
   participants.value.forEach((p) => {
-    p.selectedRuleIds = [...p.originalRuleIds]
+    p.ruleValues = { ...p.originalRuleValues }
     p.dirty = false
     p.saveState = null
     p.matchUsername = null
@@ -425,15 +470,20 @@ function resetChanges() {
 }
 
 function buildPayload(p, explicitUsername) {
+  const appliedRules = pointRules.value
+    .map((rule) => {
+      const raw = p.ruleValues[rule.id]
+      const count = rule.type === 'COUNT' ? Number(raw) || 0 : raw ? 1 : 0
+      return { label: rule.label, points: rule.points, count }
+    })
+    .filter((r) => r.count > 0)
+
   return {
     tournamentId: tournament.value?.id,
     tournamentName: tournament.value?.name,
     participantName: p.name,
     playerUsername: explicitUsername || null,
-    appliedRules: p.selectedRuleIds.map((id) => {
-      const rule = pointRules.value.find((r) => r.id === id)
-      return { label: rule?.label, points: rule?.points }
-    }),
+    appliedRules,
     multiplier: multiplier.value,
     totalPoints: computeTotal(p),
   }
@@ -442,7 +492,7 @@ function buildPayload(p, explicitUsername) {
 async function submitOne(p) {
   try {
     await axios.post(`${RANKINGS_API_BASE}/points`, buildPayload(p, p.matchUsername))
-    p.originalRuleIds = [...p.selectedRuleIds]
+    p.originalRuleValues = { ...p.ruleValues }
     p.dirty = false
     p.saveState = 'success'
     return 'success'
