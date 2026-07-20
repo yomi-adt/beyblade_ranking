@@ -27,12 +27,13 @@ import Card from 'primevue/card'
 import Password from 'primevue/password'
 import Button from 'primevue/button'
 import Message from 'primevue/message'
-import { isUnlocked, setOrganizerKey, markUnlocked, clearOrganizerKey } from '../service/OrganizerAuth'
+import { isUnlocked, setOrganizerKey, markUnlocked, clearOrganizerKey } from './organizerAuth'
+import { API_ROOT } from './apiConfig'
 
 // Verifying the key requires an actual request — there's nothing to check
 // client-side, so this hits a lightweight organizer-only endpoint and
 // unlocks only if the backend accepts it.
-const VERIFY_URL = '/api/point-rules'
+const VERIFY_URL = `${API_ROOT}/api/point-rules`
 
 const keyInput = ref('')
 const checking = ref(false)

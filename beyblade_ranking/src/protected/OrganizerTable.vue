@@ -241,6 +241,7 @@ import ToggleButton from 'primevue/togglebutton'
 import Select from 'primevue/select'
 import SelectButton from 'primevue/selectbutton'
 import OrganizerGate from './OrganizerGate.vue'
+import { RANKINGS_API_BASE, CHALLONGE_API_BASE, PLAYERS_API_BASE, POINT_RULES_API_BASE } from './apiConfig'
 
 // Assumes PrimeVue is already installed and registered with a theme preset
 // (e.g. Aura) in main.js:
@@ -251,10 +252,6 @@ import OrganizerGate from './OrganizerGate.vue'
 // Points are your app's own community ranking data (stored in your backend/DB),
 // separate from Challonge itself — Challonge only supplies the participant list
 // and bracket results, it has no concept of your community's point system.
-const RANKINGS_API_BASE = '/api/rankings'
-const CHALLONGE_API_BASE = '/api/challonge'
-const PLAYERS_API_BASE = '/api/players'
-const POINT_RULES_API_BASE = '/api/point-rules'
 
 const ruleTypeOptions = [
   { label: 'Yes/No', value: 'BOOLEAN' },

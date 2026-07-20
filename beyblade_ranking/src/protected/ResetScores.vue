@@ -57,11 +57,10 @@ import Button from 'primevue/button'
 import Message from 'primevue/message'
 import Dialog from 'primevue/dialog'
 import OrganizerGate from './OrganizerGate.vue'
+import { RANKINGS_API_BASE } from './apiConfig'
 
 // Assumes PrimeVue is already installed and registered with a theme preset
 // (e.g. Aura) in main.js — see TournamentAdminDashboard.vue for the setup snippet.
-
-const RANKINGS_API_BASE = '/api/rankings'
 
 const confirmVisible = ref(false)
 const resetting = ref(false)
