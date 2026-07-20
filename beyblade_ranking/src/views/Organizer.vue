@@ -1,5 +1,5 @@
 <script setup>
-    import OrganizerTable from '../protected/OrganizerTable.vue/index.js';
+    import OrganizerTable from '../protected/OrganizerTable.vue';
 </script>
 
 <template>

@@ -2,7 +2,7 @@
 import { useRouter } from 'vue-router'
 import Card from 'primevue/card'
 import Button from 'primevue/button'
-import OrganizerGate from '../components/OrganizerGate.vue';
+import OrganizerGate from '../protected/OrganizerGate.vue';
 
 const router = useRouter()
 </script>
