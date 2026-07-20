@@ -1,4 +1,5 @@
 <template>
+  <OrganizerGate>
   <div class="reset-scores p-4">
     <div class="mb-4">
       <h1 class="text-2xl font-bold m-0">Reset Scores</h1>
@@ -44,6 +45,7 @@
       </template>
     </Dialog>
   </div>
+  </OrganizerGate>
 </template>
 
 <script setup>
@@ -54,6 +56,7 @@ import Card from 'primevue/card'
 import Button from 'primevue/button'
 import Message from 'primevue/message'
 import Dialog from 'primevue/dialog'
+import OrganizerGate from './OrganizerGate.vue'
 
 // Assumes PrimeVue is already installed and registered with a theme preset
 // (e.g. Aura) in main.js — see TournamentAdminDashboard.vue for the setup snippet.

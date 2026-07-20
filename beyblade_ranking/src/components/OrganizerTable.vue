@@ -1,4 +1,5 @@
 <template>
+  <OrganizerGate>
   <div class="dashboard p-4">
     <div class="mb-4">
       <h1 class="text-2xl font-bold m-0">Tournament Administrator</h1>
@@ -219,6 +220,7 @@
       No participants found for that tournament.
     </div>
   </div>
+  </OrganizerGate>
 </template>
 
 <script setup>
@@ -238,6 +240,7 @@ import Column from 'primevue/column'
 import ToggleButton from 'primevue/togglebutton'
 import Select from 'primevue/select'
 import SelectButton from 'primevue/selectbutton'
+import OrganizerGate from './OrganizerGate.vue'
 
 // Assumes PrimeVue is already installed and registered with a theme preset
 // (e.g. Aura) in main.js:
