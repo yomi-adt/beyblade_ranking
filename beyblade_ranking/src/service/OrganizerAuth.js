@@ -11,8 +11,13 @@ export function getOrganizerKey() {
   return sessionStorage.getItem(STORAGE_KEY) || ''
 }
 
+/** Stores the key so requests can use it, without marking the app as unlocked yet. */
 export function setOrganizerKey(key) {
   sessionStorage.setItem(STORAGE_KEY, key)
+}
+
+/** Call only after a request with this key has actually succeeded. */
+export function markUnlocked() {
   isUnlocked.value = true
 }
 

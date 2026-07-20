@@ -27,7 +27,7 @@ import Card from 'primevue/card'
 import Password from 'primevue/password'
 import Button from 'primevue/button'
 import Message from 'primevue/message'
-import { isUnlocked, setOrganizerKey, clearOrganizerKey } from '../service/OrganizerAuth'
+import { isUnlocked, setOrganizerKey, markUnlocked, clearOrganizerKey } from '../service/OrganizerAuth'
 
 // Verifying the key requires an actual request — there's nothing to check
 // client-side, so this hits a lightweight organizer-only endpoint and
@@ -42,10 +42,10 @@ async function attemptUnlock() {
   if (!keyInput.value.trim()) return
   checking.value = true
   error.value = ''
-  setOrganizerKey(keyInput.value.trim())
+  setOrganizerKey(keyInput.value.trim()) // stored so the interceptor attaches it to the verify call below
   try {
     await axios.get(VERIFY_URL)
-    // isUnlocked already true via setOrganizerKey; request succeeded, so it stays true.
+    markUnlocked() // only now does the gate actually open
   } catch (err) {
     clearOrganizerKey()
     error.value = err.response?.status === 401 ? 'Incorrect key.' : 'Could not verify key. Try again.'
