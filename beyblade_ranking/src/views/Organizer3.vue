@@ -1,5 +1,5 @@
 <script setup>
-    import OrganizerTable from '../components/OrganizerTable.vue';
+    import OrganizerTable from '../protected/OrganizerTable.vue/index.js';
     import { Button } from 'primevue';
 </script>
 
