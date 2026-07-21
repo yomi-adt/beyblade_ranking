@@ -6,6 +6,8 @@
 export const API_ROOT = import.meta.env.VITE_API_BASE_URL || ''
 
 export const CHALLONGE_API_BASE = `${API_ROOT}/api/challonge`
-export const RANKINGS_API_BASE = `${API_ROOT}/api/rankings`
+export const PLAYER_RANKINGS_API_BASE = `${API_ROOT}/api/rankings/players`
+export const CLAN_RANKINGS_API_BASE = `${API_ROOT}/api/rankings/clans`
 export const PLAYERS_API_BASE = `${API_ROOT}/api/players`
+export const CLANS_API_BASE = `${API_ROOT}/api/clans`
 export const POINT_RULES_API_BASE = `${API_ROOT}/api/point-rules`
