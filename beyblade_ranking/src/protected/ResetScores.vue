@@ -13,8 +13,8 @@
         <template #title>Players</template>
         <template #content>
           <Message severity="warn" :closable="false" class="mb-4">
-            Sets every player's points back to 0. Past tournament point history stays intact —
-            only the running totals are reset, and that can't be undone.
+            Sets every player's points back to 0 AND deletes their tournament point history.
+            This can't be undone.
           </Message>
           <Message v-if="playerResult.message" :severity="playerResult.severity" :closable="false" class="mb-4">
             {{ playerResult.message }}
@@ -33,8 +33,8 @@
         <template #title>Clans</template>
         <template #content>
           <Message severity="warn" :closable="false" class="mb-4">
-            Sets every clan's points back to 0. Past tournament point history stays intact —
-            only the running totals are reset, and that can't be undone.
+            Sets every clan's points back to 0 AND deletes their tournament point history.
+            This can't be undone.
           </Message>
           <Message v-if="clanResult.message" :severity="clanResult.severity" :closable="false" class="mb-4">
             {{ clanResult.message }}
@@ -51,7 +51,10 @@
     </div>
 
     <Dialog v-model:visible="playerConfirmVisible" modal header="Confirm player score reset" :style="{ width: '28rem' }">
-      <p class="m-0 mb-3">Are you sure? This will set every player's points to 0. This can't be undone.</p>
+      <p class="m-0 mb-3">
+        Are you sure? This will set every player's points to 0 and delete their tournament point
+        history. This can't be undone.
+      </p>
       <template #footer>
         <Button label="Cancel" severity="secondary" text @click="playerConfirmVisible = false" />
         <Button label="Yes, reset everything" severity="danger" :loading="playerResetting" @click="resetPlayerScores" />
@@ -59,7 +62,10 @@
     </Dialog>
 
     <Dialog v-model:visible="clanConfirmVisible" modal header="Confirm clan score reset" :style="{ width: '28rem' }">
-      <p class="m-0 mb-3">Are you sure? This will set every clan's points to 0. This can't be undone.</p>
+      <p class="m-0 mb-3">
+        Are you sure? This will set every clan's points to 0 and delete their tournament point
+        history. This can't be undone.
+      </p>
       <template #footer>
         <Button label="Cancel" severity="secondary" text @click="clanConfirmVisible = false" />
         <Button label="Yes, reset everything" severity="danger" :loading="clanResetting" @click="resetClanScores" />
@@ -93,7 +99,10 @@ async function resetPlayerScores() {
   playerResult.value = { message: '', severity: 'success' }
   try {
     const res = await axios.post(`${PLAYER_RANKINGS_API_BASE}/reset-scores`)
-    playerResult.value = { message: `Reset ${res.data.entitiesReset} player(s) to 0 points.`, severity: 'success' }
+    playerResult.value = {
+      message: `Reset ${res.data.entitiesReset} player(s) to 0 points and removed ${res.data.logEntriesRemoved} history entr${res.data.logEntriesRemoved === 1 ? 'y' : 'ies'}.`,
+      severity: 'success',
+    }
     playerConfirmVisible.value = false
   } catch (err) {
     playerResult.value = { message: 'Could not reset player scores. Try again.', severity: 'error' }
@@ -107,7 +116,10 @@ async function resetClanScores() {
   clanResult.value = { message: '', severity: 'success' }
   try {
     const res = await axios.post(`${CLAN_RANKINGS_API_BASE}/reset-scores`)
-    clanResult.value = { message: `Reset ${res.data.entitiesReset} clan(s) to 0 points.`, severity: 'success' }
+    clanResult.value = {
+      message: `Reset ${res.data.entitiesReset} clan(s) to 0 points and removed ${res.data.logEntriesRemoved} history entr${res.data.logEntriesRemoved === 1 ? 'y' : 'ies'}.`,
+      severity: 'success',
+    }
     clanConfirmVisible.value = false
   } catch (err) {
     clanResult.value = { message: 'Could not reset clan scores. Try again.', severity: 'error' }
