@@ -27,12 +27,12 @@ onMounted(async () => {
 const data = ref([]);
 const columns = [
   { field: "rank", header: "Rank" },
-  { field: "username", header: "Name" },
+  { field: "name", header: "Name" },
   { field: "points", header: "Points" },
 ];
 
 const filters = ref({
-  username: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
+  name: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
 });
 
 async function copyToClipboard(data) {
@@ -60,7 +60,7 @@ function popupBlader(selectedBlader) {
   <Toolbar>
     <template #start>
       <InputText
-        v-model="filters['username'].value"
+        v-model="filters['name'].value"
         placeholder="Search for Blader"
       />
     </template>
