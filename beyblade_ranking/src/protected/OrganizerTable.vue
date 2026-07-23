@@ -175,7 +175,7 @@
                     showButtons
                     buttonLayout="horizontal"
                     class="w-6rem"
-                    inputStyle="width: 2.5rem"
+                    inputStyle="width: 2.5rem; text-align: center;"
                   />
                 </div>
               </div>
