@@ -126,11 +126,10 @@ function popupBlader(selectedBlader) {
       <Divider></Divider>
 
       <Message severity="success" icon="pi pi-trophy">
-        Total Podiums: {{ selectedBladerRef.data["Total Wins"] }}
+        Stats
       </Message>
       <div class="bladerField">
-        <i class="pi pi-angle-right"></i>
-        First Place Finishes:
+        Total points: {{ selectedBladerRef.data["points"] }}
         {{ selectedBladerRef.data["First Place Finishes"] }}
       </div>
       <div class="bladerField">

@@ -1,6 +1,6 @@
 <template>
   <div class="leaderboard-container">
-    <h2 class="text-center mb-4">Top 3 Players</h2>
+    <h2 class="text-center mb-4">Top 3 Clans</h2>
 
     <div class="top3-wrapper flex justify-content-center align-items-end gap-4 mb-5">
       <!-- Loading state: 3 skeleton cards -->
@@ -25,7 +25,7 @@
         >
           <template #content>
             <div class="flex flex-column align-items-center">
-              <h3>{{ player.rank }}: {{ player.username }}</h3>
+              <h3>{{ player.rank }}: {{ player.name }}</h3>
               <p class="text-secondary">{{ player.points }} points</p>
             </div>
           </template>
