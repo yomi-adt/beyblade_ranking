@@ -178,7 +178,11 @@ async function popupBlader(selectedBlader) {
 
     </div>
     <template #footer>
-      <Divider></Divider>
+        <Button
+            label="Close"
+            severity="danger"
+            @click="bladerPopup = false"
+        />
     </template>
   </Dialog>
 </template>
