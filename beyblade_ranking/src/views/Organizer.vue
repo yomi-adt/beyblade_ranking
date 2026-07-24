@@ -1,7 +1,7 @@
 <script setup>
-    import OrganizerTable from '../protected/OrganizerTable.vue';
+    import TournamentAdminDashboard from '../protected/TournamentAdminDashboard.vue';
 </script>
 
 <template>
-    <OrganizerTable />
+    <TournamentAdminDashboard />
 </template>

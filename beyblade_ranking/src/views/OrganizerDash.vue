@@ -26,6 +26,20 @@ const router = useRouter()
 
     <Card>
       <template #title>
+        Update Clan Scores
+      </template>
+
+      <template #footer>
+        <Button
+          label="Update Clan Scores"
+          icon="pi pi-shield"
+          @click="router.push('/update-clan-scores')"
+        />
+      </template>
+    </Card>
+
+    <Card>
+      <template #title>
         Reset Scores
       </template>
 
