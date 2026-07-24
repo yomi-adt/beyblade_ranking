@@ -162,7 +162,8 @@ async function popupBlader(selectedBlader) {
         signatureCombo Combo: [NO DATA AVAILABLE]
       </Message>
 
-      <Button class="mt-3" v-on:click="() => {showAudits = !showAudits}">Show Audit</Button>
+      <Divider></Divider>
+      <Button v-on:click="() => {showAudits = !showAudits}">{{showAudits ? "Hide" : "Show"}} Audit</Button>
       <div v-show="showAudits">
         <Divider></Divider>
         <div v-for="audit in currAudit">
