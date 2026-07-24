@@ -42,6 +42,8 @@ async function copyToClipboard(data) {
   console.log('Copied ' + challongeName + ' to clipboard!')
 }
 
+const currAudit = ref([])
+
 const organizerMode = ref(false);
 const apiKey = ref("");
 const communityId = ref("wbbx");
@@ -49,9 +51,14 @@ const tournamentId = ref("");
 
 const bladerPopup = ref(false);
 const selectedBladerRef = ref();
-function popupBlader(selectedBlader) {
+
+const showAudits = ref(false);
+
+async function popupBlader(selectedBlader) {
   selectedBladerRef.value = selectedBlader;
   bladerPopup.value = true;
+
+  currAudit.value = await Bladers.getAudits(selectedBlader.data.username);
 }
 </script>
 
@@ -85,21 +92,12 @@ function popupBlader(selectedBlader) {
       :field="col.field"
       :header="col.header"
     ></Column>
-    <Column 
-      header="Add to Challonge"
-    >
-      <template #body="slotProps">
-        <Button
-          icon="pi pi-copy"
-          @click="copyToClipboard(slotProps.data)"
-        />
-      </template>
-    </Column>
   </DataTable>
 
   <Dialog
     v-model:visible="bladerPopup"
     style="min-width: 20vw; max-width: 70vw"
+    @hide="() => {showAudits = false}"
   >
     <template #header>
       <div class="fadeIn">
@@ -163,9 +161,23 @@ function popupBlader(selectedBlader) {
       >
         signatureCombo Combo: [NO DATA AVAILABLE]
       </Message>
+
+      <Button class="mt-3" v-on:click="() => {showAudits = !showAudits}">Show Audit</Button>
+      <div v-show="showAudits">
+        <Divider></Divider>
+        <div v-for="audit in currAudit">
+          <h3>{{ audit.tournamentName }}</h3>
+          <h4>Total points earned: {{ audit.totalPoints }}</h4>
+          <div v-for="rule in audit.appliedRules">
+            - {{ rule.label }}: {{ rule.points }} points x {{ rule.count }} times
+          </div>
+        </div>
+        <Divider></Divider>
+      </div>
+
     </div>
     <template #footer>
-      <Divider></Divider>
+        <Divider></Divider>
     </template>
   </Dialog>
 </template>
