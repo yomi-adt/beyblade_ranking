@@ -235,36 +235,18 @@
       No participants found for that tournament.
     </div>
 
-    <Dialog v-model:visible="addPlayerDialogVisible" modal header="Add New Player" :style="{ width: '26rem' }">
-      <div class="flex flex-column gap-3">
-        <div>
-          <label for="newPlayerUsername" class="font-semibold block mb-1">Username</label>
-          <InputText id="newPlayerUsername" v-model="newPlayerUsername" class="w-full" placeholder="Unique login/id" />
-        </div>
-        <div>
-          <label for="newPlayerBladerName" class="font-semibold block mb-1">Blader Name</label>
-          <InputText id="newPlayerBladerName" v-model="newPlayerBladerName" class="w-full" placeholder="Optional" />
-        </div>
-        <Message v-if="addPlayerError" severity="error" :closable="false">{{ addPlayerError }}</Message>
-      </div>
-      <template #footer>
-        <Button label="Cancel" severity="secondary" text @click="addPlayerDialogVisible = false" />
-        <Button
-          label="Create &amp; Match"
-          icon="pi pi-user-plus"
-          :loading="addingPlayer"
-          :disabled="!newPlayerUsername.trim()"
-          @click="createAndMatchPlayer"
-        />
-      </template>
-    </Dialog>
+    <PlayerFormDialog 
+      v-model:visible="addPlayerDialogVisible"
+      mode="create"
+      :suggested-username="addPlayerTarget?.name"
+      @saved="onPlayerCreated"
+    />
   </div>
   </OrganizerGate>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import axios from 'axios'
 
 import Card from 'primevue/card'
 import InputText from 'primevue/inputtext'
@@ -283,6 +265,7 @@ import Dialog from 'primevue/dialog'
 import OrganizerGate from './OrganizerGate.vue'
 import { PLAYER_RANKINGS_API_BASE, CHALLONGE_API_BASE, PLAYERS_API_BASE, POINT_RULES_API_BASE } from './apiConfig.js'
 import { useTournamentScoring } from './useTournamentScoring.js'
+import PlayerFormDialog from './PlayerFormDialog.vue'
 
 // Assumes PrimeVue is already installed and registered with a theme preset
 // (e.g. Aura) in main.js:
@@ -310,50 +293,20 @@ const {
 // immediately resubmits the pending point award against it.
 const addPlayerDialogVisible = ref(false)
 const addPlayerTarget = ref(null)
-const newPlayerUsername = ref('')
-const newPlayerBladerName = ref('')
-const addingPlayer = ref(false)
-const addPlayerError = ref('')
 
 function openAddPlayerDialog(participant) {
   addPlayerTarget.value = participant
-  newPlayerUsername.value = participant.name
-  newPlayerBladerName.value = ''
-  addPlayerError.value = ''
   addPlayerDialogVisible.value = true
 }
 
-async function createAndMatchPlayer() {
-  const username = newPlayerUsername.value.trim()
-  if (!username) return
-
-  addingPlayer.value = true
-  addPlayerError.value = ''
-  try {
-    const res = await axios.post(PLAYERS_API_BASE, {
-      username,
-      bladerName: newPlayerBladerName.value.trim() || null,
-      lore: null,
-      signatureCombo: null,
-      points: 0,
-    })
-    entityList.value.push(res.data)
-
-    const target = addPlayerTarget.value
-    addPlayerDialogVisible.value = false
-    if (target) {
-      target.matchKey = res.data.username
-      submitting.value = true
-      await submitOne(target)
-      submitting.value = false
-    }
-  } catch (err) {
-    addPlayerError.value =
-      err.response?.status === 409 || err.response?.status === 400
-        ? 'A player with that username already exists.'
-        : 'Could not create the player. Try again.'
-  } finally {
-    addingPlayer.value = false
+async function onPlayerCreated(newPlayer) {
+  entityList.value.push(newPlayer)
+  const target = addPlayerTarget.value
+  if (target) {
+    target.matchKey = newPlayer.username
+    submitting.value = true
+    await submitOne(target)
+    submitting.value = false
   }
 }
 </script>

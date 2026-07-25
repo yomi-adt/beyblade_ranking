@@ -46,8 +46,29 @@ const router = useRouter()
       <template #footer>
         <Button
           label="Reset Scores"
-          icon="pi pi-user"
+          icon="pi pi-list"
           @click="router.push('/reset-scores')"
+        />
+      </template>
+    </Card>
+
+    <Card>
+      <template #title>
+        Edit Participants
+      </template>
+
+      <template #footer>
+        <Button
+          class="m-1"
+          label="Edit players"
+          icon="pi pi-users"
+          @click="router.push('/edit-players')"
+        />
+        <Button
+          class="m-1"
+          label="Edit Clans"
+          icon="pi pi-shield"
+          @click="router.push('/edit-clans')"
         />
       </template>
     </Card>
