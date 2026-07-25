@@ -180,7 +180,7 @@
                     :disabled="submitting"
                     showButtons
                     buttonLayout="horizontal"
-                    inputStyle="width: 2.5rem"
+                    inputStyle="width: 2.5rem; text-align: center;"
                   >
                     <template #incrementbuttonicon>
                         <span class="pi pi-plus" />
