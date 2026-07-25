@@ -180,9 +180,15 @@
                     :disabled="submitting"
                     showButtons
                     buttonLayout="horizontal"
-                    class="w-6rem"
                     inputStyle="width: 2.5rem"
-                  />
+                  >
+                    <template #incrementbuttonicon>
+                        <span class="pi pi-plus" />
+                    </template>
+                    <template #decrementbuttonicon>
+                        <span class="pi pi-minus" />
+                    </template>
+                  </InputNumber>
                 </div>
               </div>
             </template>
