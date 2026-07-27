@@ -181,7 +181,7 @@
               </div>
             </template>
           </Column>
-          <Column header="Total Points" style="width: 7rem" bodyStyle="text-align: center" headerStyle="text-align: center">
+          <Column header="Total Points" style="width: 7rem" bodyStyle="text-align: center; justify-content: center;" headerStyle="text-align: center; justify-content: center;">
             <template #body="{ data }">
               <span class="font-semibold">{{ computeTotal(data) }}</span>
             </template>
