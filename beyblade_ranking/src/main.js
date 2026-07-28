@@ -4,6 +4,7 @@ import App from './App.vue'
 
 import PrimeVue from 'primevue/config'
 import Aura from '@primeuix/themes/aura'
+import { definePreset } from '@primeuix/themes'
 import 'primeflex/primeflex.css';
 
 import 'primeicons/primeicons.css'

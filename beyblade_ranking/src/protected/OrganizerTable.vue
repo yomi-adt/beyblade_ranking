@@ -154,7 +154,7 @@
           <Column field="name" header="Participant" style="width: 14rem" />
           <Column :header="`Achievements (${multiplier}× multiplier applied)`">
             <template #body="{ data }">
-              <div class="flex flex-wrap align-items-center gap-2">
+              <div class="flex flex-wrap align-items-center gap-4">
                 <ToggleButton
                   v-for="rule in booleanRules"
                   :key="rule.id"
@@ -181,7 +181,7 @@
               </div>
             </template>
           </Column>
-          <Column header="Total Points" style="width: 7rem">
+          <Column header="Total Points" style="width: 7rem" bodyStyle="text-align: center; justify-content: center;" headerStyle="text-align: center; justify-content: center;">
             <template #body="{ data }">
               <span class="font-semibold">{{ computeTotal(data) }}</span>
             </template>
