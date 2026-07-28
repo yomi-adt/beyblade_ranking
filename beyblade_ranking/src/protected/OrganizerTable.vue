@@ -154,7 +154,7 @@
           <Column field="name" header="Participant" style="width: 14rem" />
           <Column :header="`Achievements (${multiplier}× multiplier applied)`">
             <template #body="{ data }">
-              <div class="flex flex-wrap align-items-center gap-2">
+              <div class="flex flex-wrap align-items-center gap-4">
                 <ToggleButton
                   v-for="rule in booleanRules"
                   :key="rule.id"

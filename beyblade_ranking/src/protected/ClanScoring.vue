@@ -160,7 +160,7 @@
           </Column>
           <Column :header="`Achievements (${multiplier}× multiplier applied)`">
             <template #body="{ data }">
-              <div class="flex flex-wrap align-items-center gap-2">
+              <div class="flex flex-wrap align-items-center gap-3">
                 <ToggleButton
                   v-for="rule in booleanRules"
                   :key="rule.id"
@@ -233,7 +233,7 @@
               </div>
               <Tag v-else-if="data.saveState === 'success'" value="Saved" severity="success" />
               <Tag v-else-if="data.saveState === 'error'" value="Failed" severity="danger" />
-              <Tag v-else-if="data.dirty" value="Unsaved" severity="warning" />
+              <Tag v-else-if="data.dirty" value="Unsaved" severity="warn" />
               <Tag v-else value="—" severity="secondary" />
             </template>
           </Column>
