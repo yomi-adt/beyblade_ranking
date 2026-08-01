@@ -245,29 +245,12 @@
       No participants found for that tournament.
     </div>
 
-    <Dialog v-model:visible="addClanDialogVisible" modal header="Add New Clan" :style="{ width: '26rem' }">
-      <div class="flex flex-column gap-3">
-        <div>
-          <label for="newClanTag" class="font-semibold block mb-1">Tag</label>
-          <InputText id="newClanTag" v-model="newClanTag" class="w-full" placeholder="Unique clan tag" />
-        </div>
-        <div>
-          <label for="newClanName" class="font-semibold block mb-1">Clan Name</label>
-          <InputText id="newClanName" v-model="newClanName" class="w-full" placeholder="Optional" />
-        </div>
-        <Message v-if="addClanError" severity="error" :closable="false">{{ addClanError }}</Message>
-      </div>
-      <template #footer>
-        <Button label="Cancel" severity="secondary" text @click="addClanDialogVisible = false" />
-        <Button
-          label="Create &amp; Match"
-          icon="pi pi-plus-circle"
-          :loading="addingClan"
-          :disabled="!newClanTag.trim()"
-          @click="createAndMatchClan"
-        />
-      </template>
-    </Dialog>
+    <ClanFormDialog 
+      v-model:visible="addClanDialogVisible"
+      mode="create"
+      :suggested-tag="extractedTag(addClanTarget?.name)"
+      @saved="onClanCreated"
+    />
   </div>
   </OrganizerGate>
 </template>
@@ -289,10 +272,10 @@ import Column from 'primevue/column'
 import ToggleButton from 'primevue/togglebutton'
 import Select from 'primevue/select'
 import SelectButton from 'primevue/selectbutton'
-import Dialog from 'primevue/dialog'
 import OrganizerGate from './OrganizerGate.vue'
 import { CLAN_RANKINGS_API_BASE, CHALLONGE_API_BASE, CLANS_API_BASE, POINT_RULES_API_BASE } from './apiConfig'
 import { useTournamentScoring } from './useTournamentScoring'
+import ClanFormDialog from './ClanFormDialog.vue'
 
 const {
   ruleTypeOptions, pointRules, rulesLoading, rulesError, multiplier, booleanRules, countRules,
@@ -322,48 +305,20 @@ function extractedTag(participantName) {
 // pending point award against it.
 const addClanDialogVisible = ref(false)
 const addClanTarget = ref(null)
-const newClanTag = ref('')
-const newClanName = ref('')
-const addingClan = ref(false)
-const addClanError = ref('')
 
 function openAddClanDialog(participant) {
   addClanTarget.value = participant
-  newClanTag.value = extractedTag(participant.name) || ''
-  newClanName.value = ''
-  addClanError.value = ''
   addClanDialogVisible.value = true
 }
 
-async function createAndMatchClan() {
-  const tag = newClanTag.value.trim()
-  if (!tag) return
-
-  addingClan.value = true
-  addClanError.value = ''
-  try {
-    const res = await axios.post(CLANS_API_BASE, {
-      tag,
-      name: newClanName.value.trim() || null,
-      points: 0,
-    })
-    entityList.value.push(res.data)
-
-    const target = addClanTarget.value
-    addClanDialogVisible.value = false
-    if (target) {
-      target.matchKey = res.data.tag
-      submitting.value = true
-      await submitOne(target)
-      submitting.value = false
-    }
-  } catch (err) {
-    addClanError.value =
-      err.response?.status === 409 || err.response?.status === 400
-        ? 'A clan with that tag already exists.'
-        : 'Could not create the clan. Try again.'
-  } finally {
-    addingClan.value = false
+async function onClanCreated(newClan) {
+  entityList.value.push(newClan)
+  const target = addClanTarget.value
+  if (target) {
+    target.matchKey = newClan.tag
+    submitting.value = true
+    await submitOne(target)
+    submitting.value = false
   }
 }
 </script>

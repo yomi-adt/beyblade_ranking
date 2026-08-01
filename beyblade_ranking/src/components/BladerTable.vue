@@ -16,6 +16,14 @@ import { Bladers } from "../service/BladersService";
 import { onMounted, ref } from "vue";
 import { FilterMatchMode } from "@primevue/core/api";
 
+const props = defineProps({
+  editablePlayer: 
+  {
+    type: Boolean,
+    default: false
+  }
+});
+
 onMounted(async () => {
   data.value = await Bladers.getBladers();
   data.value.sort((a, b) => b.points - a.points);
