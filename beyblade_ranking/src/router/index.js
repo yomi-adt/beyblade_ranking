@@ -7,7 +7,8 @@ import Players from '../views/Players.vue'
 import Clans from '../views/Clans.vue'
 import ResetScores from '../protected/ResetScores.vue'
 import OrganizerDash from '../views/OrganizerDash.vue'
-import ClanScoring from '../protected/ClanScoring.vue'
+import PlayerRoster from '../protected/PlayerRoster.vue'
+import ClanRoster from '../protected/ClanRoster.vue'
 
 // Create and export router
 const router = createRouter({
@@ -30,11 +31,6 @@ const router = createRouter({
       component: Organizer,
     },
     {
-      path: '/update-clan-scores',
-      name: 'Update-Clan-Scores',
-      component: ClanScoring,
-    },
-    {
       path: '/reset-scores',
       name: 'Reset-Scores',
       component: ResetScores,
@@ -43,6 +39,16 @@ const router = createRouter({
       path: '/organizer-dash',
       name: 'Organizer-Dash',
       component: OrganizerDash,
+    },
+    {
+      path: '/manage-players',
+      name: 'Manage-Players',
+      component: PlayerRoster,
+    },
+    {
+      path: '/manage-clans',
+      name: 'Manage-Clans',
+      component: ClanRoster,
     },
   ]
 })

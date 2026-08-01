@@ -62,13 +62,13 @@ const router = useRouter()
           class="m-1"
           label="Edit players"
           icon="pi pi-users"
-          @click="router.push('/edit-players')"
+          @click="router.push('/manage-players')"
         />
         <Button
           class="m-1"
           label="Edit Clans"
           icon="pi pi-shield"
-          @click="router.push('/edit-clans')"
+          @click="router.push('/manage-clans')"
         />
       </template>
     </Card>
