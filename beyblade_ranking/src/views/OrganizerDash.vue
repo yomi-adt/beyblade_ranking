@@ -101,13 +101,13 @@ const router = useRouter()
       <template #footer>
         <Button
           class="m-1"
-          label="Edit players"
+          label="Player Points"
           icon="pi pi-users"
           @click="router.push('/player-history')"
         />
         <Button
           class="m-1"
-          label="Edit Clans"
+          label="Clan Points"
           icon="pi pi-shield"
           @click="router.push('/clan-history')"
         />
