@@ -72,6 +72,27 @@ const router = useRouter()
         />
       </template>
     </Card>
+
+    <Card>
+      <template #title>
+        View Point History
+      </template>
+
+      <template #footer>
+        <Button
+          class="m-1"
+          label="Edit players"
+          icon="pi pi-users"
+          @click="router.push('/player-history')"
+        />
+        <Button
+          class="m-1"
+          label="Edit Clans"
+          icon="pi pi-shield"
+          @click="router.push('/clan-history')"
+        />
+      </template>
+    </Card>
   </div>
   </OrganizerGate>
 </template>
