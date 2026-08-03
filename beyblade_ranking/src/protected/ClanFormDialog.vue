@@ -9,8 +9,10 @@
     <div class="flex flex-column gap-3">
       <div>
         <label for="clanTag" class="font-semibold block mb-1">Tag</label>
-        <InputText id="clanTag" v-model="tag" class="w-full" placeholder="Unique clan tag" :disabled="mode === 'edit'" />
-        <small v-if="mode === 'edit'" class="text-color-secondary">Tag can't be changed after creation.</small>
+        <InputText id="clanTag" v-model="tag" class="w-full" placeholder="Unique clan tag" />
+        <small v-if="mode === 'edit'" class="text-color-secondary">
+          Changing this renames the clan — point history moves with it.
+        </small>
       </div>
       <div>
         <label for="clanName" class="font-semibold block mb-1">Clan Name</label>
@@ -93,7 +95,7 @@ async function save() {
   try {
     const res =
       props.mode === 'edit'
-        ? await axios.put(`${CLANS_API_BASE}/${encodeURIComponent(trimmedTag)}`, payload)
+        ? await axios.put(`${CLANS_API_BASE}/${encodeURIComponent(props.initialEntity.tag)}`, payload)
         : await axios.post(CLANS_API_BASE, payload)
     emit('saved', res.data)
     emit('update:visible', false)
