@@ -10,9 +10,6 @@
       <div>
         <label for="clanTag" class="font-semibold block mb-1">Tag</label>
         <InputText id="clanTag" v-model="tag" class="w-full" placeholder="Unique clan tag" />
-        <small v-if="mode === 'edit'" class="text-color-secondary">
-          Changing this renames the clan — point history moves with it.
-        </small>
       </div>
       <div>
         <label for="clanName" class="font-semibold block mb-1">Clan Name</label>
