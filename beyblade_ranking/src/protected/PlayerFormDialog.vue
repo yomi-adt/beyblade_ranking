@@ -14,13 +14,18 @@
           v-model="username"
           class="w-full"
           placeholder="Unique login/id"
-          :disabled="mode === 'edit'"
         />
-        <small v-if="mode === 'edit'" class="text-color-secondary">Username can't be changed after creation.</small>
+        <small v-if="mode === 'edit'" class="text-color-secondary">
+          This is the main name of the player, and what is used when searching
+        </small>
       </div>
       <div>
         <label for="playerBladerName" class="font-semibold block mb-1">Blader Name</label>
         <InputText id="playerBladerName" v-model="bladerName" class="w-full" placeholder="Optional" />
+        <small v-if="mode === 'edit'" class="text-color-secondary">
+          This is the player's moniker or alt name. It's for display. For example: CJ "HellsSuboh",
+          where "HellsSuboh" is the blader name
+        </small>
       </div>
       <div>
         <label for="playerLore" class="font-semibold block mb-1">Lore</label>
@@ -119,7 +124,7 @@ async function save() {
   try {
     const res =
       props.mode === 'edit'
-        ? await axios.put(`${PLAYERS_API_BASE}/${encodeURIComponent(trimmedUsername)}`, payload)
+        ? await axios.put(`${PLAYERS_API_BASE}/${encodeURIComponent(props.initialEntity.username)}`, payload)
         : await axios.post(PLAYERS_API_BASE, payload)
     emit('saved', res.data)
     emit('update:visible', false)

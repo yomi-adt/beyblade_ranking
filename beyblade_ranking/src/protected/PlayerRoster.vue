@@ -21,24 +21,23 @@
           <Button label="Retry" icon="pi pi-refresh" severity="secondary" outlined @click="fetchEntities" />
         </div>
         <div class="flex justify-content-end mb-3">
-            <span class="p-input-icon-left">
-                <i class="pi pi-search mx-2" />
-                <InputText
-                v-model="filters.username.value"
-                placeholder="Search username..."
-                />
-            </span>
+        <span class="p-input-icon-left">
+            <InputText
+            v-model="filters.username.value"
+            placeholder="Search username..."
+            />
+        </span>
         </div>
         <DataTable
-            :value="entities"
-            :loading="loading"
-            dataKey="username"
-            paginator
-            :rows="15"
-            sortField="points"
-            :sortOrder="-1"
-            v-model:filters="filters"
-            filterDisplay="row"
+        :value="entities"
+        :loading="loading"
+        dataKey="username"
+        paginator
+        :rows="15"
+        sortField="points"
+        :sortOrder="-1"
+        v-model:filters="filters"
+        filterDisplay="row"
         >
           <Column
             field="username"
@@ -64,7 +63,7 @@
       v-model:visible="formVisible"
       :mode="formMode"
       :initial-entity="editTarget"
-      @saved="(entity) => upsertLocal('username', entity)"
+      @saved="onPlayerSaved"
     />
 
     <Dialog v-model:visible="deleteConfirmVisible" modal header="Delete player" :style="{ width: '26rem' }">
@@ -121,6 +120,17 @@ function openEdit(player) {
   formMode.value = 'edit'
   editTarget.value = player
   formVisible.value = true
+}
+
+function onPlayerSaved(entity) {
+  // A rename (username changed) means the old row's key no longer matches
+  // the new entity — upsertLocal alone would add a fresh row rather than
+  // replacing the old one, leaving a stale duplicate until a refetch.
+  const previousUsername = editTarget.value?.username
+  if (previousUsername && previousUsername !== entity.username) {
+    entities.value = entities.value.filter((e) => e.username !== previousUsername)
+  }
+  upsertLocal('username', entity)
 }
 
 const deleteConfirmVisible = ref(false)

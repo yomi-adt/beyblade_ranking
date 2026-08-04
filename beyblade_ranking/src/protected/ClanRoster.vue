@@ -64,7 +64,7 @@
       v-model:visible="formVisible"
       :mode="formMode"
       :initial-entity="editTarget"
-      @saved="(entity) => upsertLocal('tag', entity)"
+      @saved="onClanSaved"
     />
 
     <Dialog v-model:visible="deleteConfirmVisible" modal header="Delete clan" :style="{ width: '26rem' }">
@@ -121,6 +121,17 @@ function openEdit(clan) {
   formMode.value = 'edit'
   editTarget.value = clan
   formVisible.value = true
+}
+
+function onClanSaved(entity) {
+  // A rename (tag changed) means the old row's key no longer matches the
+  // new entity — upsertLocal alone would add a fresh row rather than
+  // replacing the old one, leaving a stale duplicate until a refetch.
+  const previousTag = editTarget.value?.tag
+  if (previousTag && previousTag !== entity.tag) {
+    entities.value = entities.value.filter((e) => e.tag !== previousTag)
+  }
+  upsertLocal('tag', entity)
 }
 
 const deleteConfirmVisible = ref(false)

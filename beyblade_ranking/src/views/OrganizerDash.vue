@@ -15,23 +15,23 @@ const router = useRouter()
         Update Player Scores
       </template>
 
+      <template #subtitle>
+        Following a ranked tournamenet, update the rankings.
+        <a href="https://youtu.be/HTjzFEeaPKQ" target="_blank" rel="noopener noreferrer">
+            Tutorial here
+        </a>
+      </template>
+
       <template #footer>
         <Button
-          label="Update Player Scores"
+          label="Players"
+          class="m-1"
           icon="pi pi-users"
           @click="router.push('/update-player-scores')"
         />
-      </template>
-    </Card>
-
-    <Card>
-      <template #title>
-        Update Clan Scores
-      </template>
-
-      <template #footer>
         <Button
-          label="Update Clan Scores"
+          label="Clans"
+          class="m-1"
           icon="pi pi-shield"
           @click="router.push('/update-clan-scores')"
         />
@@ -41,6 +41,10 @@ const router = useRouter()
     <Card>
       <template #title>
         Reset Scores
+      </template>
+
+      <template #subtitle>
+        Reset both player and clan leaderboards here.
       </template>
 
       <template #footer>
@@ -57,6 +61,14 @@ const router = useRouter()
         Edit Participants
       </template>
 
+      <template #subtitle>
+        Change participant's (player/clan) name, lore, etc.
+
+        <a href="https://youtu.be/H_QnjLS-avY" target="_blank" rel="noopener noreferrer">
+            Tutorial here
+        </a>
+      </template>
+
       <template #footer>
         <Button
           class="m-1"
@@ -69,6 +81,35 @@ const router = useRouter()
           label="Edit Clans"
           icon="pi pi-shield"
           @click="router.push('/manage-clans')"
+        />
+      </template>
+    </Card>
+
+    <Card>
+      <template #title>
+        View Point History
+      </template>
+
+      <template #subtitle>
+        See the points you added and undo any mistakes.
+
+        <a href="https://youtu.be/nLlNIN4s0Nk" target="_blank" rel="noopener noreferrer">
+            Tutorial here
+        </a>
+      </template>
+
+      <template #footer>
+        <Button
+          class="m-1"
+          label="Player Points"
+          icon="pi pi-users"
+          @click="router.push('/player-history')"
+        />
+        <Button
+          class="m-1"
+          label="Clan Points"
+          icon="pi pi-shield"
+          @click="router.push('/clan-history')"
         />
       </template>
     </Card>
