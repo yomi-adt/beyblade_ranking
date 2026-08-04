@@ -9,6 +9,7 @@ import ResetScores from '../protected/ResetScores.vue'
 import OrganizerDash from '../views/OrganizerDash.vue'
 import PlayerRoster from '../protected/PlayerRoster.vue'
 import ClanRoster from '../protected/ClanRoster.vue'
+import ClanScoring from '../protected/ClanScoring.vue'
 
 // Create and export router
 const router = createRouter({
@@ -29,6 +30,11 @@ const router = createRouter({
       path: '/update-player-scores',
       name: 'Update-Player-Scores',
       component: Organizer,
+    },
+    {
+      path: '/update-clan-scores',
+      name: 'Update-Clan-Scores',
+      component: ClanScoring,
     },
     {
       path: '/reset-scores',

@@ -179,6 +179,7 @@ export function useTournamentScoring(opts) {
         dirty: false,
         saveState: null, // null | 'success' | 'error' | 'needs-match' | 'malformed'
         matchKey: null, // set once the admin resolves a name mismatch
+        manualEntities: [], // optional: set by pages that support splitting a row across multiple entities (e.g. ClanScoring duo/trio teams)
       }))
     } catch (err) {
       tournament.value = null
@@ -329,6 +330,6 @@ export function useTournamentScoring(opts) {
     entityList, ensureEntityListLoaded,
     hasChanges, rowClass, loadTournament,
     toggleBooleanRule, setCountRule, computeTotal, resetChanges,
-    submitOne, submitAllPoints, confirmMatch,
+    buildPayload, submitOne, submitAllPoints, confirmMatch,
   }
 }

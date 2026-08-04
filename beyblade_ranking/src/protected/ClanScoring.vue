@@ -72,17 +72,40 @@
 
         <Divider />
 
-        <div class="flex flex-column gap-2" style="max-width: 16rem;">
-          <label for="multiplier" class="font-semibold">Event Multiplier</label>
-          <InputNumber
-            id="multiplier"
-            v-model="multiplier"
-            :min="0"
-            :minFractionDigits="0"
-            :maxFractionDigits="2"
-            prefix="×"
-          />
-          <small class="text-color-secondary">Use 2 for "double points" events, 1 for normal events.</small>
+        <div class="flex align-items-start gap-6 flex-wrap">
+          <div class="flex flex-column gap-2" style="max-width: 16rem;">
+            <label for="multiplier" class="font-semibold">Event Multiplier</label>
+            <InputNumber
+              id="multiplier"
+              v-model="multiplier"
+              :min="0"
+              :minFractionDigits="0"
+              :maxFractionDigits="2"
+              prefix="×"
+            />
+            <small class="text-color-secondary">Use 2 for "double points" events, 1 for normal events.</small>
+          </div>
+
+          <div
+            class="flex flex-column align-items-center text-center gap-2"
+            style="max-width: 20rem;"
+          >
+            <label class="font-semibold flex align-items-center gap-2 cursor-pointer">
+              <Checkbox v-model="multiClanMode" binary inputId="multiClanMode" />
+              <span>Split across clans</span>
+            </label>
+
+            <small class="text-color-secondary">
+              For splitting across clans (such as a duo tournament with partners from different clans). 
+              <a
+                href="https://youtu.be/OiQnc6Ic4KA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Tutorial here.
+              </a>
+            </small>
+          </div>
         </div>
       </template>
     </Card>
@@ -136,7 +159,7 @@
               severity="secondary"
               text
               :disabled="submitting"
-              @click="resetChanges"
+              @click="resetChangesClanAware"
               class="mr-2"
             />
             <Button
@@ -144,7 +167,7 @@
               icon="pi pi-check"
               :loading="submitting"
               :disabled="!hasChanges"
-              @click="submitAllPoints"
+              @click="submitAllPointsClanAware"
             />
           </template>
         </Toolbar>
@@ -158,6 +181,40 @@
               <Tag v-if="extractedTag(data.name)" :value="extractedTag(data.name)" severity="secondary" class="mt-1" />
             </template>
           </Column>
+
+          <Column v-if="multiClanMode" header="Split Between Clans" style="width: 18rem">
+            <template #body="{ data }">
+              <MultiSelect
+                v-model="data.manualEntities"
+                :options="entityList"
+                optionLabel="tag"
+                optionValue="tag"
+                filter
+                placeholder="Auto (from tag)"
+                display="chip"
+                class="w-full"
+                :disabled="submitting"
+                @update:modelValue="() => onManualEntitiesChange(data)"
+              />
+              <div v-if="data.manualEntities?.length >= 2" class="flex flex-column gap-1 mt-2">
+                <div v-for="tag in data.manualEntities" :key="tag" class="flex align-items-center gap-2">
+                  <span class="text-sm w-4rem">{{ tag }}</span>
+                  <InputNumber
+                    :modelValue="data.manualQuantities?.[tag] || 1"
+                    @update:modelValue="(v) => setManualQuantity(data, tag, v)"
+                    :min="1"
+                    showButtons
+                    buttonLayout="horizontal"
+                    class="w-7rem"
+                    inputStyle="width: 2.5rem; text-align: center;"
+                    :disabled="submitting"
+                  />
+                </div>
+                <small class="text-color-secondary">Quantity = members from that clan on this team</small>
+              </div>
+            </template>
+          </Column>
+
           <Column :header="`Achievements (${multiplier}× multiplier applied)`">
             <template #body="{ data }">
               <div class="flex flex-wrap align-items-center gap-3">
@@ -193,9 +250,14 @@
               </div>
             </template>
           </Column>
-          <Column header="Total Points" style="width: 7rem" bodyStyle="text-align: center; justify-content: center;" headerStyle="text-align: center; justify-content: center;">
+          <Column header="Total Points" style="width: 9rem" bodyStyle="text-align: center; justify-content: center;" headerStyle="text-align: center; justify-content: center;">
             <template #body="{ data }">
               <span class="font-semibold">{{ computeTotal(data) }}</span>
+              <div v-if="data.manualEntities?.length >= 2" class="text-xs text-color-secondary">
+                <div v-for="share in computeSplitShares(data)" :key="share.tag">
+                  {{ share.tag }}: {{ share.share }} ({{ share.quantity }}/{{ share.totalQuantity }})
+                </div>
+              </div>
             </template>
           </Column>
           <Column header="Status" style="width: 18rem">
@@ -256,7 +318,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import axios from 'axios'
 
 import Card from 'primevue/card'
@@ -272,6 +334,8 @@ import Column from 'primevue/column'
 import ToggleButton from 'primevue/togglebutton'
 import Select from 'primevue/select'
 import SelectButton from 'primevue/selectbutton'
+import Checkbox from 'primevue/checkbox'
+import MultiSelect from 'primevue/multiselect'
 import OrganizerGate from './OrganizerGate.vue'
 import { CLAN_RANKINGS_API_BASE, CHALLONGE_API_BASE, CLANS_API_BASE, POINT_RULES_API_BASE } from './apiConfig'
 import { useTournamentScoring } from './useTournamentScoring'
@@ -281,9 +345,9 @@ const {
   ruleTypeOptions, pointRules, rulesLoading, rulesError, multiplier, booleanRules, countRules,
   fetchPointRules, markRuleDirty, addRule, saveRule, removeRule,
   challongeInput, tournament, participants, loading, submitting, loadError, attemptedLoad, banner,
-  entityList, hasChanges, rowClass, loadTournament,
+  entityList, ensureEntityListLoaded, hasChanges, rowClass, loadTournament,
   toggleBooleanRule, setCountRule, computeTotal, resetChanges,
-  submitOne, submitAllPoints, confirmMatch,
+  buildPayload, submitOne, confirmMatch,
 } = useTournamentScoring({
   rulesAppliesTo: 'CLAN',
   rankingsApiBase: CLAN_RANKINGS_API_BASE,
@@ -298,6 +362,154 @@ const TAG_PATTERN = /^\[([^[\]]+)]\s*.*$/
 function extractedTag(participantName) {
   const match = TAG_PATTERN.exec((participantName || '').trim())
   return match ? match[1].trim() : null
+}
+
+// ---------- Duo/trio split mode ----------
+// Off by default: normal solo tournaments keep using the standard single-clan
+// auto-match/needs-match flow untouched. Turning this on adds a per-row
+// manual clan picker (data.manualEntities) for rows where the participant is
+// actually a team spanning multiple clans — the single [TAG] extraction can
+// only ever find one tag, so those rows need an explicit override.
+const multiClanMode = ref(false)
+
+watch(multiClanMode, (enabled) => {
+  if (enabled) ensureEntityListLoaded() // populate the clan list up front for the picker, instead of waiting for a needs-match
+})
+
+function markDirtyFromSplitChange(p) {
+  p.dirty = true
+  if (p.saveState !== 'needs-match' && p.saveState !== 'malformed') p.saveState = null
+}
+
+/** Keeps manualQuantities in sync with the MultiSelect: newly-picked clans default to 1, deselected ones are dropped. */
+function onManualEntitiesChange(p) {
+  if (!p.manualQuantities) p.manualQuantities = {}
+  const selected = new Set(p.manualEntities || [])
+  Object.keys(p.manualQuantities).forEach((tag) => {
+    if (!selected.has(tag)) delete p.manualQuantities[tag]
+  })
+  selected.forEach((tag) => {
+    if (!(tag in p.manualQuantities)) p.manualQuantities[tag] = 1
+  })
+  markDirtyFromSplitChange(p)
+}
+
+function setManualQuantity(p, tag, value) {
+  if (!p.manualQuantities) p.manualQuantities = {}
+  p.manualQuantities[tag] = Math.max(1, Number(value) || 1)
+  markDirtyFromSplitChange(p)
+}
+
+function resetChangesClanAware() {
+  participants.value.forEach((p) => {
+    p.manualEntities = []
+    p.manualQuantities = {}
+  })
+  resetChanges()
+}
+
+/**
+ * Proportional split by clan headcount (not just an even split per clan) —
+ * e.g. 2 members from C1 + 1 from C2 gives C1 two-thirds of the row's points.
+ * Used by BOTH the on-screen preview and the actual submission below, so
+ * they can never show one number and submit a different one.
+ */
+function computeSplitShares(p) {
+  const tags = p.manualEntities || []
+  if (tags.length < 2) return []
+
+  const quantities = tags.map((tag) => p.manualQuantities?.[tag] || 1)
+  const totalQuantity = quantities.reduce((sum, q) => sum + q, 0)
+  const fullTotal = computeTotal(p)
+
+  return tags.map((tag, i) => {
+    const quantity = quantities[i]
+    // Proportional share, floored per clan. Any leftover from flooring is
+    // dropped, not reallocated to anyone. CHANGE HERE for a different
+    // rounding/remainder policy (e.g. Math.round, or give the remainder to
+    // the clan with the largest quantity).
+    const share = totalQuantity > 0 ? Math.floor((fullTotal * quantity) / totalQuantity) : 0
+    return { tag, quantity, totalQuantity, share }
+  })
+}
+
+/**
+ * Submits one row split proportionally across its manually-selected clans.
+ * Only called for rows with 2+ entries in manualEntities — a single manual
+ * selection is treated as a normal one-target submission (see below).
+ */
+async function submitSplitAcrossClans(p) {
+  const shares = computeSplitShares(p)
+
+  let anyFailure = false
+  for (const { tag, quantity, totalQuantity, share } of shares) {
+    try {
+      const payload = buildPayload(p, tag)
+      payload.totalPoints = share
+      payload.tournamentName = `${payload.tournamentName} (${quantity}/${totalQuantity} share)`
+      await axios.post(`${CLAN_RANKINGS_API_BASE}/points`, payload)
+    } catch (err) {
+      anyFailure = true
+    }
+  }
+
+  if (anyFailure) {
+    p.saveState = 'error'
+    return 'error'
+  }
+  p.originalRuleValues = { ...p.ruleValues }
+  p.dirty = false
+  p.saveState = 'success'
+  return 'success'
+}
+
+async function submitAllPointsClanAware() {
+  const changed = participants.value.filter((p) => p.dirty)
+  if (!changed.length) return
+
+  submitting.value = true
+  banner.value = { message: '', type: 'success' }
+  let failures = 0
+  let needsMatch = 0
+  let malformed = 0
+
+  for (const p of changed) {
+    const manualCount = multiClanMode.value ? (p.manualEntities?.length || 0) : 0
+
+    let result
+    if (manualCount >= 2) {
+      result = await submitSplitAcrossClans(p)
+    } else if (manualCount === 1) {
+      // Exactly one manual clan picked — same as any normal single-target
+      // submission, just bypassing [TAG] auto-match with an explicit choice.
+      p.matchKey = p.manualEntities[0]
+      result = await submitOne(p)
+    } else {
+      result = await submitOne(p)
+    }
+
+    if (result === 'error') failures += 1
+    if (result === 'needs-match') needsMatch += 1
+    if (result === 'malformed') malformed += 1
+  }
+
+  submitting.value = false
+
+  if (malformed) {
+    banner.value = {
+      message: `${malformed} participant name(s) didn't match the expected format — see the Status column.`,
+      type: 'error',
+    }
+  } else if (needsMatch) {
+    banner.value = {
+      message: `${needsMatch} participant name(s) didn't match an existing clan — pick or add one in the Status column, then confirm.`,
+      type: 'error',
+    }
+  } else if (failures) {
+    banner.value = { message: `${failures} point update(s) failed. Adjust and try again.`, type: 'error' }
+  } else {
+    banner.value = { message: 'All points submitted.', type: 'success' }
+  }
 }
 
 // "Add Clan" dialog — for when a Challonge participant's tag genuinely has no
