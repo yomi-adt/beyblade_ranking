@@ -1,0 +1,86 @@
+[
+  {
+    "tag": "BNC",
+    "name": "BEY N CHILL",
+    "points": 272,
+    "rankKey": "BNC"
+  },
+  {
+    "tag": "BBCLB",
+    "name": "BULLET BEY CLUB",
+    "points": 80,
+    "rankKey": "BBCLB"
+  },
+  {
+    "tag": "T15",
+    "name": "T15",
+    "points": 316,
+    "rankKey": "T15"
+  },
+  {
+    "tag": "SEND",
+    "name": "STARTEND",
+    "points": 224,
+    "rankKey": "SEND"
+  },
+  {
+    "tag": "DYN",
+    "name": "DYNASTY",
+    "points": 17,
+    "rankKey": "DYN"
+  },
+  {
+    "tag": "UNDRTD",
+    "name": "UNDERRATED",
+    "points": 139,
+    "rankKey": "UNDRTD"
+  },
+  {
+    "tag": "JARV",
+    "name": "JARVEE",
+    "points": 92,
+    "rankKey": "JARV"
+  },
+  {
+    "tag": "SOJU",
+    "name": "SOJU",
+    "points": 250,
+    "rankKey": "SOJU"
+  },
+  {
+    "tag": "NV",
+    "name": "NEW VESTROIA",
+    "points": 322,
+    "rankKey": "NV"
+  },
+  {
+    "tag": "TRX",
+    "name": "TRUE AXIS",
+    "points": 120,
+    "rankKey": "TRX"
+  },
+  {
+    "tag": "KAOS",
+    "name": "CHAOSBORN",
+    "points": 132,
+    "rankKey": "KAOS"
+  },
+  {
+    "tag": "RTO",
+    "name": "RATIO",
+    "points": 20,
+    "rankKey": "RTO"
+  },
+  {
+    "tag": "WPG",
+    "name": "Winning Pegasus",
+    "points": 60,
+    "rankKey": "WPG"
+  },
+  {
+    "tag": "NPC",
+    "name": "NEW PLAYER COLLECTIVE",
+    "points": 10,
+    "rankKey": "NPC"
+  }
+]
