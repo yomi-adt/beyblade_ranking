@@ -3,7 +3,7 @@
 // try/catch around fetch() won't trigger a fallback in that case, since the
 // request eventually succeeds, just slowly. This treats "too slow" the same
 // as "errored" by aborting after timeoutMs and falling back either way.
-const DEFAULT_TIMEOUT_MS = 8000
+const DEFAULT_TIMEOUT_MS = 2000
 
 export async function fetchJsonWithFallback(url, fallbackData, { timeoutMs = DEFAULT_TIMEOUT_MS, label = url } = {}) {
   const controller = new AbortController()
