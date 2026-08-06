@@ -113,6 +113,29 @@ const router = useRouter()
         />
       </template>
     </Card>
+
+    <Card>
+      <template #title>
+        Grab Leaderboard Snapshot
+      </template>
+
+      <template #subtitle>
+        Grab Leaderboard snapshots to act as a fallback when backend is down.
+
+        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+            Tutorial here
+        </a>
+      </template>
+
+      <template #footer>
+        <Button
+          class="m-1"
+          label="Player Points"
+          icon="pi pi-users"
+          @click="router.push('/ranking-snapshot')"
+        />
+      </template>
+    </Card>
   </div>
   </OrganizerGate>
 </template>
