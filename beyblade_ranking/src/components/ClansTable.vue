@@ -11,6 +11,7 @@ import {
   Button,
   Toolbar,
   ToggleSwitch,
+  Tag,
 } from "primevue";
 import { Bladers } from "../service/ClansService";
 import { onMounted, ref } from "vue";
@@ -24,12 +25,16 @@ const props = defineProps({
   }
 });
 
+const loading = ref(true);
+
 onMounted(async () => {
+  loading.value = true;
   data.value = await Bladers.getBladers();
   data.value.sort((a, b) => b.points - a.points);
   for (let i = 1; i <= data.value.length; i++) {
     data.value[i - 1].rank = i.toString();
   }
+  loading.value = false;
 });
 
 const data = ref([]);
@@ -51,6 +56,7 @@ async function copyToClipboard(data) {
 }
 
 const currAudit = ref([])
+const auditsLoading = ref(false)
 
 const organizerMode = ref(false);
 const apiKey = ref("");
@@ -66,7 +72,9 @@ async function popupBlader(selectedBlader) {
   selectedBladerRef.value = selectedBlader;
   bladerPopup.value = true;
 
+  auditsLoading.value = true;
   currAudit.value = await Bladers.getAudits(selectedBlader.data.tag);
+  auditsLoading.value = false;
 }
 </script>
 
@@ -84,6 +92,7 @@ async function popupBlader(selectedBlader) {
     v-model:filters="filters"
     removableSort
     :value="data"
+    :loading="loading"
     sortField="rank"
     :sortOrder="1"
     selectionMode="single"
@@ -174,13 +183,46 @@ async function popupBlader(selectedBlader) {
       <Divider></Divider>
       <Button v-on:click="() => {showAudits = !showAudits}">{{showAudits ? "Hide" : "Show"}} Audit</Button>
       <div v-show="showAudits">
-        <div v-for="audit in currAudit">
-          <h3>{{ audit.tournamentName }}</h3>
-          <h4>Total points earned: {{ audit.totalPoints }}</h4>
-          <div v-for="rule in audit.appliedRules">
-            - {{ rule.label }}: {{ rule.points }} points x {{ rule.count }} times
+        <Divider></Divider>
+
+        <div v-if="auditsLoading" class="text-color-secondary py-3">
+          <i class="pi pi-spin pi-spinner mr-2"></i>Loading history…
+        </div>
+
+        <div v-else-if="!currAudit.length" class="text-color-secondary py-3 text-center">
+          No recorded point history.
+        </div>
+
+        <div v-else class="flex flex-column gap-3">
+          <div
+            v-for="(audit, idx) in currAudit"
+            :key="idx"
+            class="border-1 surface-border border-round p-3"
+          >
+            <div class="flex justify-content-between align-items-start mb-2">
+              <div>
+                <div class="font-semibold">{{ audit.tournamentName || 'Untitled tournament' }}</div>
+                <div class="text-sm text-color-secondary">
+                  {{ audit.totalPoints >= 0 ? 'Awarded' : 'Reversal' }}
+                </div>
+              </div>
+              <Tag
+                :value="`${audit.totalPoints >= 0 ? '+' : ''}${audit.totalPoints} pts`"
+                :severity="audit.totalPoints >= 0 ? 'success' : 'danger'"
+              />
+            </div>
+
+            <div v-if="audit.appliedRules?.length" class="flex flex-wrap gap-2">
+              <Tag
+                v-for="(rule, ruleIdx) in audit.appliedRules"
+                :key="ruleIdx"
+                :value="`${rule.label} × ${rule.count} (${rule.points} ea)`"
+                severity="secondary"
+              />
+            </div>
           </div>
         </div>
+
         <Divider></Divider>
       </div>
 
