@@ -50,7 +50,7 @@ const router = useRouter()
       <template #footer>
         <Button
           label="Reset Scores"
-          icon="pi pi-list"
+          icon="pi pi-undo"
           @click="router.push('/reset-scores')"
         />
       </template>
@@ -130,8 +130,8 @@ const router = useRouter()
       <template #footer>
         <Button
           class="m-1"
-          label="Player Points"
-          icon="pi pi-users"
+          label="Copy to Clipboard"
+          icon="pi pi-trophy"
           @click="router.push('/ranking-snapshot')"
         />
       </template>
