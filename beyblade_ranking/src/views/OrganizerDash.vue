@@ -122,7 +122,7 @@ const router = useRouter()
       <template #subtitle>
         Grab Leaderboard snapshots to act as a fallback when backend is down.
 
-        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://youtu.be/_mheRo0AAO8" target="_blank" rel="noopener noreferrer">
             Tutorial here
         </a>
       </template>
