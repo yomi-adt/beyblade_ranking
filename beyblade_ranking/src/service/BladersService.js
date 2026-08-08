@@ -1,5 +1,5 @@
 import { endpoints } from "./BaseService";
-import { fetchJsonWithFallback } from "./fetchWithFallback";
+import { fetchJsonWithFallback } from "./FetchWithFallback";
 import playersFallback from "../data/players-fallback.json";
 
 export const Bladers = {
