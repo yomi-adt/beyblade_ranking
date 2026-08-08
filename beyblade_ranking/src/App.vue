@@ -28,7 +28,7 @@ const items = ref([
 </script>
 
 <template>
-  <Menubar :model="items" class="w-full">
+  <Menubar :model="items">
 
     <template #start>
       <img
@@ -36,7 +36,7 @@ const items = ref([
         alt="Logo"
         style="max-height: 32px; width: auto;"
       />
-      <p style="padding: 0 10px;">
+      <p>
         x yomi_adt
       </p>
     </template>
@@ -58,9 +58,8 @@ const items = ref([
 
   </Menubar>
 
-  <div class="pt-16">
+  <div class="pt-1">
     <RouterView />
-    <p style="font-style: italic">Last updated July 4th, 2026</p>
   </div>
 
 </template>
