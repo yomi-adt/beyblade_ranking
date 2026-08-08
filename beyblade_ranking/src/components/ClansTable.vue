@@ -26,14 +26,20 @@ const props = defineProps({
 });
 
 const loading = ref(true);
+const lastUpdated = ref(null);
 
 onMounted(async () => {
   loading.value = true;
-  data.value = await Bladers.getBladers();
+  const [clans, lastUpdatedValue] = await Promise.all([
+    Bladers.getBladers(),
+    Bladers.getLastUpdated(),
+  ]);
+  data.value = clans;
   data.value.sort((a, b) => b.points - a.points);
   for (let i = 1; i <= data.value.length; i++) {
     data.value[i - 1].rank = i.toString();
   }
+  lastUpdated.value = lastUpdatedValue;
   loading.value = false;
 });
 
@@ -80,6 +86,9 @@ async function popupBlader(selectedBlader) {
 
 <template>
   <h3>Clans</h3>
+  <p v-if="lastUpdated" class="text-color-secondary text-sm mt-0 mb-3">
+    Last updated: {{ new Date(lastUpdated).toLocaleString() }}
+  </p>
   <Toolbar>
     <template #start>
       <InputText

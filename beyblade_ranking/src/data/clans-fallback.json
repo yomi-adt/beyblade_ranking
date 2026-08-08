@@ -3,84 +3,105 @@
     "tag": "BNC",
     "name": "BEY N CHILL",
     "points": 272,
-    "rankKey": "BNC"
+    "rankKey": "BNC",
+    "updatedAt": null
   },
   {
     "tag": "BBCLB",
     "name": "BULLET BEY CLUB",
     "points": 80,
-    "rankKey": "BBCLB"
+    "rankKey": "BBCLB",
+    "updatedAt": null
   },
   {
     "tag": "T15",
     "name": "T15",
     "points": 316,
-    "rankKey": "T15"
+    "rankKey": "T15",
+    "updatedAt": null
   },
   {
     "tag": "SEND",
     "name": "STARTEND",
     "points": 224,
-    "rankKey": "SEND"
+    "rankKey": "SEND",
+    "updatedAt": null
   },
   {
     "tag": "DYN",
     "name": "DYNASTY",
     "points": 17,
-    "rankKey": "DYN"
+    "rankKey": "DYN",
+    "updatedAt": null
   },
   {
     "tag": "UNDRTD",
     "name": "UNDERRATED",
     "points": 139,
-    "rankKey": "UNDRTD"
+    "rankKey": "UNDRTD",
+    "updatedAt": null
   },
   {
     "tag": "JARV",
     "name": "JARVEE",
     "points": 92,
-    "rankKey": "JARV"
+    "rankKey": "JARV",
+    "updatedAt": null
   },
   {
     "tag": "SOJU",
     "name": "SOJU",
     "points": 250,
-    "rankKey": "SOJU"
+    "rankKey": "SOJU",
+    "updatedAt": null
   },
   {
     "tag": "NV",
     "name": "NEW VESTROIA",
     "points": 322,
-    "rankKey": "NV"
+    "rankKey": "NV",
+    "updatedAt": null
   },
   {
     "tag": "TRX",
     "name": "TRUE AXIS",
     "points": 120,
-    "rankKey": "TRX"
+    "rankKey": "TRX",
+    "updatedAt": null
   },
   {
     "tag": "KAOS",
     "name": "CHAOSBORN",
     "points": 132,
-    "rankKey": "KAOS"
+    "rankKey": "KAOS",
+    "updatedAt": null
   },
   {
     "tag": "RTO",
     "name": "RATIO",
     "points": 20,
-    "rankKey": "RTO"
+    "rankKey": "RTO",
+    "updatedAt": null
   },
   {
     "tag": "WPG",
     "name": "Winning Pegasus",
     "points": 60,
-    "rankKey": "WPG"
+    "rankKey": "WPG",
+    "updatedAt": null
   },
   {
     "tag": "NPC",
     "name": "NEW PLAYER COLLECTIVE",
     "points": 10,
-    "rankKey": "NPC"
+    "rankKey": "NPC",
+    "updatedAt": null
+  },
+  {
+    "tag": "sdaf",
+    "name": "DELETE ME",
+    "points": 10,
+    "rankKey": "sdaf",
+    "updatedAt": "2026-08-08T04:27:20.195Z"
   }
 ]
