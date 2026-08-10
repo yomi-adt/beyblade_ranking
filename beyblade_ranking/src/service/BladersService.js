@@ -10,7 +10,7 @@ export const Bladers = {
   /** Best-effort: returns null on failure rather than throwing, since this is supplementary info. */
   async getLastUpdated() {
     try {
-      const response = await fetch(endpoints.playersLastUpdated);
+      const response = await fetchJsonWithFallback(endpoints.playersLastUpdated, null);
       if (!response.ok) return null;
       const data = await response.json();
       return data.lastUpdated || null;
