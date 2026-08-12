@@ -2,7 +2,7 @@
   <div class="leaderboard-container">
     <h2 class="text-center mb-4">Top 3 Clans</h2>
 
-    <div class="top3-wrapper flex justify-content-center align-items-end gap-4 mb-5">
+    <div class="top3-wrapper flex flex-column align-items-center gap-4 mb-5">
       <!-- Loading state: 3 skeleton cards -->
       <template v-if="loading">
         <Card v-for="n in 3" :key="n" class="player-card">
@@ -57,7 +57,7 @@ onMounted(async () => {
     // Only build podium if we actually have 3+ players
     if (data.value.length >= 3) {
       const [first, second, third] = data.value;
-      players.value = [second, first, third];
+      players.value = [first, second, third];
     } else {
       players.value = data.value; // fallback: show what we have, in rank order
     }
