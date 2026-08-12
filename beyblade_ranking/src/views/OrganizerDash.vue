@@ -136,6 +136,29 @@ const router = useRouter()
         />
       </template>
     </Card>
+
+    <Card>
+      <template #title>
+        Manage Pre-Registrations (WIP).
+      </template>
+
+      <template #subtitle>
+        View, delete, edit, and process pre-registrations from the discord bot.
+
+        <a href="https://youtu.be/_mheRo0AAO8" target="_blank" rel="noopener noreferrer">
+            Tutorial here
+        </a>
+      </template>
+
+      <template #footer>
+        <Button
+          class="m-1"
+          label="Pre-Registrations"
+          icon="pi pi-users"
+          @click="router.push('/pre-registrations')"
+        />
+      </template>
+    </Card>
   </div>
   </OrganizerGate>
 </template>

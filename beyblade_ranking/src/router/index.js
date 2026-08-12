@@ -13,6 +13,7 @@ import ClanScoring from '../protected/ClanScoring.vue'
 import PlayerAuditLog from '../protected/PlayerAuditLog.vue'
 import ClanAuditLog from '../protected/ClanAuditLog.vue'
 import RankingsExport from '../protected/RankingsExport.vue'
+import PreRegistrationRoster from '../protected/PreRegistrationRoster.vue'
 
 // Create and export router
 const router = createRouter({
@@ -73,6 +74,11 @@ const router = createRouter({
       path: '/ranking-snapshot',
       name: 'Ranking-Snapshot',
       component: RankingsExport,
+    },
+    {
+      path: '/pre-registrations',
+      name: 'Pre-Registrations',
+      component: PreRegistrationRoster,
     },
   ]
 })

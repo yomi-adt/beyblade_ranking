@@ -11,3 +11,4 @@ export const CLAN_RANKINGS_API_BASE = `${API_ROOT}/api/rankings/clans`
 export const PLAYERS_API_BASE = `${API_ROOT}/api/players`
 export const CLANS_API_BASE = `${API_ROOT}/api/clans`
 export const POINT_RULES_API_BASE = `${API_ROOT}/api/point-rules`
+export const PRE_REGISTRATIONS_API_BASE = `${API_ROOT}/api/pre-registrations`
