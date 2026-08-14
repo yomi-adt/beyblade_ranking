@@ -39,7 +39,7 @@ onMounted(async () => {
   for (let i = 1; i <= data.value.length; i++) {
     data.value[i - 1].rank = i.toString();
   }
-  lastUpdated.value = lastUpdatedValue;
+  lastUpdated.value = lastUpdatedValue.lastUpdated;
   loading.value = false;
 });
 
@@ -85,9 +85,9 @@ async function popupBlader(selectedBlader) {
 </script>
 
 <template>
-  <h3>Bladers</h3>
+  <h1 class="pt-2">Blader Leaderboard</h1>
   <p v-if="lastUpdated" class="text-color-secondary text-sm mt-0 mb-3">
-    Last updated: {{ new Date(lastUpdated).toLocaleString() }}
+    Last updated: {{ new Date(lastUpdated).toDateString() }}
   </p>
   <Toolbar>
     <template #start>

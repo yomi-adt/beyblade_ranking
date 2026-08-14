@@ -9,15 +9,7 @@ export const Bladers = {
 
   /** Best-effort: returns null on failure rather than throwing, since this is supplementary info. */
   async getLastUpdated() {
-    try {
-      const response = await fetchJsonWithFallback(endpoints.clansLastUpdated, null);
-      if (!response.ok) return null;
-      const data = await response.json();
-      return data.lastUpdated || null;
-    } catch (error) {
-      console.warn('Could not fetch clans last-updated timestamp:', error);
-      return null;
-    }
+    return fetchJsonWithFallback(endpoints.clansLastUpdated, null);
   },
 
   async getAudits(tag) {
