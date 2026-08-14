@@ -84,3 +84,22 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.min-w-100 { 
+  min-width: 100% !important; 
+}
+.min-vw-100 { 
+  min-width: 100vw !important; 
+}
+.min-w-75 { 
+  min-width: 75% !important; 
+}
+.min-vw-75 { 
+  min-width: 75 !important; 
+}
+.min-w-50 { 
+  min-width: 50% !important; 
+}
+.min-vw-50 { 
+  min-width: 50 !important; 
+}

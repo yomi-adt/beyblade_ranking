@@ -1,0 +1,51 @@
+.border-left-custom {
+  /* Initializes a solid layout style */
+  border-left-style: solid !important;
+  border-left-width: 0.5rem !important;
+}
+
+.gold-colour {
+    border-left-color: #C9B037;
+    border: 0.5rem solid #C9B037;
+
+    /* Attaches the keyframe below. Cycle repeats forever. */
+    animation: breatheGlow 1s ease-in-out infinite alternate;
+}
+.silver-colour {
+    border-left-color: #B4B4B4
+}
+
+.bronze-colour {
+    border-left-color: #AD8A56
+}
+
+/* Target the PrimeVue card element globally */
+.glow-card.p-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover state glow */
+.glow-card.p-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(6, 182, 212, 0.7);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.5),
+              0 0 40px rgba(6, 182, 212, 0.3);
+}
+
+/* 2. Keyframes for the dynamic pulse */
+@keyframes breatheGlow {
+  0% {
+    /* Dimmer core state */
+    box-shadow: 0 0 12px 0 #C9B037,
+                0 0 25px 2px #C9B037;
+    transform: scale(1);
+  }
+  100% {
+    /* Brighter flared state with a micro-expansion */
+    box-shadow: 0 0 22px 2px #C9B037,
+                0 0 45px 5px #C9B037;
+    transform: scale(1.015);
+    border-color: #C9B037;
+  }
+}

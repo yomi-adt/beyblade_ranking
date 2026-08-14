@@ -5,7 +5,7 @@
     <div class="top3-wrapper flex flex-column align-items-center gap-4 mb-5">
       <!-- Loading state: 3 skeleton cards -->
       <template v-if="loading">
-        <Card v-for="n in 3" :key="n" class="player-card">
+        <Card v-for="n in 3" :key="n" class="player-card min-w-75">
           <template #content>
             <div class="flex flex-column align-items-center gap-2">
               <Skeleton width="8rem" height="1.5rem" />
@@ -20,12 +20,17 @@
         <Card
           v-for="player in players"
           :key="player.username"
-          class="player-card"
-          :class="{ 'top-player': player.rank === 1 }"
+          class="player-card min-w-75 border-left-custom"
+          :class="
+            { 
+              'gold-colour': player.rank === 1,  
+              'silver-colour': player.rank === 2, 
+              'bronze-colour': player.rank === 3
+            }"
         >
           <template #content>
-            <div class="flex flex-column align-items-center">
-              <h3>{{ player.rank }}: {{ player.name }}</h3>
+            <div class="flex flex-column align-items-start">
+              <h3>{{ player.name }}</h3>
               <p class="text-secondary">{{ player.points }} points</p>
             </div>
           </template>
@@ -39,6 +44,8 @@
 import { ref, onMounted } from 'vue';
 import { Skeleton, Card } from 'primevue';
 import { Bladers } from '../service/ClansService';
+
+import './styling/Top3Cards.css'
 
 const loading = ref(true);
 const data = ref([]);
