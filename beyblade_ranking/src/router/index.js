@@ -2,7 +2,7 @@ import {createRouter, createWebHashHistory} from 'vue-router'
 
 // Import your views
 import Home from '../views/Home.vue'
-import Organizer from '../views/Organizer.vue'
+import PlayerScoring from '../protected/PlayerScoring.vue'
 import Players from '../views/Players.vue'
 import Clans from '../views/Clans.vue'
 import ResetScores from '../protected/ResetScores.vue'
@@ -33,7 +33,7 @@ const router = createRouter({
     {
       path: '/update-player-scores',
       name: 'Update-Player-Scores',
-      component: Organizer,
+      component: PlayerScoring,
     },
     {
       path: '/update-clan-scores',
