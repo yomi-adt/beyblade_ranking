@@ -1,7 +1,20 @@
 <script setup>
 import { RouterView } from "vue-router";
 import { Button, Menubar } from "primevue";
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
+import Toast from 'primevue/toast';
+import {useToast} from 'primevue/usetoast'
+import { toastQueue } from './toastBus.js'; // Import the reactive queue array
+
+const primevueToast = useToast();
+
+watch(toastQueue, () => {
+  // Loop through and clear out any backed up triggers
+  while (toastQueue.value.length > 0) {
+    const notification = toastQueue.value.shift();
+    primevueToast.add(notification);
+  }
+}, { deep: true });
 
 const items = ref([
     {
@@ -28,6 +41,7 @@ const items = ref([
 </script>
 
 <template>
+  <Toast :baseZIndex="9999"/>
   <Menubar :model="items" class="mb-2">
 
     <template #start>
