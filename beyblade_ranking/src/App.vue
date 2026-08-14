@@ -4,7 +4,7 @@ import { Button, Menubar } from "primevue";
 import { ref, watch } from 'vue'
 import Toast from 'primevue/toast';
 import {useToast} from 'primevue/usetoast'
-import { toastQueue } from './toastBus.js'; // Import the reactive queue array
+import { toastQueue } from './ToastBus.js'; // Import the reactive queue array
 
 const primevueToast = useToast();
 
