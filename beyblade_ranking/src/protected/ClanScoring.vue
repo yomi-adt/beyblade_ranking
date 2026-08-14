@@ -10,7 +10,7 @@
     </div>
 
     <!-- Step 1: Point rules + multiplier -->
-    <Card class="mb-4">
+    <Card class="mb-4 overflow-x-auto">
       <template #title>1. Point Rules</template>
       <template #content>
         <div v-if="rulesError" class="flex align-items-center gap-2 mb-3">
@@ -111,7 +111,7 @@
     </Card>
 
     <!-- Step 2: Load tournament -->
-    <Card class="mb-4">
+    <Card class="mb-4 overflow-x-auto">
       <template #title>2. Load Tournament</template>
       <template #content>
         <label for="challongeUrl" class="font-semibold block mb-2">Challonge tournament link or slug</label>
@@ -149,7 +149,7 @@
     </Message>
 
     <!-- Step 3: Tag achievements per participant -->
-    <Card v-if="participants.length">
+    <Card v-if="participants.length" class="overflow-x-auto">
       <template #title>
         <Toolbar>
           <template #start>3. Tag Results &amp; Review Points</template>

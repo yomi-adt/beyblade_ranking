@@ -28,7 +28,7 @@ const items = ref([
 </script>
 
 <template>
-  <Menubar :model="items">
+  <Menubar :model="items" class="mb-2">
 
     <template #start>
       <img
