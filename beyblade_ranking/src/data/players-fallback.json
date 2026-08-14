@@ -2025,15 +2025,6 @@
     "updatedAt": null
   },
   {
-    "username": "DELETE ME",
-    "bladerName": "DELETE ME",
-    "lore": null,
-    "signatureCombo": null,
-    "points": 5,
-    "rankKey": "DELETE ME",
-    "updatedAt": "2026-08-08T04:05:12.411Z"
-  },
-  {
     "username": "RIP ROSS",
     "bladerName": null,
     "lore": null,
@@ -2050,5 +2041,14 @@
     "points": 185,
     "rankKey": "KOBES",
     "updatedAt": null
+  },
+  {
+    "username": "AAAA",
+    "bladerName": "DELETE ME AFTER SUNDAY AUG 16",
+    "lore": null,
+    "signatureCombo": null,
+    "points": 0,
+    "rankKey": "AAAA",
+    "updatedAt": "2026-08-14T20:26:13.285Z"
   }
 ]
