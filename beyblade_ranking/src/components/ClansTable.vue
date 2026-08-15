@@ -87,7 +87,7 @@ async function popupBlader(selectedBlader) {
 <template>
   <h1 class="pt-2">Clan Leaderboard</h1>
   <p v-if="lastUpdated" class="text-color-secondary text-sm mt-0 mb-3">
-    {{ isNaN(Date(lastUpdated)) == false ? "As of " + Date.parse(lastUpdated).toDateString : "Showing Latest Snapshot"}}
+    {{ isNaN(Date(lastUpdated)) === false ? "As of " + Date.parse(lastUpdated).toDateString() : "Showing Latest Snapshot"}}
   </p>
   <Toolbar>
     <template #start>
@@ -103,6 +103,7 @@ async function popupBlader(selectedBlader) {
     :value="data"
     :loading="loading"
     sortField="rank"
+    style="min-height: 34rem;"
     :sortOrder="1"
     selectionMode="single"
     v-model:selection="selectedBladerRef"

@@ -5,6 +5,8 @@ import { ref, watch } from 'vue'
 import Toast from 'primevue/toast';
 import {useToast} from 'primevue/usetoast'
 import { toastQueue } from './ToastBus.js'; // Import the reactive queue array
+import { ROUTE_TRANSITION_NAME } from './RouteTransition'
+import './route-transitions.css'
 
 const primevueToast = useToast();
 
@@ -73,7 +75,11 @@ const items = ref([
   </Menubar>
 
   <div class="pt-1">
-    <RouterView />
+    <RouterView v-slot="{ Component, route }">
+      <transition :name="route.meta.transition || ROUTE_TRANSITION_NAME" mode="out-in">
+        <component :is="Component" :key="route.path" />
+      </transition>
+    </RouterView>
   </div>
 
 </template>

@@ -1,0 +1,40 @@
+/*
+ * Named page-transition animations for <router-view>. Each block defines
+ * one named transition ('fade', 'slide', ...) using Vue's standard
+ * <transition> class hooks (name-enter-active, name-leave-active, etc).
+ *
+ * To add a new animation: copy one of these blocks, rename it, adjust the
+ * CSS. To switch which one the app uses: change ROUTE_TRANSITION_NAME in
+ * routeTransition.js (or override per-route via route.meta.transition) —
+ * nothing else needs to change.
+ */
+
+/* fade — default, safest for mismatched page heights (no layout shift) */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* slide — horizontal slide + fade */
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.slide-enter-from {
+  transform: translateX(16px);
+  opacity: 0;
+}
+.slide-leave-to {
+  transform: translateX(-16px);
+  opacity: 0;
+}
+
+/* none — instant, effectively disables the animation without removing the wiring */
+.none-enter-active,
+.none-leave-active {
+  transition: none;
+}

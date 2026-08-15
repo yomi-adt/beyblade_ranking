@@ -9,28 +9,31 @@ const router = useRouter();
 </script>
 
 <template>
-  <h1 class="pt-5">Winnipeg's Competitive Beyblade X Rankings</h1>
-  <small class="pt-5 text-color-secondary">(Development is still ongoing!)</small>
+  <div>
+    <h1 class="pt-5">Winnipeg's Competitive Beyblade X Rankings</h1>
+    <small class="pt-5 text-color-secondary">(Development is still ongoing!)</small>
 
-<div class="rankings-container">
-  <div class="ranking-section">
-    <Top3Bladers />
-    <Button
-      label="View Full Rankings"
-      class="mt-3"
-      @click="router.push('/players')"
-    />
+    <div class="rankings-container">
+      <div class="ranking-section">
+        <Top3Bladers />
+        <Button
+          label="View Full Rankings"
+          class="mt-3"
+          @click="router.push('/players')"
+        />
+      </div>
+
+      <div class="ranking-section">
+        <Top3Clans />
+        <Button
+          label="View Full Rankings"
+          class="mt-3"
+          @click="router.push('/clans')"
+        />
+      </div>
+    </div>
   </div>
 
-  <div class="ranking-section">
-    <Top3Clans />
-    <Button
-      label="View Full Rankings"
-      class="mt-3"
-      @click="router.push('/clans')"
-    />
-  </div>
-</div>
 </template>
 
 <style scoped>
