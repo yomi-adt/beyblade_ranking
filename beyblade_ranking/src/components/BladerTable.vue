@@ -39,7 +39,7 @@ onMounted(async () => {
   for (let i = 1; i <= data.value.length; i++) {
     data.value[i - 1].rank = i.toString();
   }
-  lastUpdated.value = (lastUpdatedValue ? lastUpdatedValue.lastUpdated : "Latest Snapshot");
+  lastUpdated.value = (lastUpdatedValue ? lastUpdatedValue.lastUpdated : null);
   loading.value = false;
 });
 
@@ -87,7 +87,7 @@ async function popupBlader(selectedBlader) {
 <template>
   <h1 class="pt-2">Blader Leaderboard</h1>
   <p v-if="lastUpdated" class="text-color-secondary text-sm mt-0 mb-3">
-    {{ isNaN(Date(lastUpdated)) ? "Showing Latest Snapshot" : "As of " + Date.parse(lastUpdated).toDateString()}}
+    Last updated: {{ new Date(lastUpdated).toDateString() }}
   </p>
   <Toolbar>
     <template #start>
