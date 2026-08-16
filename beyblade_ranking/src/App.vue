@@ -43,7 +43,7 @@ const items = ref([
 </script>
 
 <template>
-  <Toast :baseZIndex="9999"/>
+  <Toast :baseZIndex="9999" class="app-toast"/>
   <Menubar :model="items" class="mb-2">
 
     <template #start>
@@ -74,7 +74,7 @@ const items = ref([
 
   </Menubar>
 
-  <div class="pt-1">
+  <div class="pt-1 app-content">
     <RouterView v-slot="{ Component, route }">
       <transition :name="route.meta.transition || ROUTE_TRANSITION_NAME" mode="out-in">
         <component :is="Component" :key="route.path" />
@@ -85,6 +85,17 @@ const items = ref([
 </template>
 
 <style scoped>
+.app-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+}
+
+:global(.app-toast) {
+  max-width: 90vw;
+}
+
 /* The animation code */
 @keyframes bounce {
   0% {
