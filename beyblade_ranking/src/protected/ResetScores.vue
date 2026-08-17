@@ -4,11 +4,11 @@
     <div class="mb-4">
       <h1 class="text-2xl font-bold m-0">Reset Scores</h1>
       <p class="text-color-secondary mt-1 mb-0">
-        Zero out point totals — for example, at the start of a new season.
+        Zero out point totals. For example, at the start of a new season.
       </p>
     </div>
 
-    <div class="flex flex-column gap-4">
+    <div class="flex flex-row justify-content-center gap-4">
       <Card style="max-width: 32rem;">
         <template #title>Players</template>
         <template #content>
