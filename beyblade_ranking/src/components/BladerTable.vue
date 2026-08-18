@@ -85,7 +85,7 @@ async function popupBlader(selectedBlader) {
 </script>
 
 <template>
-  <h1 class="pt-2">Blader Leaderboard</h1>
+  <h2 class="pt-2">Blader Leaderboard</h2>
   <p v-if="lastUpdated" class="text-color-secondary text-sm mt-0 mb-3">
     Last updated: {{ new Date(lastUpdated).toDateString() }}
   </p>

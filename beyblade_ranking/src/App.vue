@@ -89,7 +89,7 @@ const items = ref([
     width: 100%;
     max-width: 100%;
     min-width: 0;
-    overflow-x: clip;
+    overflow-x: auto;
 }
 
 :global(.app-toast) {
