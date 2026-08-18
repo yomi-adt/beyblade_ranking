@@ -93,7 +93,8 @@ const items = ref([
 }
 
 :global(.app-toast) {
-  max-width: 90vw;
+    min-width: 30vw;
+    max-width: 90vw;
 }
 
 /* The animation code */
