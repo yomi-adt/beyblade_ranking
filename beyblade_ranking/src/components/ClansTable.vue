@@ -36,8 +36,10 @@ onMounted(async () => {
   ]);
   data.value = clans;
   data.value.sort((a, b) => b.points - a.points);
-  for (let i = 1; i <= data.value.length; i++) {
-    data.value[i - 1].rank = i.toString();
+  for (let i = 0; i < data.value.length; i++) {
+    data.value[i].rank = (i > 0 && data.value[i].points === data.value[i - 1].points)
+      ? data.value[i - 1].rank
+      : (i + 1).toString();
   }
   lastUpdated.value = (lastUpdatedValue ? lastUpdatedValue.lastUpdated : null);
   loading.value = false;
