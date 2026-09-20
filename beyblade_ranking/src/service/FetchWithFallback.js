@@ -24,7 +24,7 @@ export async function fetchJsonWithFallback(url, fallbackData, { timeoutMs = DEF
     
     // The fourth argument passes the unique code tracking key string.
     // The internal toastBus architecture automatically blocks duplicate insertions.
-    triggerToast('info', 'Backend is waking up', 'You\'re looking at the latest snapshot. Try again in a few minutes!', TOAST_CODE)
+    triggerToast('info', 'Server is waking up', 'You\'re looking at the latest snapshot. Try again in a few minutes!', TOAST_CODE)
     
     return fallbackData
   } finally {

@@ -5,9 +5,9 @@
     <div class="top3-wrapper flex flex-column align-items-center gap-4 mb-5">
       <!-- Loading state: 3 skeleton cards -->
       <template v-if="loading">
-        <Card v-for="n in 3" :key="n" class="player-card min-w-75">
+        <Card v-for="n in 3" :key="n" class="player-card min-w-75 vh-25">
           <template #content>
-            <div class="flex flex-column align-items-center gap-2">
+            <div class="flex flex-column align-items-start gap-2">
               <Skeleton width="8rem" height="1.5rem" />
               <Skeleton width="5rem" height="1rem" />
             </div>
@@ -20,7 +20,7 @@
         <Card
           v-for="player in players"
           :key="player.username"
-          class="player-card min-w-75 border-left-custom"
+          class="player-card min-w-75 border-left-custom vh-25"
           :class="
             { 
               'gold-colour': player.rank === 1,  

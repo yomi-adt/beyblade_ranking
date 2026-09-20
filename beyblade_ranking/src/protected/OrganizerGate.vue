@@ -1,23 +1,25 @@
 <template>
-  <div v-if="!isUnlocked" class="organizer-gate flex align-items-center justify-content-center" style="min-height: 60vh;">
-    <Card style="width: 24rem;">
-      <template #title>Organizer Access</template>
-      <template #content>
-        <p class="text-color-secondary mt-0">Enter the organizer key to continue.</p>
-        <Password
-          v-model="keyInput"
-          :feedback="false"
-          toggleMask
-          class="w-full mb-3"
-          inputClass="w-full"
-          @keyup.enter="attemptUnlock"
-        />
-        <Message v-if="error" severity="error" :closable="false" class="mb-3">{{ error }}</Message>
-        <Button label="Unlock" class="w-full" :loading="checking" @click="attemptUnlock" />
-      </template>
-    </Card>
+  <div class="organizer-gate-root">
+    <div v-if="!isUnlocked" class="organizer-gate flex align-items-center justify-content-center" style="min-height: 60vh;">
+      <Card style="width: 24rem;">
+        <template #title>Organizer Access</template>
+        <template #content>
+          <p class="text-color-secondary mt-0">Enter the organizer key to continue.</p>
+          <Password
+            v-model="keyInput"
+            :feedback="false"
+            toggleMask
+            class="w-full mb-3"
+            inputClass="w-full"
+            @keyup.enter="attemptUnlock"
+          />
+          <Message v-if="error" severity="error" :closable="false" class="mb-3">{{ error }}</Message>
+          <Button label="Unlock" class="w-full" :loading="checking" @click="attemptUnlock" />
+        </template>
+      </Card>
+    </div>
+    <slot v-else />
   </div>
-  <slot v-else />
 </template>
 
 <script setup>
@@ -27,7 +29,7 @@ import Card from 'primevue/card'
 import Password from 'primevue/password'
 import Button from 'primevue/button'
 import Message from 'primevue/message'
-import { isUnlocked, setOrganizerKey, markUnlocked, clearOrganizerKey } from '../service/OrganizerAuth'
+import { isUnlocked, setOrganizerKey, markUnlocked, clearOrganizerKey } from './organizerAuth'
 import { API_ROOT } from './apiConfig'
 
 // Verifying the key requires an actual request — there's nothing to check
