@@ -1,30 +1,44 @@
 [
   {
+    "tag": "SOJU",
+    "name": "SOJU",
+    "points": 270,
+    "rankKey": "SOJU",
+    "updatedAt": "2026-09-29T21:11:23.349Z"
+  },
+  {
+    "tag": "NV",
+    "name": "NEW VESTROIA",
+    "points": 492,
+    "rankKey": "NV",
+    "updatedAt": "2026-09-29T21:11:21.597Z"
+  },
+  {
     "tag": "BNC",
     "name": "BEY N CHILL",
-    "points": 272,
+    "points": 562,
     "rankKey": "BNC",
-    "updatedAt": null
+    "updatedAt": "2026-09-29T21:11:21.290Z"
   },
   {
-    "tag": "BBCLB",
-    "name": "BULLET BEY CLUB",
-    "points": 80,
-    "rankKey": "BBCLB",
-    "updatedAt": null
+    "tag": "UNDRTD",
+    "name": "UNDERRATED",
+    "points": 199,
+    "rankKey": "UNDRTD",
+    "updatedAt": "2026-09-29T21:11:23.889Z"
   },
   {
-    "tag": "T15",
-    "name": "T15",
-    "points": 316,
-    "rankKey": "T15",
-    "updatedAt": null
+    "tag": "JARV",
+    "name": "JARVEE",
+    "points": 272,
+    "rankKey": "JARV",
+    "updatedAt": "2026-09-29T21:11:22.979Z"
   },
   {
-    "tag": "SEND",
-    "name": "STARTEND",
-    "points": 224,
-    "rankKey": "SEND",
+    "tag": "KAOS",
+    "name": "CHAOSBORN",
+    "points": 132,
+    "rankKey": "KAOS",
     "updatedAt": null
   },
   {
@@ -35,32 +49,25 @@
     "updatedAt": null
   },
   {
-    "tag": "UNDRTD",
-    "name": "UNDERRATED",
-    "points": 139,
-    "rankKey": "UNDRTD",
-    "updatedAt": null
+    "tag": "T15",
+    "name": "T15",
+    "points": 421,
+    "rankKey": "T15",
+    "updatedAt": "2026-09-29T21:11:22.714Z"
   },
   {
-    "tag": "JARV",
-    "name": "JARVEE",
-    "points": 92,
-    "rankKey": "JARV",
-    "updatedAt": null
+    "tag": "BBCLB",
+    "name": "BULLET BEY CLUB",
+    "points": 240,
+    "rankKey": "BBCLB",
+    "updatedAt": "2026-09-29T21:11:22.186Z"
   },
   {
-    "tag": "SOJU",
-    "name": "SOJU",
-    "points": 250,
-    "rankKey": "SOJU",
-    "updatedAt": null
-  },
-  {
-    "tag": "NV",
-    "name": "NEW VESTROIA",
-    "points": 322,
-    "rankKey": "NV",
-    "updatedAt": null
+    "tag": "SEND",
+    "name": "STARTEND",
+    "points": 294,
+    "rankKey": "SEND",
+    "updatedAt": "2026-08-25T06:29:22.480Z"
   },
   {
     "tag": "TRX",
@@ -70,25 +77,18 @@
     "updatedAt": null
   },
   {
-    "tag": "KAOS",
-    "name": "CHAOSBORN",
-    "points": 132,
-    "rankKey": "KAOS",
-    "updatedAt": null
-  },
-  {
     "tag": "RTO",
     "name": "RATIO",
-    "points": 20,
+    "points": 80,
     "rankKey": "RTO",
-    "updatedAt": null
+    "updatedAt": "2026-09-29T21:11:21.004Z"
   },
   {
     "tag": "WPG",
     "name": "Winning Pegasus",
-    "points": 60,
+    "points": 230,
     "rankKey": "WPG",
-    "updatedAt": null
+    "updatedAt": "2026-09-29T21:11:23.619Z"
   },
   {
     "tag": "NPC",
@@ -98,10 +98,10 @@
     "updatedAt": null
   },
   {
-    "tag": "DELETE ME AFTER SUNDAY",
-    "name": null,
-    "points": 1,
-    "rankKey": "DELETE ME AFTER SUNDAY",
-    "updatedAt": "2026-08-14T20:44:28.265Z"
+    "tag": "NWA",
+    "name": "No Wizards Allowed",
+    "points": 60,
+    "rankKey": "NWA",
+    "updatedAt": "2026-09-29T21:11:31.845Z"
   }
 ]
