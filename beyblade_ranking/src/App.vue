@@ -48,7 +48,7 @@ const items = ref([
 
     <template #start>
       <img
-        src="/LG-Logo-Edited-Edited.png"
+        src="/wbbx_logo.png"
         alt="Logo"
         style="max-height: 32px; width: auto;"
       />
