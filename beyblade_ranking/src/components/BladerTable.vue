@@ -12,9 +12,10 @@ import {
   Toolbar,
   ToggleSwitch,
   Tag,
+  SelectButton,
 } from "primevue";
 import { Bladers } from "../service/BladersService";
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 import { FilterMatchMode } from "@primevue/core/api";
 
 const props = defineProps({
@@ -28,22 +29,29 @@ const props = defineProps({
 const loading = ref(true);
 const lastUpdated = ref(null);
 
-onMounted(async () => {
+const ageGroupFilterOptions = [
+  { label: 'Adults', value: 'ADULT' },
+  { label: 'Kids', value: 'KID' },
+];
+const ageGroupFilter = ref('ADULT'); // defaults to Adults — swap to 'KID' or make this null-able ("Everyone") if you'd rather default differently
+
+async function loadBladers() {
   loading.value = true;
   const [players, lastUpdatedValue] = await Promise.all([
-    Bladers.getBladers(),
+    Bladers.getBladers(ageGroupFilter.value),
     Bladers.getLastUpdated(),
   ]);
   data.value = players;
   data.value.sort((a, b) => b.points - a.points);
-  for (let i = 0; i < data.value.length; i++) {
-    data.value[i].rank = (i > 0 && data.value[i].points === data.value[i - 1].points)
-      ? data.value[i - 1].rank
-      : (i + 1).toString();
+  for (let i = 1; i <= data.value.length; i++) {
+    data.value[i - 1].rank = i.toString();
   }
-  lastUpdated.value = (lastUpdatedValue ? lastUpdatedValue.lastUpdated : null);
+  lastUpdated.value = lastUpdatedValue;
   loading.value = false;
-});
+}
+
+onMounted(loadBladers);
+watch(ageGroupFilter, loadBladers);
 
 const data = ref([]);
 const columns = [
@@ -87,9 +95,9 @@ async function popupBlader(selectedBlader) {
 </script>
 
 <template>
-  <h2 class="pt-2">Blader Leaderboard</h2>
+  <h3>Bladers</h3>
   <p v-if="lastUpdated" class="text-color-secondary text-sm mt-0 mb-3">
-    Last updated: {{ new Date(lastUpdated).toDateString() }}
+    Last updated: {{ new Date(lastUpdated).toLocaleString() }}
   </p>
   <Toolbar>
     <template #start>
@@ -98,15 +106,24 @@ async function popupBlader(selectedBlader) {
         placeholder="Search for Blader"
       />
     </template>
+    <template #end>
+      <SelectButton
+        v-model="ageGroupFilter"
+        :options="ageGroupFilterOptions"
+        optionLabel="label"
+        optionValue="value"
+        :allowEmpty="false"
+      />
+    </template>
   </Toolbar>
   <DataTable
     v-model:filters="filters"
     removableSort
     :value="data"
     :loading="loading"
+    style="min-height: 34rem;"
     sortField="rank"
     :sortOrder="1"
-    style="min-height: 34rem;"
     selectionMode="single"
     v-model:selection="selectedBladerRef"
     stripedRows

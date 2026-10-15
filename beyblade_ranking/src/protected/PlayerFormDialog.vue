@@ -16,16 +16,12 @@
           placeholder="Unique login/id"
         />
         <small v-if="mode === 'edit'" class="text-color-secondary">
-          This is the main name of the player, and what is used when searching
+          Changing this renames the player. Existing point history stays under the old username.
         </small>
       </div>
       <div>
         <label for="playerBladerName" class="font-semibold block mb-1">Blader Name</label>
         <InputText id="playerBladerName" v-model="bladerName" class="w-full" placeholder="Optional" />
-        <small v-if="mode === 'edit'" class="text-color-secondary">
-          This is the player's moniker or alt name. It's for display. For example: CJ "HellsSuboh",
-          where "HellsSuboh" is the blader name
-        </small>
       </div>
       <div>
         <label for="playerLore" class="font-semibold block mb-1">Lore</label>
@@ -38,6 +34,19 @@
       <div>
         <label for="playerPoints" class="font-semibold block mb-1">Points</label>
         <InputNumber id="playerPoints" v-model="points" class="w-full" :min="0" />
+      </div>
+      <div>
+        <label class="font-semibold block mb-1">Age Group</label>
+        <SelectButton
+          v-model="ageGroup"
+          :options="ageGroupOptions"
+          optionLabel="label"
+          optionValue="value"
+          :allowEmpty="false"
+        />
+        <small v-if="!props.initialEntity?.ageGroup && mode === 'edit'" class="text-color-secondary d-block mt-1">
+          Not set yet — pick one and save to classify this player.
+        </small>
       </div>
       <Message v-if="error" severity="error" :closable="false">{{ error }}</Message>
     </div>
@@ -62,6 +71,7 @@ import Dialog from 'primevue/dialog'
 import InputText from 'primevue/inputtext'
 import InputNumber from 'primevue/inputnumber'
 import Textarea from 'primevue/textarea'
+import SelectButton from 'primevue/selectbutton'
 import Button from 'primevue/button'
 import Message from 'primevue/message'
 import { PLAYERS_API_BASE } from './apiConfig'
@@ -71,6 +81,7 @@ const props = defineProps({
   mode: { type: String, default: 'create' }, // 'create' | 'edit'
   initialEntity: { type: Object, default: null }, // required for mode: 'edit'
   suggestedUsername: { type: String, default: '' }, // prefill for mode: 'create'
+  suggestedAgeGroup: { type: String, default: null }, // prefill for mode: 'create' — e.g. the scoring page's active league
 })
 
 const emit = defineEmits(['update:visible', 'saved'])
@@ -80,8 +91,14 @@ const bladerName = ref('')
 const lore = ref('')
 const signatureCombo = ref('')
 const points = ref(0)
+const ageGroup = ref('ADULT') // null = not yet classified — no default guess between ADULT/KID
 const saving = ref(false)
 const error = ref('')
+
+const ageGroupOptions = [
+  { label: 'Adult', value: 'ADULT' },
+  { label: 'Kid', value: 'KID' },
+]
 
 // Reset the form fresh every time the dialog opens, rather than once on
 // mount — this component gets reused for many different players/creations
@@ -97,12 +114,14 @@ watch(
       lore.value = props.initialEntity.lore || ''
       signatureCombo.value = props.initialEntity.signatureCombo || ''
       points.value = props.initialEntity.points || 0
+      ageGroup.value = props.initialEntity.ageGroup || null
     } else {
       username.value = props.suggestedUsername || ''
       bladerName.value = ''
       lore.value = ''
       signatureCombo.value = ''
       points.value = 0
+      ageGroup.value = props.suggestedAgeGroup || 'ADULT'
     }
   }
 )
@@ -110,6 +129,10 @@ watch(
 async function save() {
   const trimmedUsername = username.value.trim()
   if (!trimmedUsername) return
+  if (!ageGroup.value) {
+    error.value = 'Pick an age group (Adult or Kid) before saving.'
+    return
+  }
 
   saving.value = true
   error.value = ''
@@ -119,6 +142,7 @@ async function save() {
     lore: lore.value.trim() || null,
     signatureCombo: signatureCombo.value.trim() || null,
     points: points.value || 0,
+    ageGroup: ageGroup.value,
   }
 
   try {

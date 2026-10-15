@@ -9,7 +9,7 @@
     </div>
 
     <!-- Step 1: Point rules + multiplier -->
-    <Card class="mb-4 overflow-x-auto">
+    <Card class="mb-4">
       <template #title>1. Point Rules</template>
       <template #content>
         <div v-if="rulesError" class="flex align-items-center gap-2 mb-3">
@@ -71,23 +71,40 @@
 
         <Divider />
 
-        <div class="flex flex-column gap-2" style="max-width: 16rem;">
-          <label for="multiplier" class="font-semibold">Event Multiplier</label>
-          <InputNumber
-            id="multiplier"
-            v-model="multiplier"
-            :min="0"
-            :minFractionDigits="0"
-            :maxFractionDigits="2"
-            prefix="×"
-          />
-          <small class="text-color-secondary">Use 2 for "double points" events, 1 for normal events.</small>
+        <div class="flex align-items-start gap-6 flex-wrap">
+          <div class="flex flex-column gap-2" style="max-width: 16rem;">
+            <label for="multiplier" class="font-semibold">Event Multiplier</label>
+            <InputNumber
+              id="multiplier"
+              v-model="multiplier"
+              :min="0"
+              :minFractionDigits="0"
+              :maxFractionDigits="2"
+              prefix="×"
+            />
+            <small class="text-color-secondary">Use 2 for "double points" events, 1 for normal events.</small>
+          </div>
+
+          <div class="flex flex-column gap-2 align-items-center" style="max-width: 22rem;">
+            <label class="font-semibold">League</label>
+            <SelectButton
+              v-model="leagueFilter"
+              :options="leagueOptions"
+              optionLabel="label"
+              optionValue="value"
+              :allowEmpty="false"
+            />
+            <small class="text-color-secondary">
+              Limits the "Select player…" match list to this league, and pre-selects it when
+              adding a new player (a kids' bracket can't accidentally match an adult).
+            </small>
+          </div>
         </div>
       </template>
     </Card>
 
     <!-- Step 2: Load tournament -->
-    <Card class="mb-4 overflow-x-auto">
+    <Card class="mb-4">
       <template #title>2. Load Tournament</template>
       <template #content>
         <label for="challongeUrl" class="font-semibold block mb-2">Challonge tournament link or slug</label>
@@ -125,7 +142,7 @@
     </Message>
 
     <!-- Step 3: Tag achievements per participant -->
-    <Card v-if="participants.length" class="overflow-x-auto">
+    <Card v-if="participants.length">
       <template #title>
         <Toolbar>
           <template #start>3. Tag Results &amp; Review Points</template>
@@ -154,7 +171,7 @@
           <Column field="name" header="Participant" style="width: 14rem" />
           <Column :header="`Achievements (${multiplier}× multiplier applied)`">
             <template #body="{ data }">
-              <div class="flex flex-wrap align-items-center gap-3">
+              <div class="flex flex-wrap align-items-center gap-2">
                 <ToggleButton
                   v-for="rule in booleanRules"
                   :key="rule.id"
@@ -174,20 +191,14 @@
                     :disabled="submitting"
                     showButtons
                     buttonLayout="horizontal"
-                    inputStyle="width: 2.5rem; text-align: center;"
-                  >
-                    <template #incrementbuttonicon>
-                        <span class="pi pi-plus" />
-                    </template>
-                    <template #decrementbuttonicon>
-                        <span class="pi pi-minus" />
-                    </template>
-                  </InputNumber>
+                    class="w-6rem"
+                    inputStyle="width: 2.5rem"
+                  />
                 </div>
               </div>
             </template>
           </Column>
-          <Column header="Total Points" style="width: 7rem" bodyStyle="text-align: center; justify-content: center;" headerStyle="text-align: center; justify-content: center;">
+          <Column header="Total Points" style="width: 7rem">
             <template #body="{ data }">
               <span class="font-semibold">{{ computeTotal(data) }}</span>
             </template>
@@ -203,6 +214,7 @@
                   filter
                   placeholder="Select player…"
                   class="w-12rem"
+                  @change="console.log('Selected match key:', $event.value)"
                 />
                 <Button
                   icon="pi pi-check"
@@ -223,7 +235,7 @@
               </div>
               <Tag v-else-if="data.saveState === 'success'" value="Saved" severity="success" />
               <Tag v-else-if="data.saveState === 'error'" value="Failed" severity="danger" />
-              <Tag v-else-if="data.dirty" value="Unsaved" severity="warn" />
+              <Tag v-else-if="data.dirty" value="Unsaved" severity="warning" />
               <Tag v-else value="—" severity="secondary" />
             </template>
           </Column>
@@ -235,10 +247,11 @@
       No participants found for that tournament.
     </div>
 
-    <PlayerFormDialog 
+    <PlayerFormDialog
       v-model:visible="addPlayerDialogVisible"
       mode="create"
       :suggested-username="addPlayerTarget?.name"
+      :suggested-age-group="leagueFilter"
       @saved="onPlayerCreated"
     />
   </div>
@@ -246,7 +259,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 
 import Card from 'primevue/card'
 import InputText from 'primevue/inputtext'
@@ -261,11 +274,10 @@ import Column from 'primevue/column'
 import ToggleButton from 'primevue/togglebutton'
 import Select from 'primevue/select'
 import SelectButton from 'primevue/selectbutton'
-import Dialog from 'primevue/dialog'
 import OrganizerGate from './OrganizerGate.vue'
-import { PLAYER_RANKINGS_API_BASE, CHALLONGE_API_BASE, PLAYERS_API_BASE, POINT_RULES_API_BASE } from './apiConfig.js'
-import { useTournamentScoring } from './useTournamentScoring.js'
 import PlayerFormDialog from './PlayerFormDialog.vue'
+import { PLAYER_RANKINGS_API_BASE, CHALLONGE_API_BASE, PLAYERS_API_BASE, POINT_RULES_API_BASE } from './apiConfig'
+import { useTournamentScoring } from './useTournamentScoring'
 
 // Assumes PrimeVue is already installed and registered with a theme preset
 // (e.g. Aura) in main.js:
@@ -277,7 +289,7 @@ const {
   ruleTypeOptions, pointRules, rulesLoading, rulesError, multiplier, booleanRules, countRules,
   fetchPointRules, markRuleDirty, addRule, saveRule, removeRule,
   challongeInput, tournament, participants, loading, submitting, loadError, attemptedLoad, banner,
-  entityList, hasChanges, rowClass, loadTournament,
+  entityList, ensureEntityListLoaded, hasChanges, rowClass, loadTournament,
   toggleBooleanRule, setCountRule, computeTotal, resetChanges,
   submitOne, submitAllPoints, confirmMatch,
 } = useTournamentScoring({
@@ -286,11 +298,29 @@ const {
   entityListApiBase: PLAYERS_API_BASE,
   pointRulesApiBase: POINT_RULES_API_BASE,
   challongeApiBase: CHALLONGE_API_BASE,
+  getAgeGroup: () => leagueFilter.value,
 })
 
+// ---------- League (Adults / Kids) ----------
+// Scopes the "Select player…" match list to one league, so running a kids'
+// bracket can't accidentally match a participant to an adult (or vice versa),
+// and pre-selects that league when adding a brand-new player.
+const leagueOptions = [
+  { label: 'Adults', value: 'ADULT' },
+  { label: 'Kids', value: 'KID' },
+]
+const leagueFilter = ref('ADULT')
+
+// Load the filtered list up front (rather than waiting for the first
+// needs-match), and again whenever the toggle changes. The composable
+// remembers these params, so its internal needs-match refetch keeps the filter.
+onMounted(() => ensureEntityListLoaded({ ageGroup: leagueFilter.value }))
+watch(leagueFilter, (league) => ensureEntityListLoaded({ ageGroup: league }))
+
 // "Add Player" dialog — for when a Challonge participant genuinely has no
-// existing Player yet (new community member). Creates the Player, then
-// immediately resubmits the pending point award against it.
+// existing Player yet (new community member). PlayerFormDialog handles the
+// actual create/edit request; this page just needs to know which pending
+// participant to resubmit once a new player is saved.
 const addPlayerDialogVisible = ref(false)
 const addPlayerTarget = ref(null)
 

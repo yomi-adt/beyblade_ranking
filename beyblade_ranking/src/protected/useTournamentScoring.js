@@ -16,7 +16,14 @@ import axios from 'axios'
  * @param {string} opts.challongeApiBase  CHALLONGE_API_BASE
  */
 export function useTournamentScoring(opts) {
-  const { rulesAppliesTo, rankingsApiBase, entityListApiBase, pointRulesApiBase, challongeApiBase } = opts
+  const {
+    rulesAppliesTo,
+    rankingsApiBase,
+    entityListApiBase,
+    pointRulesApiBase,
+    challongeApiBase,
+    getAgeGroup,
+  } = opts
 
   const ruleTypeOptions = [
     { label: 'Yes/No', value: 'BOOLEAN' },
@@ -132,20 +139,46 @@ export function useTournamentScoring(opts) {
   const attemptedLoad = ref(false)
   const banner = ref({ message: '', type: 'success' })
 
-  // Entity list (players or clans) for the match picker — fetched lazily,
-  // once, the first time a participant name fails to resolve.
+  // Entity list (players or clans) for the match picker — fetched lazily the
+  // first time a participant name fails to resolve (or eagerly by a page that
+  // calls this itself). Accepts optional query params (e.g. { ageGroup: 'KID' })
+  // and refetches whenever they differ from the last call, rather than
+  // caching one result forever — pages that don't pass any params (like
+  // ClanScoring) behave exactly as before.
   const entityList = ref([])
   let entityListLoadPromise = null
-  async function ensureEntityListLoaded() {
-    if (entityList.value.length) return
-    if (!entityListLoadPromise) {
-      entityListLoadPromise = axios
-        .get(entityListApiBase)
-        .then((res) => { entityList.value = res.data || [] })
-        .catch(() => { entityList.value = [] })
-    }
-    await entityListLoadPromise
+  let lastEntityListParamsKey = null
+  // The most recently *explicitly* requested params. Internal no-arg calls
+  // (e.g. submitOne's needs-match path) reuse these rather than resetting to
+  // "no filter" — otherwise a league toggle on the page would get silently
+  // undone the first time a participant fails to match.
+  let currentEntityListParams = undefined
+async function ensureEntityListLoaded(extraParams) {
+  if (extraParams !== undefined) currentEntityListParams = extraParams
+
+  const paramsKey = JSON.stringify(currentEntityListParams || {})
+
+  if (entityList.value.length && lastEntityListParamsKey === paramsKey) {
+    console.log('Using cached entity list:', entityList.value)
+    return
   }
+
+  if (!entityListLoadPromise || lastEntityListParamsKey !== paramsKey) {
+    lastEntityListParamsKey = paramsKey
+
+    entityListLoadPromise = axios
+      .get(entityListApiBase, { params: currentEntityListParams })
+      .then((res) => {
+        entityList.value = res.data || []
+      })
+      .catch((err) => {
+        console.error('Failed to load entity list:', err)
+        entityList.value = []
+      })
+  }
+
+  await entityListLoadPromise
+}
 
   const hasChanges = computed(() => participants.value.some((p) => p.dirty))
 
@@ -173,6 +206,7 @@ export function useTournamentScoring(opts) {
         id: p.id,
         seed: p.seed,
         name: p.name,
+        ageGroup: rulesAppliesTo === 'PLAYER' ? getAgeGroup?.() ?? null : null,
         // Keyed by rule id. BOOLEAN rules store true/false; COUNT rules store a number.
         ruleValues: {},
         originalRuleValues: {},
@@ -232,51 +266,61 @@ export function useTournamentScoring(opts) {
 
   // ---------- Submitting ----------
 
-  function buildPayload(p, explicitKey) {
-    const appliedRules = pointRules.value
-      .map((rule) => {
-        const raw = p.ruleValues[rule.id]
-        const count = rule.type === 'COUNT' ? Number(raw) || 0 : raw ? 1 : 0
-        return { label: rule.label, points: rule.points, count }
-      })
-      .filter((r) => r.count > 0)
+function buildPayload(p, explicitKey) {
+  const appliedRules = pointRules.value
+    .map((rule) => {
+      const raw = p.ruleValues[rule.id]
+      const count = rule.type === 'COUNT' ? Number(raw) || 0 : raw ? 1 : 0
+      return { label: rule.label, points: rule.points, count }
+    })
+    .filter((r) => r.count > 0)
 
-    return {
-      tournamentId: tournament.value?.id,
-      tournamentName: tournament.value?.name,
-      participantName: p.name,
-      entityKey: explicitKey || null,
-      appliedRules,
-      multiplier: multiplier.value,
-      totalPoints: computeTotal(p),
-    }
+  return {
+    tournamentId: tournament.value?.id,
+    tournamentName: tournament.value?.name,
+    participantName: p.name,
+    entityKey: explicitKey || null,
+    ageGroup: p.ageGroup ?? null,
+    appliedRules,
+    multiplier: multiplier.value,
+    totalPoints: computeTotal(p),
+  }
+}
+
+async function submitOne(p) {
+  if (!assignMatchedEntity(p)) {
+    p.saveState = 'needs-match'
+    return 'needs-match'
   }
 
-  async function submitOne(p) {
-    try {
-      await axios.post(`${rankingsApiBase}/points`, buildPayload(p, p.matchKey))
-      p.originalRuleValues = { ...p.ruleValues }
-      p.dirty = false
-      p.saveState = 'success'
-      return 'success'
-    } catch (err) {
-      const code = err.response?.data?.code
-      if (err.response?.status === 409 || code === 'ENTITY_NOT_FOUND') {
-        p.saveState = 'needs-match'
-        await ensureEntityListLoaded()
-        return 'needs-match'
-      }
-      if (err.response?.status === 422 || code === 'MALFORMED_NAME') {
-        // Distinct from needs-match: the participant name didn't even parse
-        // (e.g. missing the "[TAG] " prefix for clans) — no point showing a
-        // picker, since there's nothing to search for.
-        p.saveState = 'malformed'
-        return 'malformed'
-      }
-      p.saveState = 'error'
-      return 'error'
+  try {
+    await axios.post(
+      `${rankingsApiBase}/points`,
+      buildPayload(p, p.matchKey)
+    )
+
+    p.originalRuleValues = { ...p.ruleValues }
+    p.dirty = false
+    p.saveState = 'success'
+    return 'success'
+  } catch (err) {
+    const code = err.response?.data?.code
+
+    if (err.response?.status === 409 || code === 'ENTITY_NOT_FOUND') {
+      p.saveState = 'needs-match'
+      await ensureEntityListLoaded()
+      return 'needs-match'
     }
+
+    if (err.response?.status === 422 || code === 'MALFORMED_NAME') {
+      p.saveState = 'malformed'
+      return 'malformed'
+    }
+
+    p.saveState = 'error'
+    return 'error'
   }
+}
 
   async function submitAllPoints() {
     const changed = participants.value.filter((p) => p.dirty)
@@ -289,10 +333,15 @@ export function useTournamentScoring(opts) {
     let malformed = 0
 
     for (const p of changed) {
-      const result = await submitOne(p)
-      if (result === 'error') failures += 1
-      if (result === 'needs-match') needsMatch += 1
-      if (result === 'malformed') malformed += 1
+        if (rulesAppliesTo === 'PLAYER' && p.matchKey) {
+            await ensureEntityListLoaded()
+        }
+
+        const result = await submitOne(p)
+
+        if (result === 'error') failures += 1
+        if (result === 'needs-match') needsMatch += 1
+        if (result === 'malformed') malformed += 1
     }
 
     submitting.value = false
@@ -314,13 +363,42 @@ export function useTournamentScoring(opts) {
     }
   }
 
-  /** Resubmits a single participant once the admin has picked/created a matching entity. */
-  async function confirmMatch(p) {
-    if (!p.matchKey) return
-    submitting.value = true
+async function confirmMatch(p) {
+  if (!p.matchKey) return
+
+  const selectedPlayer = entityList.value.find(
+    (player) => player.username === p.matchKey
+  )
+
+  if (rulesAppliesTo === 'PLAYER') {
+    if (!selectedPlayer) {
+      console.error('Selected player not found in entityList')
+      return
+    }
+
+    p.ageGroup = selectedPlayer.ageGroup
+  }
+
+  submitting.value = true
+  try {
     await submitOne(p)
+  } finally {
     submitting.value = false
   }
+}
+
+function assignMatchedEntity(p) {
+  if (rulesAppliesTo !== 'PLAYER' || !p.matchKey) return true
+
+  const selectedPlayer = entityList.value.find(
+    (player) => player.username === p.matchKey
+  )
+
+  if (!selectedPlayer) return false
+
+  p.ageGroup = selectedPlayer.ageGroup
+  return true
+}
 
   return {
     ruleTypeOptions,
