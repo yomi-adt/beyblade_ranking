@@ -1,24 +1,38 @@
 [
   {
-    "tag": "SOJU",
-    "name": "SOJU",
-    "points": 270,
-    "rankKey": "SOJU",
-    "updatedAt": "2026-09-29T21:11:23.349Z"
-  },
-  {
-    "tag": "NV",
-    "name": "NEW VESTROIA",
-    "points": 492,
-    "rankKey": "NV",
-    "updatedAt": "2026-09-29T21:11:21.597Z"
-  },
-  {
     "tag": "BNC",
     "name": "BEY N CHILL",
     "points": 562,
     "rankKey": "BNC",
     "updatedAt": "2026-09-29T21:11:21.290Z"
+  },
+  {
+    "tag": "BBCLB",
+    "name": "BULLET BEY CLUB",
+    "points": 240,
+    "rankKey": "BBCLB",
+    "updatedAt": "2026-09-29T21:11:22.186Z"
+  },
+  {
+    "tag": "T15",
+    "name": "T15",
+    "points": 421,
+    "rankKey": "T15",
+    "updatedAt": "2026-09-29T21:11:22.714Z"
+  },
+  {
+    "tag": "SEND",
+    "name": "STARTEND",
+    "points": 294,
+    "rankKey": "SEND",
+    "updatedAt": "2026-08-25T06:29:22.480Z"
+  },
+  {
+    "tag": "DYN",
+    "name": "DYNASTY",
+    "points": 17,
+    "rankKey": "DYN",
+    "updatedAt": null
   },
   {
     "tag": "UNDRTD",
@@ -35,45 +49,31 @@
     "updatedAt": "2026-09-29T21:11:22.979Z"
   },
   {
-    "tag": "KAOS",
-    "name": "CHAOSBORN",
-    "points": 132,
-    "rankKey": "KAOS",
-    "updatedAt": null
+    "tag": "SOJU",
+    "name": "SOJU",
+    "points": 270,
+    "rankKey": "SOJU",
+    "updatedAt": "2026-09-29T21:11:23.349Z"
   },
   {
-    "tag": "DYN",
-    "name": "DYNASTY",
-    "points": 17,
-    "rankKey": "DYN",
-    "updatedAt": null
-  },
-  {
-    "tag": "T15",
-    "name": "T15",
-    "points": 421,
-    "rankKey": "T15",
-    "updatedAt": "2026-09-29T21:11:22.714Z"
-  },
-  {
-    "tag": "BBCLB",
-    "name": "BULLET BEY CLUB",
-    "points": 240,
-    "rankKey": "BBCLB",
-    "updatedAt": "2026-09-29T21:11:22.186Z"
-  },
-  {
-    "tag": "SEND",
-    "name": "STARTEND",
-    "points": 294,
-    "rankKey": "SEND",
-    "updatedAt": "2026-08-25T06:29:22.480Z"
+    "tag": "NV",
+    "name": "NEW VESTROIA",
+    "points": 492,
+    "rankKey": "NV",
+    "updatedAt": "2026-09-29T21:11:21.597Z"
   },
   {
     "tag": "TRX",
     "name": "TRUE AXIS",
     "points": 120,
     "rankKey": "TRX",
+    "updatedAt": null
+  },
+  {
+    "tag": "KAOS",
+    "name": "CHAOSBORN",
+    "points": 132,
+    "rankKey": "KAOS",
     "updatedAt": null
   },
   {

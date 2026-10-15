@@ -4,9 +4,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 45,
+    "points": 75,
+    "ageGroup": "ADULT",
     "rankKey": "SURGE",
-    "updatedAt": "2026-09-21T17:54:51.927Z"
+    "updatedAt": "2026-10-06T03:21:22.893Z"
   },
   {
     "username": "TDAWG",
@@ -14,6 +15,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "TDAWG",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -23,6 +25,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KAI SMITH",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -32,6 +35,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "SHADE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -41,6 +45,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KIKIAM",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -50,6 +55,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "REDMAN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -59,6 +65,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KUYA NIISAN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -68,6 +75,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KYLE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -77,6 +85,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "FRANCIS",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -85,18 +94,20 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 95,
+    "ageGroup": "ADULT",
     "rankKey": "FUTANAKA",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:11.353Z"
   },
   {
     "username": "ACE",
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 90,
+    "points": 115,
+    "ageGroup": "ADULT",
     "rankKey": "ACE",
-    "updatedAt": "2026-09-21T17:54:50.172Z"
+    "updatedAt": "2026-10-06T03:21:18.149Z"
   },
   {
     "username": "MILKED",
@@ -104,6 +115,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "MILKED",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -113,6 +125,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "DAQUAN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -122,6 +135,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "REMI",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -130,36 +144,40 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 20,
+    "points": 50,
+    "ageGroup": "ADULT",
     "rankKey": "NICO",
-    "updatedAt": "2026-09-21T17:55:02.569Z"
+    "updatedAt": "2026-10-06T03:21:21.356Z"
   },
   {
     "username": "JASON",
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 60,
+    "ageGroup": "ADULT",
     "rankKey": "JASON",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:12.267Z"
   },
   {
     "username": "EMILY",
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 30,
+    "ageGroup": "ADULT",
     "rankKey": "EMILY",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:25.513Z"
   },
   {
     "username": "ERNEST",
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 15,
+    "ageGroup": "ADULT",
     "rankKey": "ERNEST",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:31.890Z"
   },
   {
     "username": "YSHI",
@@ -167,6 +185,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "YSHI",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -176,6 +195,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "RY",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -185,6 +205,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JACOB V",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -193,9 +214,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 15,
+    "ageGroup": "ADULT",
     "rankKey": "MEGUMI",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:25.218Z"
   },
   {
     "username": "BLADER J",
@@ -203,6 +225,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "BLADER J",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -212,6 +235,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "WILL",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -221,6 +245,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "CRAZYBRADY",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -230,6 +255,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KILLSCREEN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -239,6 +265,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JAMES CARLES",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -247,18 +274,20 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 45,
+    "points": 70,
+    "ageGroup": "ADULT",
     "rankKey": "EVAN",
-    "updatedAt": "2026-09-21T17:54:47.974Z"
+    "updatedAt": "2026-10-06T03:21:24.142Z"
   },
   {
     "username": "GRIMSTAR",
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 20,
+    "ageGroup": "ADULT",
     "rankKey": "GRIMSTAR",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:17.846Z"
   },
   {
     "username": "UNDERRATED",
@@ -266,6 +295,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "UNDERRATED",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -274,18 +304,20 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 30,
+    "ageGroup": "ADULT",
     "rankKey": "JANKS",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:24:55.416Z"
   },
   {
     "username": "SEAJAY",
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 25,
+    "points": 50,
+    "ageGroup": "ADULT",
     "rankKey": "SEAJAY",
-    "updatedAt": "2026-09-21T17:54:58.069Z"
+    "updatedAt": "2026-10-06T03:21:19.246Z"
   },
   {
     "username": "SAMXBLADER",
@@ -293,6 +325,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "SAMXBLADER",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -302,6 +335,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KENZHI",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -311,6 +345,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JIN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -320,6 +355,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "RYU",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -329,6 +365,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "NICOLE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -338,6 +375,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "GRAESON",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -347,6 +385,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "BRADDY",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -356,6 +395,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "XAVIER",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -365,6 +405,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ASHER",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -374,6 +415,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "RIC",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -383,6 +425,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "FRANZ",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -392,6 +435,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KIRT",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -401,6 +445,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "BEAN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -410,6 +455,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "RAINIER",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -419,6 +465,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 30,
+    "ageGroup": "ADULT",
     "rankKey": "JARED",
     "updatedAt": "2026-09-21T17:58:53.865Z"
   },
@@ -428,17 +475,9 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "BRYXX",
     "updatedAt": "2026-09-14T06:35:56.375Z"
-  },
-  {
-    "username": "KUSO",
-    "bladerName": "KYOYA",
-    "lore": "Hard work pays off, dreams come true, bad times don't last, but bad guys do.",
-    "signatureCombo": "Heavens Ring 1-60 LR",
-    "points": 25,
-    "rankKey": "KUSO",
-    "updatedAt": "2026-09-21T17:54:59.504Z"
   },
   {
     "username": "ITAMI",
@@ -446,6 +485,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ITAMI",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -455,6 +495,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "CHILL BRO",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -464,6 +505,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "AIRN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -473,6 +515,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "CHRIS A",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -481,9 +524,10 @@
     "bladerName": null,
     "lore": null,
     "signatureCombo": "Shark Scale 7-60 R",
-    "points": 50,
+    "points": 75,
+    "ageGroup": "ADULT",
     "rankKey": "REI",
-    "updatedAt": "2026-09-21T18:08:28.052Z"
+    "updatedAt": "2026-10-06T03:24:53.725Z"
   },
   {
     "username": "CASTER",
@@ -491,6 +535,7 @@
     "lore": "",
     "signatureCombo": "Samurai Saber 9-60 LR",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "CASTER",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -500,6 +545,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "DAVE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -509,6 +555,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KIRYU",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -518,6 +565,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "RAY",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -526,18 +574,20 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 25,
+    "points": 35,
+    "ageGroup": "ADULT",
     "rankKey": "LANS",
-    "updatedAt": "2026-09-21T17:54:59.190Z"
+    "updatedAt": "2026-10-06T03:21:22.599Z"
   },
   {
     "username": "JAREN JAMES",
     "bladerName": "JJC",
     "lore": "",
     "signatureCombo": "",
-    "points": 10,
+    "points": 35,
+    "ageGroup": "ADULT",
     "rankKey": "JAREN JAMES",
-    "updatedAt": "2026-09-21T17:58:48.606Z"
+    "updatedAt": "2026-10-06T03:27:34.248Z"
   },
   {
     "username": "TRISH",
@@ -545,6 +595,7 @@
     "lore": "",
     "signatureCombo": "Wizard Rod 1-60 LR",
     "points": 20,
+    "ageGroup": "ADULT",
     "rankKey": "TRISH",
     "updatedAt": "2026-09-21T17:59:07.383Z"
   },
@@ -554,6 +605,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "WREKCY",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -563,6 +615,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ALLEN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -571,9 +624,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 20,
+    "points": 35,
+    "ageGroup": "ADULT",
     "rankKey": "JINZOH",
-    "updatedAt": "2026-09-21T17:54:56.626Z"
+    "updatedAt": "2026-10-06T03:21:26.784Z"
   },
   {
     "username": "KUBZ",
@@ -581,6 +635,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KUBZ",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -590,6 +645,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JEKO",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -599,6 +655,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "EVOLFLOW",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -608,6 +665,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 20,
+    "ageGroup": "ADULT",
     "rankKey": "SHERWIN",
     "updatedAt": "2026-09-21T17:54:55.861Z"
   },
@@ -617,6 +675,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "WITHAK",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -626,6 +685,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "SUNSHINE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -635,6 +695,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "MIGUEL F",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -644,6 +705,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "TRAVEN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -652,18 +714,20 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 20,
+    "points": 50,
+    "ageGroup": "ADULT",
     "rankKey": "BEYKNIGHT",
-    "updatedAt": "2026-09-21T17:54:54.796Z"
+    "updatedAt": "2026-10-06T03:21:30.950Z"
   },
   {
     "username": "LJ",
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 25,
+    "ageGroup": "ADULT",
     "rankKey": "LJ",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:25.813Z"
   },
   {
     "username": "ETHAN L",
@@ -671,6 +735,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ETHAN L",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -680,6 +745,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ARJUN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -689,6 +755,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JACOB L",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -697,9 +764,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 25,
+    "ageGroup": "ADULT",
     "rankKey": "AEDEN",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:23.193Z"
   },
   {
     "username": "KURO",
@@ -707,6 +775,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KURO",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -716,6 +785,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ALFRED V",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -724,9 +794,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 15,
+    "points": 45,
+    "ageGroup": "ADULT",
     "rankKey": "MATT",
-    "updatedAt": "2026-09-21T17:59:18.087Z"
+    "updatedAt": "2026-10-06T03:21:27.393Z"
   },
   {
     "username": "REG",
@@ -734,6 +805,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "REG",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -742,18 +814,20 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 30,
+    "ageGroup": "ADULT",
     "rankKey": "RAIDEN",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:25:15.879Z"
   },
   {
     "username": "PSIONARA",
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 25,
+    "points": 70,
+    "ageGroup": "ADULT",
     "rankKey": "PSIONARA",
-    "updatedAt": "2026-09-21T17:54:53.255Z"
+    "updatedAt": "2026-10-06T03:21:13.291Z"
   },
   {
     "username": "EA",
@@ -761,6 +835,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "EA",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -770,6 +845,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "TIMO",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -778,18 +854,20 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 25,
+    "points": 50,
+    "ageGroup": "ADULT",
     "rankKey": "SHIRUA",
-    "updatedAt": "2026-09-21T17:54:52.952Z"
+    "updatedAt": "2026-10-06T03:21:20.853Z"
   },
   {
     "username": "LOKAJ",
     "bladerName": "BLADER LOKAJ",
     "lore": "Brought down as a hero, Rising up as the Villain😈🍆",
     "signatureCombo": "Tyranno Beat 1-70 Rush",
-    "points": 140,
+    "points": 195,
+    "ageGroup": "ADULT",
     "rankKey": "LOKAJ",
-    "updatedAt": "2026-09-21T17:54:46.143Z"
+    "updatedAt": "2026-10-06T03:21:16.313Z"
   },
   {
     "username": "MATEO",
@@ -797,6 +875,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "MATEO",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -806,6 +885,7 @@
     "lore": "",
     "signatureCombo": "Cobalt Dragoon 1-60 L",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "MICHAEL",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -814,9 +894,10 @@
     "bladerName": "RUBYSEASON",
     "lore": "THE DARK LORD, THE GLORY, THE VALKYRIE.",
     "signatureCombo": "Glory Valkyrie Rush",
-    "points": 55,
+    "points": 85,
+    "ageGroup": "ADULT",
     "rankKey": "REN",
-    "updatedAt": "2026-09-21T17:54:50.477Z"
+    "updatedAt": "2026-10-06T03:21:24.443Z"
   },
   {
     "username": "JAH",
@@ -824,6 +905,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JAH",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -833,6 +915,7 @@
     "lore": "",
     "signatureCombo": "WizardArcHeavy 1-60 R",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "IZSON",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -841,18 +924,20 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "Cobalt Dragoon 5-60 R",
-    "points": 0,
+    "points": 30,
+    "ageGroup": "ADULT",
     "rankKey": "DROAM",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:26.483Z"
   },
   {
     "username": "PAU",
     "bladerName": "JPZL",
     "lore": "",
     "signatureCombo": "Phoenix Wing 3-60 O/LO",
-    "points": 30,
+    "points": 100,
+    "ageGroup": "ADULT",
     "rankKey": "PAU",
-    "updatedAt": "2026-09-21T17:55:00.001Z"
+    "updatedAt": "2026-10-06T03:21:11.659Z"
   },
   {
     "username": "GABBY",
@@ -860,6 +945,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "GABBY",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -868,9 +954,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 20,
+    "ageGroup": "ADULT",
     "rankKey": "YEYOH",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:28.159Z"
   },
   {
     "username": "BAILEYBOYS",
@@ -878,6 +965,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "BAILEYBOYS",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -887,6 +975,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "SIP",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -896,6 +985,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ETHAN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -905,6 +995,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JETHRO",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -914,6 +1005,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "RAUGGHI",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -923,6 +1015,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 15,
+    "ageGroup": "ADULT",
     "rankKey": "JEPOY",
     "updatedAt": "2026-09-21T17:55:03.638Z"
   },
@@ -931,9 +1024,10 @@
     "bladerName": "EL SUNGANATOR",
     "lore": "",
     "signatureCombo": "",
-    "points": 25,
+    "points": 50,
+    "ageGroup": "ADULT",
     "rankKey": "SUNGANATOR",
-    "updatedAt": "2026-09-21T17:59:16.205Z"
+    "updatedAt": "2026-10-06T03:25:20.433Z"
   },
   {
     "username": "JWRECK",
@@ -941,6 +1035,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JWRECK",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -950,6 +1045,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ADZILLA",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -958,9 +1054,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 25,
+    "points": 55,
+    "ageGroup": "ADULT",
     "rankKey": "MR.PRESIDENT",
-    "updatedAt": "2026-09-21T17:58:49.794Z"
+    "updatedAt": "2026-10-06T03:25:13.659Z"
   },
   {
     "username": "TANTAN",
@@ -968,6 +1065,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "TANTAN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -977,6 +1075,7 @@
     "lore": "",
     "signatureCombo": "Phoenix Wing 1-60 LR",
     "points": 25,
+    "ageGroup": "ADULT",
     "rankKey": "MIG",
     "updatedAt": "2026-09-21T17:58:58.339Z"
   },
@@ -985,9 +1084,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 25,
+    "points": 50,
+    "ageGroup": "ADULT",
     "rankKey": "PSYBLADE",
-    "updatedAt": "2026-09-21T17:55:03.043Z"
+    "updatedAt": "2026-10-06T03:21:23.668Z"
   },
   {
     "username": "GAVIN",
@@ -995,6 +1095,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 20,
+    "ageGroup": "ADULT",
     "rankKey": "GAVIN",
     "updatedAt": "2026-09-21T17:54:55.267Z"
   },
@@ -1004,6 +1105,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "LEGEND",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1012,9 +1114,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 65,
+    "points": 210,
+    "ageGroup": "ADULT",
     "rankKey": "AUSTIN",
-    "updatedAt": "2026-09-21T17:54:49.873Z"
+    "updatedAt": "2026-10-06T03:21:16.631Z"
   },
   {
     "username": "EELITEWITT",
@@ -1022,6 +1125,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "EELITEWITT",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1030,9 +1134,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 45,
+    "ageGroup": "ADULT",
     "rankKey": "CHOI",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:12.601Z"
   },
   {
     "username": "HAM",
@@ -1040,6 +1145,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "HAM",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1049,6 +1155,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "BRENT",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1057,9 +1164,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 70,
+    "ageGroup": "ADULT",
     "rankKey": "BEVERAGE",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:17.013Z"
   },
   {
     "username": "DATASIANELMO",
@@ -1067,6 +1175,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 15,
+    "ageGroup": "ADULT",
     "rankKey": "DATASIANELMO",
     "updatedAt": "2026-09-21T17:54:57.296Z"
   },
@@ -1076,6 +1185,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 30,
+    "ageGroup": "ADULT",
     "rankKey": "HARU REN",
     "updatedAt": "2026-09-21T17:55:01.130Z"
   },
@@ -1085,6 +1195,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 25,
+    "ageGroup": "ADULT",
     "rankKey": "KANA",
     "updatedAt": "2026-09-21T17:55:01.462Z"
   },
@@ -1094,6 +1205,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "EEVEE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1103,6 +1215,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "GAB",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1112,6 +1225,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KOOYA",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1121,6 +1235,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ZET",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1130,6 +1245,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "PAT",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1139,6 +1255,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "HORACE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1147,18 +1264,20 @@
     "bladerName": "CEEJ",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 60,
+    "ageGroup": "ADULT",
     "rankKey": "CEEJAYWORX",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:24:10.441Z"
   },
   {
     "username": "BRAN",
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 55,
+    "points": 110,
+    "ageGroup": "ADULT",
     "rankKey": "BRAN",
-    "updatedAt": "2026-09-21T17:54:50.774Z"
+    "updatedAt": "2026-10-06T03:21:15.186Z"
   },
   {
     "username": "JOHN ACE",
@@ -1166,6 +1285,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JOHN ACE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1175,6 +1295,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ROYALCOOKIEX",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1184,6 +1305,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "STEVEN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1193,6 +1315,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "CHRISTIAN C",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1202,6 +1325,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "RICH",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1211,6 +1335,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "BLACS",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1220,6 +1345,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KAEL",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1229,6 +1355,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "DANIEL",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1238,6 +1365,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JARED C",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1247,6 +1375,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "VICKI",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1256,6 +1385,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "CONN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1264,9 +1394,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 15,
+    "points": 35,
+    "ageGroup": "ADULT",
     "rankKey": "GEM",
-    "updatedAt": "2026-09-21T17:58:44.641Z"
+    "updatedAt": "2026-10-06T03:21:17.440Z"
   },
   {
     "username": "SEL",
@@ -1274,6 +1405,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 25,
+    "ageGroup": "ADULT",
     "rankKey": "SEL",
     "updatedAt": "2026-09-21T17:54:53.969Z"
   },
@@ -1283,6 +1415,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "CHIEF",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1292,6 +1425,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "RICKY",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1301,6 +1435,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "NHIMRODD",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1310,6 +1445,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "GUAR",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1319,6 +1455,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JERSIKOA",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1328,6 +1465,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "CARC",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1337,6 +1475,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "RILEY",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1346,6 +1485,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ZOOKE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1355,6 +1495,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "SQUIRTLE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1364,6 +1505,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "SHUN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1372,9 +1514,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 40,
+    "points": 65,
+    "ageGroup": "ADULT",
     "rankKey": "KINGSTON",
-    "updatedAt": "2026-09-21T17:59:36.011Z"
+    "updatedAt": "2026-10-06T03:21:27.687Z"
   },
   {
     "username": "KINGSTONS GRAMP",
@@ -1382,6 +1525,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KINGSTONS GRAMP",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1391,6 +1535,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ELLE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1399,9 +1544,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 20,
+    "points": 45,
+    "ageGroup": "ADULT",
     "rankKey": "KINGSTONS DAD",
-    "updatedAt": "2026-09-21T17:59:10.429Z"
+    "updatedAt": "2026-10-06T03:27:36.473Z"
   },
   {
     "username": "REGGIE",
@@ -1409,6 +1555,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "REGGIE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1417,9 +1564,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "Cobalt Dragoon 1-60 E",
-    "points": 20,
+    "points": 130,
+    "ageGroup": "ADULT",
     "rankKey": "PAUL",
-    "updatedAt": "2026-09-21T17:55:03.337Z"
+    "updatedAt": "2026-10-06T03:21:15.991Z"
   },
   {
     "username": "GWEN",
@@ -1427,6 +1575,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "GWEN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1436,6 +1585,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "RUSS",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1445,6 +1595,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JEREL",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1454,6 +1605,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JIYA",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1463,6 +1615,7 @@
     "lore": "",
     "signatureCombo": "Hells Hammer 7-60 LF",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "CJ",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1472,6 +1625,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "STEPH",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1481,6 +1635,7 @@
     "lore": "",
     "signatureCombo": "Hover Wyvern 1-60 LR",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JACOB",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1490,6 +1645,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "RICHARD",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1499,6 +1655,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "MIKO",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1508,6 +1665,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "TATOKE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1517,6 +1675,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "BRAYDEN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1526,6 +1685,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "RUMBLECC",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1535,6 +1695,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JONATHAN V",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1544,6 +1705,7 @@
     "lore": "",
     "signatureCombo": "Hover Wyvern 1-60 R",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "FOXOF2FACES",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1553,6 +1715,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JEFF G",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1562,6 +1725,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "PANDA",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1571,6 +1735,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "TYLER S",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1580,6 +1745,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JESSICA",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1589,6 +1755,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 15,
+    "ageGroup": "ADULT",
     "rankKey": "Z3RO",
     "updatedAt": "2026-09-21T17:55:02.272Z"
   },
@@ -1598,6 +1765,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ZACH",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1607,6 +1775,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ONEZ",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1616,6 +1785,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "SHELBY",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1625,6 +1795,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "SUGOI",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1634,6 +1805,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "MULTI",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1643,6 +1815,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "DANIEL T",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1652,6 +1825,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "SKETCHI",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1660,9 +1834,10 @@
     "bladerName": "",
     "lore": "",
     "signatureCombo": "",
-    "points": 0,
+    "points": 15,
+    "ageGroup": "ADULT",
     "rankKey": "VERN",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:21.654Z"
   },
   {
     "username": "JULIAN",
@@ -1670,6 +1845,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JULIAN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1679,6 +1855,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "LEO",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1688,6 +1865,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "MAC",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1697,6 +1875,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "MATHEW S",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1706,6 +1885,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "DIEGO",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1715,6 +1895,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "MIKE T",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1724,6 +1905,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ERICK",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1733,6 +1915,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ALFRED S",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1742,6 +1925,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JAAAPIII",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1751,6 +1935,7 @@
     "lore": "",
     "signatureCombo": "",
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "WILLIAM",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1760,6 +1945,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KIESMAN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1769,6 +1955,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ADI",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1778,6 +1965,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ALFREDO",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1787,6 +1975,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "LANCE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1796,6 +1985,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "TGUSSY",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1804,18 +1994,20 @@
     "bladerName": null,
     "lore": null,
     "signatureCombo": null,
-    "points": 40,
+    "points": 95,
+    "ageGroup": "ADULT",
     "rankKey": "OWEN O",
-    "updatedAt": "2026-09-21T17:59:19.539Z"
+    "updatedAt": "2026-10-06T03:24:08.687Z"
   },
   {
     "username": "DEN",
     "bladerName": null,
     "lore": null,
     "signatureCombo": null,
-    "points": 0,
+    "points": 30,
+    "ageGroup": "ADULT",
     "rankKey": "DEN",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:20.015Z"
   },
   {
     "username": "ZANE",
@@ -1823,6 +2015,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ZANE",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1832,6 +2025,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "MARK P",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1841,6 +2035,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "FIREBOLT",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1850,6 +2045,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KAI BISHOP",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1858,9 +2054,10 @@
     "bladerName": null,
     "lore": null,
     "signatureCombo": null,
-    "points": 25,
+    "points": 50,
+    "ageGroup": "ADULT",
     "rankKey": "MATTHEWS",
-    "updatedAt": "2026-09-21T17:54:55.563Z"
+    "updatedAt": "2026-10-06T03:21:28.755Z"
   },
   {
     "username": "FLY JEBITZ",
@@ -1868,6 +2065,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "FLY JEBITZ",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1876,18 +2074,10 @@
     "bladerName": null,
     "lore": null,
     "signatureCombo": null,
-    "points": 15,
+    "points": 40,
+    "ageGroup": "ADULT",
     "rankKey": "FREE",
-    "updatedAt": "2026-09-21T17:55:00.488Z"
-  },
-  {
-    "username": "BLADER YOMI",
-    "bladerName": "CHANGE ME BACK",
-    "lore": "a developer",
-    "signatureCombo": "idk",
-    "points": 0,
-    "rankKey": "BLADER YOMI",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:29.120Z"
   },
   {
     "username": "RIP ROSS",
@@ -1895,6 +2085,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "RIP ROSS",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1903,9 +2094,10 @@
     "bladerName": "KODALES",
     "lore": null,
     "signatureCombo": null,
-    "points": 15,
+    "points": 45,
+    "ageGroup": "ADULT",
     "rankKey": "KOBES",
-    "updatedAt": "2026-09-21T17:59:41.212Z"
+    "updatedAt": "2026-10-06T03:25:16.965Z"
   },
   {
     "username": "JAY",
@@ -1913,6 +2105,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JAY",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1922,6 +2115,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "NIKO",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1930,18 +2124,20 @@
     "bladerName": null,
     "lore": null,
     "signatureCombo": null,
-    "points": 0,
+    "points": 20,
+    "ageGroup": "ADULT",
     "rankKey": "KEKON",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:27.091Z"
   },
   {
     "username": "NOAH C",
     "bladerName": null,
     "lore": null,
     "signatureCombo": null,
-    "points": 0,
+    "points": 25,
+    "ageGroup": "ADULT",
     "rankKey": "NOAH C",
-    "updatedAt": "2026-09-14T06:35:56.375Z"
+    "updatedAt": "2026-10-06T03:21:31.250Z"
   },
   {
     "username": "KEN",
@@ -1949,6 +2145,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "KEN",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1958,6 +2155,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "ADAM",
     "updatedAt": "2026-09-14T06:35:56.375Z"
   },
@@ -1966,63 +2164,70 @@
     "bladerName": null,
     "lore": null,
     "signatureCombo": null,
-    "points": 60,
+    "points": 90,
+    "ageGroup": "ADULT",
     "rankKey": "CLIFF",
-    "updatedAt": "2026-09-21T17:54:51.075Z"
+    "updatedAt": "2026-10-06T03:21:32.187Z"
   },
   {
     "username": "MISHANI",
     "bladerName": "NEIL",
     "lore": null,
     "signatureCombo": null,
-    "points": 25,
+    "points": 55,
+    "ageGroup": "ADULT",
     "rankKey": "MISHANI",
-    "updatedAt": "2026-09-21T17:54:57.774Z"
+    "updatedAt": "2026-10-06T03:21:29.911Z"
   },
   {
     "username": "RAINFALL",
     "bladerName": "JULES",
     "lore": null,
     "signatureCombo": null,
-    "points": 65,
+    "points": 90,
+    "ageGroup": "ADULT",
     "rankKey": "RAINFALL",
-    "updatedAt": "2026-09-21T17:54:47.673Z"
+    "updatedAt": "2026-10-06T03:21:26.187Z"
   },
   {
     "username": "LAZAROID",
     "bladerName": "PATRICK G",
     "lore": null,
     "signatureCombo": null,
-    "points": 30,
+    "points": 60,
+    "ageGroup": "ADULT",
     "rankKey": "LAZAROID",
-    "updatedAt": "2026-09-21T17:54:52.655Z"
+    "updatedAt": "2026-10-06T03:21:30.423Z"
   },
   {
     "username": "SHIRO",
     "bladerName": "Jeff",
     "lore": null,
     "signatureCombo": "Cobalt Dragoon 4-55 E",
-    "points": 30,
+    "points": 60,
+    "ageGroup": "ADULT",
     "rankKey": "SHIRO",
-    "updatedAt": "2026-09-21T17:54:54.502Z"
+    "updatedAt": "2026-10-06T03:21:20.491Z"
   },
   {
     "username": "RVN",
     "bladerName": "Arvine",
     "lore": null,
     "signatureCombo": "Impact Drake 3-60 P",
-    "points": 150,
+    "points": 195,
+    "ageGroup": "ADULT",
     "rankKey": "RVN",
-    "updatedAt": "2026-09-21T19:25:25.660Z"
+    "updatedAt": "2026-10-06T03:21:15.691Z"
   },
   {
     "username": "ANDREW.G3",
     "bladerName": "ANDREW",
     "lore": null,
     "signatureCombo": null,
-    "points": 25,
+    "points": 50,
+    "ageGroup": "ADULT",
     "rankKey": "ANDREW.G3",
-    "updatedAt": "2026-09-21T17:54:56.158Z"
+    "updatedAt": "2026-10-06T03:24:50.169Z"
   },
   {
     "username": "LITEWERK LEX",
@@ -2030,6 +2235,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "LITEWERK LEX",
     "updatedAt": "2026-09-14T06:44:05.372Z"
   },
@@ -2039,6 +2245,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 25,
+    "ageGroup": "ADULT",
     "rankKey": "CZ",
     "updatedAt": "2026-09-21T17:54:53.593Z"
   },
@@ -2048,6 +2255,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "RUBTAH",
     "updatedAt": "2026-09-14T06:44:46.567Z"
   },
@@ -2056,9 +2264,10 @@
     "bladerName": "SETH",
     "lore": null,
     "signatureCombo": null,
-    "points": 50,
+    "points": 65,
+    "ageGroup": "ADULT",
     "rankKey": "SETHGOGYM",
-    "updatedAt": "2026-09-21T17:54:48.569Z"
+    "updatedAt": "2026-10-06T03:21:29.519Z"
   },
   {
     "username": "JVKE",
@@ -2066,6 +2275,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "JVKE",
     "updatedAt": "2026-09-14T06:46:08.131Z"
   },
@@ -2074,9 +2284,10 @@
     "bladerName": "OMARDEMESA",
     "lore": null,
     "signatureCombo": null,
-    "points": 20,
+    "points": 40,
+    "ageGroup": "ADULT",
     "rankKey": "OMARGAWSH",
-    "updatedAt": "2026-09-21T17:54:58.894Z"
+    "updatedAt": "2026-10-06T03:27:32.653Z"
   },
   {
     "username": "DRAKEISQ",
@@ -2084,6 +2295,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 0,
+    "ageGroup": "ADULT",
     "rankKey": "DRAKEISQ",
     "updatedAt": "2026-09-14T06:46:41.804Z"
   },
@@ -2092,9 +2304,10 @@
     "bladerName": "JP",
     "lore": null,
     "signatureCombo": "Aero Pegasus 1-60 K",
-    "points": 0,
+    "points": 65,
+    "ageGroup": "ADULT",
     "rankKey": "NAGA",
-    "updatedAt": "2026-09-14T06:47:00.419Z"
+    "updatedAt": "2026-10-06T03:21:11.967Z"
   },
   {
     "username": "LISA",
@@ -2102,6 +2315,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 25,
+    "ageGroup": "ADULT",
     "rankKey": "LISA",
     "updatedAt": "2026-09-21T17:57:17.466Z"
   },
@@ -2111,6 +2325,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 20,
+    "ageGroup": "ADULT",
     "rankKey": "LA",
     "updatedAt": "2026-09-21T17:57:21.260Z"
   },
@@ -2120,6 +2335,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 15,
+    "ageGroup": "ADULT",
     "rankKey": "GRACE",
     "updatedAt": "2026-09-21T17:57:26.771Z"
   },
@@ -2128,9 +2344,10 @@
     "bladerName": null,
     "lore": null,
     "signatureCombo": null,
-    "points": 15,
+    "points": 35,
+    "ageGroup": "ADULT",
     "rankKey": "RICE",
-    "updatedAt": "2026-09-21T17:58:25.935Z"
+    "updatedAt": "2026-10-06T03:21:18.945Z"
   },
   {
     "username": "SYLV",
@@ -2138,6 +2355,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 20,
+    "ageGroup": "ADULT",
     "rankKey": "SYLV",
     "updatedAt": "2026-09-21T17:58:31.202Z"
   },
@@ -2146,18 +2364,20 @@
     "bladerName": null,
     "lore": null,
     "signatureCombo": null,
-    "points": 20,
+    "points": 30,
+    "ageGroup": "ADULT",
     "rankKey": "JUST MICHAEL",
-    "updatedAt": "2026-09-21T17:58:34.562Z"
+    "updatedAt": "2026-10-06T03:21:28.453Z"
   },
   {
     "username": "JUST KEN",
     "bladerName": null,
     "lore": null,
     "signatureCombo": null,
-    "points": 30,
+    "points": 75,
+    "ageGroup": "ADULT",
     "rankKey": "JUST KEN",
-    "updatedAt": "2026-09-21T17:58:37.817Z"
+    "updatedAt": "2026-10-06T03:21:12.953Z"
   },
   {
     "username": "SMASHER",
@@ -2165,6 +2385,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 25,
+    "ageGroup": "ADULT",
     "rankKey": "SMASHER",
     "updatedAt": "2026-09-21T17:59:05.083Z"
   },
@@ -2174,6 +2395,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 25,
+    "ageGroup": "ADULT",
     "rankKey": "DECK",
     "updatedAt": "2026-09-21T17:59:12.413Z"
   },
@@ -2183,6 +2405,7 @@
     "lore": null,
     "signatureCombo": null,
     "points": 45,
+    "ageGroup": "ADULT",
     "rankKey": "SHER",
     "updatedAt": "2026-09-21T17:59:24.745Z"
   },
@@ -2191,8 +2414,139 @@
     "bladerName": null,
     "lore": null,
     "signatureCombo": null,
-    "points": 40,
+    "points": 115,
+    "ageGroup": "ADULT",
     "rankKey": "KIIRA",
-    "updatedAt": "2026-09-21T17:59:33.752Z"
+    "updatedAt": "2026-10-06T03:21:10.255Z"
+  },
+  {
+    "username": "YOMI",
+    "bladerName": "CHANGE ME BACK",
+    "lore": "a developer",
+    "signatureCombo": "idk",
+    "points": 0,
+    "ageGroup": "ADULT",
+    "rankKey": "YOMI",
+    "updatedAt": "2026-09-21T20:47:58.081Z"
+  },
+  {
+    "username": "ROKUSHO",
+    "bladerName": "KYOYA, KUSO",
+    "lore": "Hard work pays off, dreams come true, bad times don't last, but bad guys do.",
+    "signatureCombo": "Heavens Ring 1-60 LR",
+    "points": 45,
+    "ageGroup": "ADULT",
+    "rankKey": "ROKUSHO",
+    "updatedAt": "2026-10-06T03:21:24.745Z"
+  },
+  {
+    "username": "KINGSTON (KIDS)",
+    "bladerName": null,
+    "lore": null,
+    "signatureCombo": null,
+    "points": 0,
+    "ageGroup": "ADULT",
+    "rankKey": "KINGSTON (KIDS)",
+    "updatedAt": "2026-09-30T22:57:22.238Z"
+  },
+  {
+    "username": "BLADER MIKE",
+    "bladerName": null,
+    "lore": null,
+    "signatureCombo": null,
+    "points": 20,
+    "ageGroup": "ADULT",
+    "rankKey": "BLADER MIKE",
+    "updatedAt": "2026-10-06T03:24:45.806Z"
+  },
+  {
+    "username": "SHARKY",
+    "bladerName": null,
+    "lore": null,
+    "signatureCombo": null,
+    "points": 30,
+    "ageGroup": "ADULT",
+    "rankKey": "SHARKY",
+    "updatedAt": "2026-10-06T03:25:12.022Z"
+  },
+  {
+    "username": "NICKIES",
+    "bladerName": null,
+    "lore": null,
+    "signatureCombo": null,
+    "points": 20,
+    "ageGroup": "ADULT",
+    "rankKey": "NICKIES",
+    "updatedAt": "2026-10-06T03:25:28.419Z"
+  },
+  {
+    "username": "BLUE_FLAME40",
+    "bladerName": null,
+    "lore": null,
+    "signatureCombo": null,
+    "points": 30,
+    "ageGroup": "ADULT",
+    "rankKey": "BLUE_FLAME40",
+    "updatedAt": "2026-10-06T03:25:49.874Z"
+  },
+  {
+    "username": "LIAM",
+    "bladerName": null,
+    "lore": null,
+    "signatureCombo": null,
+    "points": 25,
+    "ageGroup": "ADULT",
+    "rankKey": "LIAM",
+    "updatedAt": "2026-10-06T03:27:20.034Z"
+  },
+  {
+    "username": "DMON",
+    "bladerName": null,
+    "lore": null,
+    "signatureCombo": null,
+    "points": 15,
+    "ageGroup": "ADULT",
+    "rankKey": "DMON",
+    "updatedAt": "2026-10-06T03:27:52.267Z"
+  },
+  {
+    "username": "ODI",
+    "bladerName": null,
+    "lore": null,
+    "signatureCombo": null,
+    "points": 15,
+    "ageGroup": "ADULT",
+    "rankKey": "ODI",
+    "updatedAt": "2026-10-06T03:27:55.268Z"
+  },
+  {
+    "username": "tester",
+    "bladerName": "dasdasd adult",
+    "lore": "asdasdasdasd",
+    "signatureCombo": null,
+    "points": 65,
+    "ageGroup": "KID",
+    "rankKey": "tester",
+    "updatedAt": "2026-10-15T01:46:31.008Z"
+  },
+  {
+    "username": "bester kid",
+    "bladerName": "asdfasdf",
+    "lore": "asdfasdfsad",
+    "signatureCombo": "fasdfasdfasdf",
+    "points": 80,
+    "ageGroup": "KID",
+    "rankKey": "bester kid",
+    "updatedAt": "2026-10-15T01:44:18.401Z"
+  },
+  {
+    "username": "bester",
+    "bladerName": "bester adult",
+    "lore": null,
+    "signatureCombo": null,
+    "points": 30,
+    "ageGroup": "ADULT",
+    "rankKey": "bester",
+    "updatedAt": "2026-10-15T01:45:17.154Z"
   }
 ]
