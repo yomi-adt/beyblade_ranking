@@ -43,8 +43,12 @@ async function loadBladers() {
   ]);
   data.value = players;
   data.value.sort((a, b) => b.points - a.points);
-  for (let i = 1; i <= data.value.length; i++) {
-    data.value[i - 1].rank = i.toString();
+  // Shared rank for ties (1, 1, 3): a player with the same points as the one
+  // above inherits that player's rank instead of getting their own position.
+  for (let i = 0; i < data.value.length; i++) {
+    data.value[i].rank = (i > 0 && data.value[i].points === data.value[i - 1].points)
+      ? data.value[i - 1].rank
+      : (i + 1).toString();
   }
   lastUpdated.value = lastUpdatedValue;
   loading.value = false;
